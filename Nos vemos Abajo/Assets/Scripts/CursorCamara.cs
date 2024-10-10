@@ -20,6 +20,14 @@ public class CursorCamara : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RaycastHit hitContinuo;
+        Ray rayContinuo = cam.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(rayContinuo, out hitContinuo, Mathf.Infinity, clickable))
+        {
+            Debug.Log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+        }
+
         if (Input.GetMouseButtonDown(0)) 
         {
             RaycastHit hit;
@@ -27,7 +35,7 @@ public class CursorCamara : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickable)) 
             {
-                Debug.Log("LO ESTAS TOCANDO JEJEJEJEJEJEJEJEJJEJEJJ");
+                Debug.Log("LO ESTAS TOCANDO OOOOOOOOOOOOOOOOOOOOOOOOOOO");
             }
         }
     }
