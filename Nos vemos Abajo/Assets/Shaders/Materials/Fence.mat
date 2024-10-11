@@ -7,14 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FogCube
-  m_Shader: {fileID: -6465566751694194690, guid: 3107ee885a0cb204d8958b1658542f41,
+  m_Name: Fence
+  m_Shader: {fileID: -6465566751694194690, guid: 7e719f3ae1f0f37409e006f85bd8e2c0,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -24,6 +24,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_29ecbe6c93494d00ab2f62ef40640f2c_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: bc92e9e3f2111554a8b148f89eab1aea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 337a7ff540c738d439cf2367ef9fc989, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Transparency:
+        m_Texture: {fileID: 2800000, guid: 12c82b87732957742ae5d8793b031b97, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -40,10 +52,12 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _snow_quantity: 10
+    - _snow_scale: 26
     m_Colors:
-    - _Color: {r: 0.2743414, g: 0.3279796, b: 0.4245283, a: 0}
+    - _Base_Color: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &4199432545826890658
+--- !u!114 &5556811813813703919
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
