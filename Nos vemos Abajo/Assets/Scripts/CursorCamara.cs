@@ -25,7 +25,7 @@ public class CursorCamara : MonoBehaviour
 
         if (Physics.Raycast(rayContinuo, out hitContinuo, Mathf.Infinity, clickable))
         {
-            Debug.Log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+          //  Debug.Log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
         }
 
         if (Input.GetMouseButtonDown(0)) 
@@ -35,6 +35,11 @@ public class CursorCamara : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickable)) 
             {
+                IObject _obj = hit.transform.gameObject.GetComponent<IObject>();
+                if (_obj != null)
+                {
+                    _obj.Interact();
+                }
                 Debug.Log("LO ESTAS TOCANDO OOOOOOOOOOOOOOOOOOOOOOOOOOO");
             }
         }
