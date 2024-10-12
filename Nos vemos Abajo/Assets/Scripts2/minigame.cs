@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class minigameManager : MonoBehaviour
+public class minigame : MonoBehaviour
 {
-    public static minigameManager Instance;
+    public static minigame Instance;
+   // GameObject 
     private void Awake()
     {
         if (Instance == null)
