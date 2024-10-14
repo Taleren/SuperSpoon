@@ -12,6 +12,6 @@ public class eventCalls
     public InteractEvent.eventCallTypes callType;
     public string DialogueKey;
     public TimelineAsset timelineObj;
-  
+  public GameObject obj;
     
 }

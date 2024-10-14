@@ -20,7 +20,6 @@ public class UIManager : MonoBehaviour
             Destroy(this);
         }
     }
-
     public void showObjectName(string textKey)
     {
         //aqui se llamaria al textManager y eso
@@ -37,6 +36,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         objText = hoverGroup.GetComponentsInChildren<TMP_Text>()[0];
+        hideObjectName();
     }
 
     // Update is called once per frame

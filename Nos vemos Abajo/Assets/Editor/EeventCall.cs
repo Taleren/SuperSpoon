@@ -10,6 +10,8 @@ public class EeventCall : PropertyDrawer
     SerializedProperty callType;
     SerializedProperty DialogueKey;
     SerializedProperty timelineObj;
+    SerializedProperty obj;
+
     private void OnEnable()
     {
         //callType = serializedObject.FindProperty("callType");
@@ -21,6 +23,7 @@ public class EeventCall : PropertyDrawer
         callType = property.FindPropertyRelative("callType");
         DialogueKey = property.FindPropertyRelative("DialogueKey");
         timelineObj = property.FindPropertyRelative("timelineObj");
+        obj = property.FindPropertyRelative("obj");
 
 
         EditorGUI.BeginProperty(position, label, property);
@@ -92,6 +95,7 @@ public class EeventCall : PropertyDrawer
              position.size.x * .8f, EditorGUIUtility.singleLineHeight);
 
         EditorGUI.PropertyField(drawArea, timelineObj, new GUIContent(timelineObj.name));
+
     }
 }
 

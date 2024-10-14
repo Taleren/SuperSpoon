@@ -400,7 +400,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Una puta piedra
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -929,6 +929,63 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
+--- !u!1 &1081805842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1081805844}
+  - component: {fileID: 1081805843}
+  - component: {fileID: 1081805845}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1081805843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081805842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3420ad0e6d0d1489430fc8e650cf64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1081805844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081805842}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.628189, y: -0.69207, z: 0.5897074}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1081805845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081805842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e752d707bb889489c332d6a83732b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1281118343 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1724060792341563350, guid: ff218cdab6e307047ac7e48992629ba9,
@@ -947,7 +1004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d20063316512e24468c6447ecdc5763e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intEvent: {fileID: 0}
+  intEvent: {fileID: 11400000, guid: c0e5a8ef5bc09ef47a98a44bfbc95d05, type: 2}
   Hoverkey: Una caja
 --- !u!64 &1281118348
 MeshCollider:
@@ -1959,3 +2016,4 @@ SceneRoots:
   - {fileID: 465540782}
   - {fileID: 1817098503}
   - {fileID: 1730286742}
+  - {fileID: 1081805844}
