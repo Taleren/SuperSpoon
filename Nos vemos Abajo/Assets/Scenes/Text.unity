@@ -393,7 +393,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -453,7 +453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -201, y: 131}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222233369
@@ -468,11 +468,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba54c1d5bdaea84699c6af4f37cb06f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _testPrueba: 
+  _IndiceLinea: 
+  _IndiceParrafoInicio: 5
+  _numLineas: 10
   characterPerSecond: 20
   interpunctuationDelay: 0.5
   quickSkip: 0
   skipSpeedup: 5
+  textDialogue: {fileID: 4900000, guid: f7f4daf38501bee47b4dbedea6d376b2, type: 3}
 --- !u!114 &1222233370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,45 +496,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xBFQu\xE9 pas\xF3 contigo?\r\nD\xEDmelo, rrr\r\nO-O-Ovy On The Drums
-    (mmh)\r\nYa no tiene excusa (no)\r\nHoy sali\xF3 con su amiga (ah), dizque pa
-    matar la tusa (la tusa)\r\nQue porque un hombre le pag\xF3 mal (ah)\r\nEst\xE1
-    dura y abusa (eh)\r\nSe cans\xF3 de ser buena, ahora es ella quien los usa (oh-oh)\r\nQue
-    porque un hombre le pag\xF3 mal (mal)\r\nYa no se le ve sentimental (-tal)\r\nDice
-    que por otro man no llora (llora), no\r\nPero si le ponen la canci\xF3n (ah)\r\nLe
-    da una depresi\xF3n tonta\r\nLlorando, lo comienza a llamar\r\nPero \xE9l la
-    dej\xF3 en buz\xF3n (-z\xF3n)\r\nSer\xE1 porque con otra est\xE1 (con otra est\xE1)\r\nFingiendo
-    que a otra se puede amar\r\nPero hice todo este llanto por nada\r\nAhora soy
-    una chica mala\r\nAnd now you kicking and screaming, a big toddler\r\nDon't try
-    to get your friends to come holler, holler\r\nAyy-yo, I used to lay low\r\nI
-    wasn't in the clubs, I was on my JO (wuh)\r\nUntil I realized you a epic fail,
-    yo\r\nSo don't tell your guys that I'm still your bae, yo\r\n'Cause it's a new
-    day, I'm in a new place (uh-huh)\r\nGetting some new D, sitting on a new face
-    (okay)\r\n'Cause I know I'm the baddest bitch you ever really met (ooh)\r\nYou
-    searching for a badder bitch, and you ain't met her yet (ooh)\r\nAyy-yo, tell
-    'em to back off, he wanna slack off\r\nAin't no more booty calls, you gotta jack
-    off\r\nIt's me and KAROL G, we let them rats talk\r\nDon't run up on us 'cause
-    they letting the macks off (rrr)\r\nPero si le ponen la canci\xF3n (ah)\r\nLe
-    da una depresi\xF3n tonta (tonta)\r\nLlorando, lo comienza a llamar\r\nPero \xE9l
-    la dej\xF3 en buz\xF3n (no)\r\nSer\xE1 porque con otra est\xE1 (con otra est\xE1)\r\nFingiendo
-    que a otra se puede amar, eh-uh\r\nUn-un shot pa la pena profunda (eh)\r\nY seguimo'
-    gastando la funda (la funda)\r\nOtro shot pa la mente (yeah, yeah)\r\nPa que
-    el recuerdo no la atormente (ah; oh)\r\nYa no le copia nada\r\nSu ex ya no vale
-    nada\r\nSe va pa la disco y solo quiere perrear (perrear)\r\nPero se confunde
-    cuando empieza a tomar (tomar)\r\nElla se cura con rumba (ah)\r\nY el amor pa
-    la tumba (eh)\r\nTo' los hombre' le zumban (le zumban)\r\nPero si le ponen la
-    canci\xF3n (oh)\r\nLe da una depresi\xF3n tonta (tonta)\r\nLlorando, lo comienza
-    a llamar\r\nPero \xE9l la dej\xF3 en buz\xF3n (oh)\r\nSer\xE1 porque con otra
-    est\xE1 (con otra est\xE1)\r\nFingiendo que a otra se puede amar"
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -544,13 +518,13 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1000
-  m_fontSizeBase: 1000
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -565,7 +539,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -575,7 +549,7 @@ MonoBehaviour:
   checkPaddingRequired: 0
   m_isRichText: 1
   m_parseCtrlCharacters: 1
-  m_isOrthographic: 0
+  m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
   m_verticalMapping: 0
@@ -585,10 +559,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -221.00067, y: -82.20178, z: -236.5816, w: -46.55391}
+  m_margin: {x: -221.00067, y: -82.20178, z: -151.33514, w: -286.96936}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1222233371
