@@ -14,8 +14,8 @@ public class CursorCamara : MonoBehaviour
     {
         cam = Camera.main;
 
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.visible = true;
+       // Cursor.lockState = CursorLockMode.Locked;
     }
     void leaveCurrent()
     {
