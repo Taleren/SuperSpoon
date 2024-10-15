@@ -44,7 +44,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Scale: 1.03
+    - _Scale: 0.04
     - _Snow_Quantity: 10
     - _Snow_Scale: 26
     - _isOutlined: 1
