@@ -28,48 +28,51 @@ public class CursorCamara : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hitContinuo;
-        Ray rayContinuo = cam.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(rayContinuo, out hitContinuo, Mathf.Infinity, clickable))
+        if (gameManager.Instance.currentState == gameManager.GameState.FreePlay)
         {
-            IObject _obj = hitContinuo.transform.gameObject.GetComponent<IObject>();
-            if(_obj == null)
+            RaycastHit hitContinuo;
+            Ray rayContinuo = cam.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(rayContinuo, out hitContinuo, Mathf.Infinity, clickable))
+            {
+                IObject _obj = hitContinuo.transform.gameObject.GetComponent<IObject>();
+                if (_obj == null)
+                {
+                    leaveCurrent();
+                }
+                if (_obj != currentObject)
+                {
+                    leaveCurrent();
+                    currentObject = _obj;
+                    currentObject.EnterHover();
+                }
+
+                //  Debug.Log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
+            }
+            else
             {
                 leaveCurrent();
+
             }
-            if (_obj != currentObject)
+
+            if (Input.GetMouseButtonDown(0))
             {
-                leaveCurrent();
-                currentObject = _obj;
-                currentObject.EnterHover();
+                if (currentObject != null)
+                {
+                    currentObject.Interact();
+                }
+                //RaycastHit hit;
+                //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+                //if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickable)) 
+                //{
+                //    IObject _obj = hit.transform.gameObject.GetComponent<IObject>();
+                //    if (_obj != null)
+                //    {
+                //        _obj.Interact();
+                //    }
+                //    Debug.Log("LO ESTAS TOCANDO OOOOOOOOOOOOOOOOOOOOOOOOOOO");
+                //}
             }
-
-            //  Debug.Log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
-        }
-        else
-        {
-            leaveCurrent();
-
-        }
-
-        if (Input.GetMouseButtonDown(0)) 
-        {
-            if(currentObject != null)
-            {
-                currentObject.Interact();
-            }
-            //RaycastHit hit;
-            //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            //if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickable)) 
-            //{
-            //    IObject _obj = hit.transform.gameObject.GetComponent<IObject>();
-            //    if (_obj != null)
-            //    {
-            //        _obj.Interact();
-            //    }
-            //    Debug.Log("LO ESTAS TOCANDO OOOOOOOOOOOOOOOOOOOOOOOOOOO");
-            //}
         }
     }
 }
