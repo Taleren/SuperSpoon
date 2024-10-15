@@ -1,15 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
+using UnityEngine.UI;
 public class basicObject : MonoBehaviour,IObject
 {
-    public InteractEvent intEvent;
+  [SerializeField]  private InteractEvent intEvent;
     public string Hoverkey;
+    public bool showName = true;
     MaterialPropertyBlock materialPropertyBlock;
-    public void EnterHover()
+
+    public virtual void EnterHover()
     {
-        UIManager.Instance.showObjectName(Hoverkey);
+        if (showName)
+        {
+            UIManager.Instance.showObjectName(Hoverkey);
+        }
         materialPropertyBlock = new MaterialPropertyBlock();
         materialPropertyBlock.SetColor("_Color", Color.white);
         materialPropertyBlock.SetFloat("_isOutlined", 1.0f);
@@ -17,12 +24,12 @@ public class basicObject : MonoBehaviour,IObject
 
     }
 
-    public void Interact()
+    public virtual void Interact()
     {
         eventManager.Instance.startEvent(intEvent,()=> { print("Termine"); });
     }
 
-    public void LeaveHover()
+    public virtual void LeaveHover()
     {
         UIManager.Instance.hideObjectName();
         materialPropertyBlock.SetFloat("_isOutlined", 0.0f);
