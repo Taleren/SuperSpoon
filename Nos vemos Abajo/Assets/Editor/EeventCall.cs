@@ -44,6 +44,7 @@ public class EeventCall : PropertyDrawer
                 DrawDialogueKeyProperty(position);
 
                 break;
+          
             default:
                 break;
         }
@@ -96,6 +97,16 @@ public class EeventCall : PropertyDrawer
 
         EditorGUI.PropertyField(drawArea, timelineObj, new GUIContent(timelineObj.name));
 
+    }
+    private void DrawGameObject(Rect position,string name)
+    {
+        EditorGUIUtility.labelWidth = 100;
+
+        Rect drawArea = new Rect(position.min.x,
+             position.min.y + 2 * EditorGUIUtility.singleLineHeight,
+             position.size.x * .8f, EditorGUIUtility.singleLineHeight);
+
+        EditorGUI.PropertyField(drawArea,obj, new GUIContent(name));
     }
 }
 

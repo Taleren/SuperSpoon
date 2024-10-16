@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 public class basicObject : MonoBehaviour,IObject
 {
-  [SerializeField] private InteractEvent intEvent;
+  [SerializeField] protected InteractEvent intEvent;
   [SerializeField] private GameObject outline;
     public string Hoverkey;
 <<<<<<< Updated upstream
@@ -28,13 +28,16 @@ public class basicObject : MonoBehaviour,IObject
         //materialPropertyBlock.SetColor("_Color", Color.white);
         //materialPropertyBlock.SetFloat("_isOutlined", 1.0f);
         //this.GetComponent<MeshRenderer>().SetPropertyBlock(materialPropertyBlock, 1);
-        outline.SetActive(true);
-
+        if (outline != null)
+        {
+            outline.SetActive(true);
+        }
     }
 
     public virtual void Interact()
     {
         eventManager.Instance.startEvent(intEvent,()=> { print("Termine"); });
+        LeaveHover();
     }
 
     public virtual void LeaveHover()
@@ -44,6 +47,9 @@ public class basicObject : MonoBehaviour,IObject
         materialPropertyBlock.SetFloat("_isOutlined", 0.0f);
         this.GetComponent<MeshRenderer>().SetPropertyBlock(materialPropertyBlock, 1);
         */
-        outline.SetActive(false);
+        if (outline != null)
+        {
+            outline.SetActive(false);
+        }
     }
 }

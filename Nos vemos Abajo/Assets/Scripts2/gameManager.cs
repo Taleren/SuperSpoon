@@ -1,3 +1,4 @@
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +7,11 @@ using UnityEngine;
 public class gameManager : MonoBehaviour
 {
     public static gameManager Instance;
-  public GameState currentState { get; private set; }
+  [SerializeField]  CinemachineVirtualCamera mainCamera;
+    [SerializeField] float savedCameraSpeedX;
+    [SerializeField] float savedCameraSpeedY;
+
+    public GameState currentState { get; private set; }
     private void Awake()
     {
         if (Instance == null)
@@ -21,6 +26,9 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        savedCameraSpeedX = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed;
+        savedCameraSpeedY = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed;
+
         setState(GameState.FreePlay);
     }
 
@@ -45,13 +53,23 @@ public class gameManager : MonoBehaviour
         switch (newstate)
         {
             case GameState.Paused:
+
+                mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0;
+                mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed =0; 
                 setCursor(true);
                 break;
             case GameState.FreePlay:
+                mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = savedCameraSpeedX;
+                mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = savedCameraSpeedY;
+
+
                 setCursor(false);
 
                 break;
             case GameState.Minigame:
+
+                mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0;
+                mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0;
                 setCursor(true);
 
                 break;

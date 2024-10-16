@@ -54,10 +54,11 @@ public class eventManager : MonoBehaviour
 
                     break;
                 case InteractEvent.eventCallTypes.dialogueCall:
-                    gameManager.Instance.callPingPong("Playing Dialogue: " + Call.DialogueKey, () => { print("siguiente call"); callIndex++; playCall(); });
+                    gameManager.Instance.callPingPong("Playing Dialogue: " + Call.nameKey, () => { print("siguiente call"); callIndex++; playCall(); });
 
 
                     break;
+                
                 default:
                     break;
             }

@@ -10,7 +10,11 @@ public class minigame : MonoBehaviour
     public void StartMinigame()
     {
         gameObject.SetActive(true);
-        transform.position = Vector3.zero;
+        transform.position = Camera.main.transform.position + Camera.main.transform.forward * 0.5f;
+        foreach (minigameObject item in GetComponentsInChildren<minigameObject>())
+        {
+            item.startMinigame();
+        }
     }
     public void endMinigame()
     {

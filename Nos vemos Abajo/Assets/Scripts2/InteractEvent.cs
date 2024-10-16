@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+//[CreateAssetMenu(menuName = "ScriptableObject/Event")]
 
-[CreateAssetMenu(menuName = "ScriptableObject/Event")]
-public class InteractEvent : ScriptableObject
+[Serializable]
+public class InteractEvent 
 {
 
     public  eventCalls[] eventOrder;

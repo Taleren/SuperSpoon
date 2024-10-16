@@ -28,7 +28,7 @@ public class CursorCamara : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.Instance.currentState == gameManager.GameState.FreePlay)
+        if (gameManager.Instance.currentState != gameManager.GameState.Paused)
         {
             RaycastHit hitContinuo;
             Ray rayContinuo = cam.ScreenPointToRay(Input.mousePosition);
