@@ -6378,7 +6378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6a67ab26d3b234daafdc005ce23735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intEvent: {fileID: 11400000, guid: c0e5a8ef5bc09ef47a98a44bfbc95d05, type: 2}
+  intEvent:
+    eventOrder: []
   outline: {fileID: 0}
   Hoverkey: Rueda Activada
   showName: 1
@@ -6386,7 +6387,8 @@ MonoBehaviour:
   eventList:
   - HoverText: Rueda Desactivada
     state: 1
-    interactEvent: {fileID: 11400000, guid: c0e5a8ef5bc09ef47a98a44bfbc95d05, type: 2}
+    interactEvent:
+      eventOrder: []
     minigameEvent:
       m_PersistentCalls:
         m_Calls:
@@ -6404,7 +6406,8 @@ MonoBehaviour:
           m_CallState: 2
   - HoverText: 
     state: 2
-    interactEvent: {fileID: 11400000, guid: c0e5a8ef5bc09ef47a98a44bfbc95d05, type: 2}
+    interactEvent:
+      eventOrder: []
     minigameEvent:
       m_PersistentCalls:
         m_Calls:
@@ -11788,7 +11791,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6a67ab26d3b234daafdc005ce23735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intEvent: {fileID: 11400000, guid: c0e5a8ef5bc09ef47a98a44bfbc95d05, type: 2}
+  intEvent:
+    eventOrder: []
   outline: {fileID: 0}
   Hoverkey: Boton
   showName: 1
@@ -11796,7 +11800,8 @@ MonoBehaviour:
   eventList:
   - HoverText: 
     state: 2
-    interactEvent: {fileID: 11400000, guid: c0e5a8ef5bc09ef47a98a44bfbc95d05, type: 2}
+    interactEvent:
+      eventOrder: []
     minigameEvent:
       m_PersistentCalls:
         m_Calls:
@@ -12896,7 +12901,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54afd0d9c9763af47bbb5eded4c118cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intEvent: {fileID: 11400000, guid: c0f44bacdb8db474b802d0dce8ed064a, type: 2}
+  intEvent:
+    eventOrder:
+    - callType: 0
+      nameKey: 
+      timelineObj: {fileID: 0}
+      obj: {fileID: 0}
+      anim: {fileID: 0}
+    - callType: 0
+      nameKey: 
+      timelineObj: {fileID: 0}
+      obj: {fileID: 0}
+      anim: {fileID: 0}
+    - callType: 0
+      nameKey: 
+      timelineObj: {fileID: 0}
+      obj: {fileID: 0}
+      anim: {fileID: 0}
+    - callType: 1
+      nameKey: 
+      timelineObj: {fileID: 0}
+      obj: {fileID: 0}
+      anim: {fileID: 0}
   outline: {fileID: 363060179}
   Hoverkey: Farol
   showName: 1
@@ -13030,7 +13056,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d20063316512e24468c6447ecdc5763e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intEvent: {fileID: 11400000, guid: c0e5a8ef5bc09ef47a98a44bfbc95d05, type: 2}
+  intEvent:
+    eventOrder:
+    - callType: 0
+      nameKey: 
+      timelineObj: {fileID: 0}
+      obj: {fileID: 0}
+      anim: {fileID: 0}
+    - callType: 0
+      nameKey: 
+      timelineObj: {fileID: 0}
+      obj: {fileID: 0}
+      anim: {fileID: 0}
   outline: {fileID: 532204366}
   Hoverkey: feliz navidad del equipo de baloncesto de somosaguas
   showName: 1
@@ -13196,7 +13233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6a67ab26d3b234daafdc005ce23735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intEvent: {fileID: 11400000, guid: c0e5a8ef5bc09ef47a98a44bfbc95d05, type: 2}
+  intEvent:
+    eventOrder: []
   outline: {fileID: 0}
   Hoverkey: Boton
   showName: 1
@@ -13204,7 +13242,8 @@ MonoBehaviour:
   eventList:
   - HoverText: 
     state: 2
-    interactEvent: {fileID: 11400000, guid: c0e5a8ef5bc09ef47a98a44bfbc95d05, type: 2}
+    interactEvent:
+      eventOrder: []
     minigameEvent:
       m_PersistentCalls:
         m_Calls:
@@ -13530,7 +13569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6a67ab26d3b234daafdc005ce23735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intEvent: {fileID: 11400000, guid: c0e5a8ef5bc09ef47a98a44bfbc95d05, type: 2}
+  intEvent:
+    eventOrder: []
   outline: {fileID: 0}
   Hoverkey: Rueda Activada
   showName: 1
@@ -13538,7 +13578,8 @@ MonoBehaviour:
   eventList:
   - HoverText: Rueda Desactivada
     state: 1
-    interactEvent: {fileID: 11400000, guid: c0e5a8ef5bc09ef47a98a44bfbc95d05, type: 2}
+    interactEvent:
+      eventOrder: []
     minigameEvent:
       m_PersistentCalls:
         m_Calls:
@@ -13556,7 +13597,8 @@ MonoBehaviour:
           m_CallState: 2
   - HoverText: 
     state: 2
-    interactEvent: {fileID: 11400000, guid: c0e5a8ef5bc09ef47a98a44bfbc95d05, type: 2}
+    interactEvent:
+      eventOrder: []
     minigameEvent:
       m_PersistentCalls:
         m_Calls:

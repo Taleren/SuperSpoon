@@ -9,16 +9,12 @@ public class basicObject : MonoBehaviour,IObject
   [SerializeField] protected InteractEvent intEvent;
   [SerializeField] private GameObject outline;
     public string Hoverkey;
-<<<<<<< Updated upstream
     public bool showName = true;
     MaterialPropertyBlock materialPropertyBlock;
 
 
     public virtual void EnterHover()
-=======
 
-    public void EnterHover()
->>>>>>> Stashed changes
     {
         if (showName)
         {

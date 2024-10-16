@@ -73,10 +73,7 @@ public class CursorCamara : MonoBehaviour
                 //    Debug.Log("LO ESTAS TOCANDO OOOOOOOOOOOOOOOOOOOOOOOOOOO");
                 //}
             }
-<<<<<<< Updated upstream
-=======
 
-            //edu
         }
         else
         {
@@ -103,7 +100,6 @@ public class CursorCamara : MonoBehaviour
             //    }
             //    Debug.Log("LO ESTAS TOCANDO OOOOOOOOOOOOOOOOOOOOOOOOOOO");
             //}
->>>>>>> Stashed changes
         }
     }
 }

@@ -47,7 +47,7 @@ public class eventManager : MonoBehaviour
             switch (Call.callType)
             {
                 case InteractEvent.eventCallTypes.animCall:
-                    gameManager.Instance.callPingPong("Playing animation: ", () => { print("siguiente call"); callIndex++; playCall(); });
+                    Call.anim.Play(Call.nameKey);
                     break;
                 case InteractEvent.eventCallTypes.timelineCall:
                     gameManager.Instance.callPingPong("Playing timeline: " + Call.timelineObj, () => { print("siguiente call"); callIndex++; playCall(); });

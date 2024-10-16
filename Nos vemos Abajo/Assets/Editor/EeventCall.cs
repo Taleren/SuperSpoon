@@ -36,16 +36,17 @@ public class EeventCall : PropertyDrawer
         switch ((InteractEvent.eventCallTypes)callType.intValue)
         {
             case InteractEvent.eventCallTypes.animCall:
+                DrawStringProperty(position, "Animation Key");
+
                 break;
             case InteractEvent.eventCallTypes.timelineCall:
                 DrawTimelineObj(position);
                 break;
             case InteractEvent.eventCallTypes.dialogueCall:
-                DrawDialogueKeyProperty(position);
+                DrawStringProperty(position,"Dialogue Key");
 
                 break;
-          
-            default:
+                      default:
                 break;
         }
         EditorGUI.EndProperty();
@@ -77,7 +78,7 @@ public class EeventCall : PropertyDrawer
         EditorGUI.PropertyField(drawArea, callType, new GUIContent(callType.name));
         
     }
-    private void DrawDialogueKeyProperty(Rect position)
+    private void DrawStringProperty(Rect position,string name)
     {
         EditorGUIUtility.labelWidth = 100;
 
@@ -85,7 +86,7 @@ public class EeventCall : PropertyDrawer
              position.min.y + 2* EditorGUIUtility.singleLineHeight,
              position.size.x * .8f, EditorGUIUtility.singleLineHeight);
 
-        EditorGUI.PropertyField(drawArea, DialogueKey, new GUIContent(DialogueKey.name));
+        EditorGUI.PropertyField(drawArea, DialogueKey, new GUIContent(name));
     }
     private void DrawTimelineObj(Rect position)
     {
