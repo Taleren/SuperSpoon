@@ -86,8 +86,9 @@ public class Rotate3DObject : MonoBehaviour
         Vector2 MouseDelta = GetMouseLookInput();
 
         MouseDelta *= _speed * Time.deltaTime;
-
+        Vector3 xspin = Vector3.Cross(Camera.main.transform.forward, Vector3.up);
+        Vector3 yspin = Vector3.Cross(xspin, Vector3.up);
         transform.Rotate(Vector3.up * (_inverted ? 1 : -1), MouseDelta.x, Space.World);
-        transform.Rotate(Vector3.right * (_inverted ? 1 : -1), MouseDelta.y, Space.World);
+        transform.Rotate(xspin * (_inverted ? 1 : -1), MouseDelta.y, Space.World) ;
     }
 }

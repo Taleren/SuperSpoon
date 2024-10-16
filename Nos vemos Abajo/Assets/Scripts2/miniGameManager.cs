@@ -20,14 +20,14 @@ public class miniGameManager : MonoBehaviour
     public void LoadMinigame(minigame _minigame)
     {
         gameManager.Instance.setState(gameManager.GameState.Minigame);
-
+        currentMinigame = _minigame;
         _minigame.StartMinigame();
     }
     public void endMinigame()
     {
         gameManager.Instance.setState(gameManager.GameState.FreePlay);
 
-        // currentMinigame.endMinigame();
+         currentMinigame.endMinigame();
     }
     // Start is called before the first frame update
     void Start()

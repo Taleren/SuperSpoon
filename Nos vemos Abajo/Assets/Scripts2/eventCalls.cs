@@ -10,8 +10,9 @@ public class eventCalls
 
 
     public InteractEvent.eventCallTypes callType;
-    public string DialogueKey;
+    public string nameKey;
     public TimelineAsset timelineObj;
   public GameObject obj;
+    public Animator anim;
     
 }

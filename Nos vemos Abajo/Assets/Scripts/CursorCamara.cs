@@ -28,7 +28,7 @@ public class CursorCamara : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.Instance.currentState == gameManager.GameState.FreePlay)
+        if (gameManager.Instance.currentState != gameManager.GameState.Paused)
         {
             RaycastHit hitContinuo;
             Ray rayContinuo = cam.ScreenPointToRay(Input.mousePosition);
@@ -73,6 +73,33 @@ public class CursorCamara : MonoBehaviour
                 //    Debug.Log("LO ESTAS TOCANDO OOOOOOOOOOOOOOOOOOOOOOOOOOO");
                 //}
             }
+
+        }
+        else
+        {
+            leaveCurrent();
+
+        }
+
+        if (Input.GetMouseButtonDown(0)) 
+        {
+
+
+            if(currentObject != null)
+            {
+                currentObject.Interact();
+            }
+            //RaycastHit hit;
+            //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            //if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickable)) 
+            //{
+            //    IObject _obj = hit.transform.gameObject.GetComponent<IObject>();
+            //    if (_obj != null)
+            //    {
+            //        _obj.Interact();
+            //    }
+            //    Debug.Log("LO ESTAS TOCANDO OOOOOOOOOOOOOOOOOOOOOOOOOOO");
+            //}
         }
     }
 }

@@ -8,13 +8,12 @@ public class minigameObject : basicObject
 {
   [SerializeField] private  miniGameObjState startState;
     private miniGameObjState currentState;
-    [SerializeField] minigame _fatherMinigame;
-  public  UnityEvent Mevent;
+   minigame _fatherMinigame;
   [SerializeField]  List<eventData> eventList;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _fatherMinigame = GetComponentInParent<minigame>();
     }
 
     // Update is called once per frame
@@ -25,6 +24,7 @@ public class minigameObject : basicObject
     public override void Interact()
     {
         eventData curEvent = getState();
+        print(curEvent.minigameEvent);
         eventManager.Instance.startEvent(curEvent.interactEvent, () => { curEvent.minigameEvent.Invoke(); });
     }
   private eventData getState()
@@ -36,8 +36,23 @@ public class minigameObject : basicObject
                 return _event;
             }
         }
+        print("State event is null " + currentState);
     return null;
 
+    }
+    public override void EnterHover()
+    {
+        if (showName)
+        {
+            string txt = getState().HoverText;
+            if (string.IsNullOrEmpty(txt))
+            {
+                txt = Hoverkey;
+            }
+
+            UIManager.Instance.showObjectName(txt);
+        }
+       
     }
     public void startMinigame()
     {
@@ -57,7 +72,8 @@ public class minigameObject : basicObject
 [Serializable]
 public class eventData
 {
-   public minigameObject.miniGameObjState state;
+    public string HoverText;
+    public minigameObject.miniGameObjState state;
    public InteractEvent interactEvent;
    public UnityEvent minigameEvent;
 }
