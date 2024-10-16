@@ -8,9 +8,10 @@ using UnityEngine;
 public class EeventCall : PropertyDrawer
 {
     SerializedProperty callType;
-    SerializedProperty DialogueKey;
+    SerializedProperty nameKey;
     SerializedProperty timelineObj;
     SerializedProperty obj;
+    SerializedProperty animator;
 
     private void OnEnable()
     {
@@ -21,10 +22,11 @@ public class EeventCall : PropertyDrawer
     {
         //
         callType = property.FindPropertyRelative("callType");
-        DialogueKey = property.FindPropertyRelative("DialogueKey");
+        nameKey = property.FindPropertyRelative("nameKey");
         timelineObj = property.FindPropertyRelative("timelineObj");
         obj = property.FindPropertyRelative("obj");
 
+        animator = property.FindPropertyRelative("animator");
 
         EditorGUI.BeginProperty(position, label, property);
         Rect foldOutBox = new Rect(position.min.x, position.min.y,position.size.x,EditorGUIUtility.singleLineHeight);
@@ -36,6 +38,7 @@ public class EeventCall : PropertyDrawer
         switch ((InteractEvent.eventCallTypes)callType.intValue)
         {
             case InteractEvent.eventCallTypes.animCall:
+                DrawAnimProperty(position);
                 DrawStringProperty(position, "Animation Key");
 
                 break;
@@ -78,15 +81,25 @@ public class EeventCall : PropertyDrawer
         EditorGUI.PropertyField(drawArea, callType, new GUIContent(callType.name));
         
     }
+    private void DrawAnimProperty(Rect position)
+    {
+        EditorGUIUtility.labelWidth = 100;
+
+        Rect drawArea = new Rect(position.min.x,
+             position.min.y + 2 * EditorGUIUtility.singleLineHeight,
+             position.size.x * .8f, EditorGUIUtility.singleLineHeight);
+
+        EditorGUI.PropertyField(drawArea, animator, new GUIContent(animator.name));
+    }
     private void DrawStringProperty(Rect position,string name)
     {
         EditorGUIUtility.labelWidth = 100;
 
         Rect drawArea = new Rect(position.min.x ,
-             position.min.y + 2* EditorGUIUtility.singleLineHeight,
+             position.min.y + 3.2f* EditorGUIUtility.singleLineHeight,
              position.size.x * .8f, EditorGUIUtility.singleLineHeight);
 
-        EditorGUI.PropertyField(drawArea, DialogueKey, new GUIContent(name));
+        EditorGUI.PropertyField(drawArea, nameKey, new GUIContent(name));
     }
     private void DrawTimelineObj(Rect position)
     {

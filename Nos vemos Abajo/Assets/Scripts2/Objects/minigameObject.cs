@@ -24,7 +24,6 @@ public class minigameObject : basicObject
     public override void Interact()
     {
         eventData curEvent = getState();
-        print(curEvent.minigameEvent);
         eventManager.Instance.startEvent(curEvent.interactEvent, () => { curEvent.minigameEvent.Invoke(); });
     }
   private eventData getState()
@@ -67,6 +66,10 @@ public class minigameObject : basicObject
     public void setState(miniGameObjState _state)
     {
         currentState = _state;
+    }
+    public void nextCall()
+    {
+        eventManager.Instance.playCall();
     }
 }
 [Serializable]

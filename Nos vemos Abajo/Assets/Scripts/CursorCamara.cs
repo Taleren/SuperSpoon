@@ -81,25 +81,6 @@ public class CursorCamara : MonoBehaviour
 
         }
 
-        if (Input.GetMouseButtonDown(0)) 
-        {
-
-
-            if(currentObject != null)
-            {
-                currentObject.Interact();
-            }
-            //RaycastHit hit;
-            //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            //if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickable)) 
-            //{
-            //    IObject _obj = hit.transform.gameObject.GetComponent<IObject>();
-            //    if (_obj != null)
-            //    {
-            //        _obj.Interact();
-            //    }
-            //    Debug.Log("LO ESTAS TOCANDO OOOOOOOOOOOOOOOOOOOOOOOOOOO");
-            //}
-        }
+       
     }
 }

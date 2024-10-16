@@ -13,6 +13,6 @@ public class eventCalls
     public string nameKey;
     public TimelineAsset timelineObj;
   public GameObject obj;
-    public Animator anim;
+    public Animator animator;
     
 }

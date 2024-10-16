@@ -35,26 +35,28 @@ public class eventManager : MonoBehaviour
     {
         currentCalls = _event.eventOrder;
         currentNextAction = nextAction;
-        callIndex = 0;
+        callIndex = -1;
         playCall();
     }
 
     public void playCall()
     {
+        callIndex++;
+        print("Play call");
+        print(currentCalls.Length);
         if (callIndex < currentCalls.Length)
         {
             eventCalls Call = currentCalls[callIndex];
             switch (Call.callType)
             {
                 case InteractEvent.eventCallTypes.animCall:
-                    Call.anim.Play(Call.nameKey);
+                    Call.animator.Play(Call.nameKey);
                     break;
                 case InteractEvent.eventCallTypes.timelineCall:
-                    gameManager.Instance.callPingPong("Playing timeline: " + Call.timelineObj, () => { print("siguiente call"); callIndex++; playCall(); });
-
+                    timelineManager.Instance.callTimeline(Call.timelineObj, () => { print("siguiente call"); playCall(); });
                     break;
                 case InteractEvent.eventCallTypes.dialogueCall:
-                    gameManager.Instance.callPingPong("Playing Dialogue: " + Call.nameKey, () => { print("siguiente call"); callIndex++; playCall(); });
+                    gameManager.Instance.callPingPong("Playing Dialogue: " + Call.nameKey, () => { print("siguiente call"); playCall(); });
 
 
                     break;
@@ -65,6 +67,7 @@ public class eventManager : MonoBehaviour
         }
         else
         {
+            print("currentaction Invoke");
             currentNextAction.Invoke();
         }
     }
