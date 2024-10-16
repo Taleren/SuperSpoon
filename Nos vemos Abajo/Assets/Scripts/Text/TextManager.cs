@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using TMPro;
 using UnityEditor;
@@ -13,9 +14,8 @@ public class TextManager : MonoBehaviour
 
     // prot
     [Header("Test String")]
-    [SerializeField] private string _IndiceLinea;
-    [SerializeField] private string _IndiceParrafoInicio;
-    [SerializeField] private int _numLineas;
+    //[SerializeField] private int _IndiceParrafoInicio;
+    [SerializeField] private int _numParrafos ;
 
     private int IndiceCaracterVisibleActualmente;
     private Coroutine _typewriterCoroutine;
@@ -23,19 +23,17 @@ public class TextManager : MonoBehaviour
     // Delay
     private WaitForSeconds _simpleDelay;
     private WaitForSeconds _interpunctuationDelay;
+    private WaitForSeconds _finalDelay;
 
     // Tiempo espera
     [Header("Typewriter Settings")]
     [SerializeField] private float characterPerSecond = 20;
     [SerializeField] private float interpunctuationDelay = 0.5f;
+    [SerializeField] private float finalDelay = 1.0f;
 
     // Saltar texto
     public bool CurrentlySkipping {  get; private set; }
-    private WaitForSeconds _SkipDelay;
 
-    [Header("Skip Options")]
-    [SerializeField] private bool quickSkip;
-    [SerializeField][Min(1)] private int skipSpeedup = 5;
 
     // Excel
     List<List<string>> dialogs;
@@ -49,8 +47,8 @@ public class TextManager : MonoBehaviour
 
         _simpleDelay = new WaitForSeconds(1/characterPerSecond);
         _interpunctuationDelay = new WaitForSeconds(interpunctuationDelay);
+        _finalDelay = new WaitForSeconds(finalDelay);
 
-        _simpleDelay = new WaitForSeconds (1/ (characterPerSecond * skipSpeedup));
 
         //Dialogo
         DialogueHash = new Dictionary<string, List<string>>();
@@ -69,7 +67,6 @@ public class TextManager : MonoBehaviour
                     string[] dialoguestring = trimString.Split(';');
                     List<string> dialogue = new List<string>(dialoguestring);
                     dialogue.RemoveAt(0);
-                    //print(dialoguestring[0]);
                     DialogueHash.Add(dialoguestring[0], dialogue);
                 }
             }
@@ -92,53 +89,42 @@ public class TextManager : MonoBehaviour
     }
 
     // Párrafo a partir del índice de la primera línea
-    public void getConversation(string basekey)
+    public void getParrafo(string basekey)
     {
 
         dialogs = new List<List<string>>();
         int i = 0;
+
         List<string> dialog = getLine(basekey);
         while (dialog != null)
         {
             i++;
             dialogs.Add(dialog);
-            dialog = getLine(basekey + i);
+            dialog = getLine(basekey + "_" + i);
         }
-        print(dialogs.Count);
-        SetConversation(dialogs);
+
+        SetParrafo();
     }
+
 
 
     private void Start()
     {
-        //SetText(getLine(_IndiceLinea)[0]);
-        getConversation(_IndiceParrafoInicio);
+        _typewriterCoroutine = StartCoroutine(SetConversacion());
+
     }
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(1)) 
+        if(Input.GetKeyDown("space")) 
         {
             if (_texBox.maxVisibleCharacters != _texBox.textInfo.characterCount - 1)
                 Skip();
         }
     }
 
-
-    public void SetText(string text) 
-    {
-        if (_typewriterCoroutine != null)
-            StopCoroutine(_typewriterCoroutine);
-
-        _texBox.text = text;
-        _texBox.maxVisibleCharacters = 0;
-        IndiceCaracterVisibleActualmente = 0;
-
-        _typewriterCoroutine = StartCoroutine(Typewriter());
-
-    }
-
-    public void SetConversation(List<List<string>> conversacion)
+ 
+    public void SetParrafo()
     {
         if (_typewriterCoroutine != null)
             StopCoroutine(_typewriterCoroutine);
@@ -146,13 +132,26 @@ public class TextManager : MonoBehaviour
         _texBox.maxVisibleCharacters = 0;
         IndiceCaracterVisibleActualmente = 0;
 
-        _texBox.text += conversacion[0][0] + "\n";
-        for (int i = 1; i < _numLineas; i++)
+
+        int i = 0;
+        while(i < dialogs.Count-1)
         {
-            _texBox.text += conversacion[i][0]+"\n";
+            i++;
+            _texBox.text += dialogs[i][0]+"\n";
         }
-        _typewriterCoroutine = StartCoroutine(Typewriter());
+    }
+    public IEnumerator SetConversacion()
+    {
+        for (int i = 1; i < _numParrafos; i++)
+        {
+            getParrafo((i).ToString());
 
+            _texBox.maxVisibleCharacters = 0; 
+
+            yield return StartCoroutine(Typewriter());
+            yield return _finalDelay;
+            _texBox.text = string.Empty;
+        }
     }
 
     private IEnumerator Typewriter() 
@@ -161,7 +160,6 @@ public class TextManager : MonoBehaviour
         _texBox.ForceMeshUpdate();
         yield return new WaitForEndOfFrame();   
 
-        //print(textInfo.characterCount);
         // Delay
         while (IndiceCaracterVisibleActualmente < textInfo.characterCount) 
         { 
@@ -177,38 +175,30 @@ public class TextManager : MonoBehaviour
             }
             else 
             { 
-                yield return CurrentlySkipping ? _simpleDelay : _simpleDelay; 
+                yield return _simpleDelay; 
             }
             
             IndiceCaracterVisibleActualmente++;
+            
         }
 
-    
+
     }
+    
 
     void Skip() 
     {
-        if (CurrentlySkipping) return;
-
-        CurrentlySkipping = true;
-
-        if(!quickSkip)
-        {
-            StartCoroutine(SkipSpeedUpReset());
-            return;
-        }
-
         StopCoroutine(_typewriterCoroutine);
-        _texBox.maxVisibleCharacters = _texBox.textInfo.characterCount;
-
+        TMP_TextInfo textInfo = _texBox.textInfo;
+        _texBox.maxVisibleCharacters = textInfo.characterCount;
+        return;
     }
 
-    private IEnumerator SkipSpeedUpReset()
-    {
-        yield return new WaitUntil(() => _texBox.maxVisibleCharacters == _texBox.textInfo.characterCount-1);
-        CurrentlySkipping = false;
-    }
 
 
 
 }
+
+//Tengo este código en unity y quiero que los parrafos se muestrende
+//forma que cuando se termine de escribir uno, espero unos segundos,
+//vacíe el cuadro de texto y empiece a escribir el siguiente

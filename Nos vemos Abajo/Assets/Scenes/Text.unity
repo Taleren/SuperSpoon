@@ -468,14 +468,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba54c1d5bdaea84699c6af4f37cb06f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _IndiceLinea: 
-  _IndiceParrafoInicio: 5
-  _numLineas: 10
-  characterPerSecond: 20
-  interpunctuationDelay: 0.5
-  quickSkip: 0
-  skipSpeedup: 5
-  textDialogue: {fileID: 4900000, guid: f7f4daf38501bee47b4dbedea6d376b2, type: 3}
+  _numParrafos: 10
+  characterPerSecond: 100
+  interpunctuationDelay: 0
+  finalDelay: 2
+  textDialogue: {fileID: 4900000, guid: 8432ca1dcccee1f4eaa4f1e9a8575d1f, type: 3}
 --- !u!114 &1222233370
 MonoBehaviour:
   m_ObjectHideFlags: 0
