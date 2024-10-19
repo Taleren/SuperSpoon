@@ -13,29 +13,29 @@ public class SoundManager : MonoBehaviour
         {
             instance = this;
         }
-        /*else
+        else
         {
             Destroy(gameObject);
             return;
-        }*/
+        }
         DontDestroyOnLoad(gameObject);
 
     }
 
     // Método para reproducir un sonido en una posición específica
-    public void PlaySound(string soundName, Vector3 soundPosition)
+    public void PlaySound(string soundName, Vector3 soundPosition, GameObject parent = null)
     {
         Sound s = Array.Find(sounds, sound => sound.name == soundName);
-        
-        if (s == null)
-        {
-            Debug.LogWarning("Sound: " + soundName + " not found!");
-            return;
-        }
 
         // Crear un objeto temporal para el AudioSource 
-        GameObject tempAudioObject = new GameObject("TempAudio");
+        GameObject tempAudioObject = new GameObject("TemporalAudio");
         tempAudioObject.transform.position = soundPosition;
+
+        // Si se ha pasado un padre, asignar el objeto temporal como hijo de ese padre
+        if (parent != null)
+        {
+            tempAudioObject.transform.SetParent(parent.transform);
+        }
 
         // Añadir un AudioSource al objeto temporal
         AudioSource tempAudioSource = tempAudioObject.AddComponent<AudioSource>();

@@ -20,8 +20,6 @@ public class Sound
 
     public bool loop; // Si el sonido debe repetirse en bucle
 
-    public bool esGeneral = false; // Para la posición del sonido
-
     [HideInInspector]
     public AudioSource source; // El AudioSource que reproducirá este sonido
 }
