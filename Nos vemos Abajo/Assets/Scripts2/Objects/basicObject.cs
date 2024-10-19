@@ -11,6 +11,7 @@ public class basicObject : MonoBehaviour,IObject
     public string Hoverkey;
     public bool showName = true;
     MaterialPropertyBlock materialPropertyBlock;
+    protected ObjState currentState;
 
 
     public virtual void EnterHover()
@@ -47,5 +48,15 @@ public class basicObject : MonoBehaviour,IObject
         {
             outline.SetActive(false);
         }
+    }
+    public enum ObjState
+    {
+        Off,
+        Locked,
+        Active
+    }
+    public void setState(ObjState _state)
+    {
+        currentState = _state;
     }
 }

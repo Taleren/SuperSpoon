@@ -10,6 +10,7 @@ public class eventManager : MonoBehaviour
     Action currentNextAction;
 
     public static eventManager Instance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +51,7 @@ public class eventManager : MonoBehaviour
             switch (Call.callType)
             {
                 case InteractEvent.eventCallTypes.animCall:
-                    Call.animator.Play(Call.nameKey);
+                    Call.animator.Play(Call.nameKey,-1, 0.0f);
                     break;
                 case InteractEvent.eventCallTypes.timelineCall:
                     timelineManager.Instance.callTimeline(Call.timelineObj, () => { print("siguiente call"); playCall(); });
@@ -60,7 +61,9 @@ public class eventManager : MonoBehaviour
 
 
                     break;
-                
+                case InteractEvent.eventCallTypes.changeObjectState:
+                    Call.interactObject.setState(Call.newState);
+                    break;
                 default:
                     break;
             }

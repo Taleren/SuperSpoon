@@ -9,13 +9,16 @@ public class CursorCamara : MonoBehaviour
     IObject currentObject;
 
     public LayerMask clickable;
+    public LayerMask clickableminigame;
+    private LayerMask currentMask;
 
     void Start()
     {
         cam = Camera.main;
-
-       // Cursor.visible = true;
-       // Cursor.lockState = CursorLockMode.Locked;
+        currentMask = clickable;
+        gameManager.Instance.setChangeStateEvent(ChangeState);
+        // Cursor.visible = true;
+        // Cursor.lockState = CursorLockMode.Locked;
     }
     void leaveCurrent()
     {
@@ -33,7 +36,7 @@ public class CursorCamara : MonoBehaviour
             RaycastHit hitContinuo;
             Ray rayContinuo = cam.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(rayContinuo, out hitContinuo, Mathf.Infinity, clickable))
+            if (Physics.Raycast(rayContinuo, out hitContinuo, Mathf.Infinity, currentMask))
             {
                 IObject _obj = hitContinuo.transform.gameObject.GetComponent<IObject>();
                 if (_obj == null)
@@ -82,5 +85,22 @@ public class CursorCamara : MonoBehaviour
         }
 
        
+    }
+    public void ChangeState()
+    {
+        switch (gameManager.Instance.currentState)
+        {
+            case gameManager.GameState.Paused:
+                break;
+            case gameManager.GameState.FreePlay:
+                currentMask = clickable;
+                break;
+            case gameManager.GameState.Minigame:
+                currentMask = clickableminigame;
+
+                break;
+            default:
+                break;
+        }
     }
 }

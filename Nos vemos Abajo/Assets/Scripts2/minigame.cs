@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class minigame : MonoBehaviour
 {
-  //[SerializeField]  GameObject mainModel;
+    //[SerializeField]  GameObject mainModel;
 
-   [SerializeField] minigameObject activateObject;
-    public void StartMinigame()
+    [SerializeField] protected InteractEvent onEndEvent;
+
+    // [SerializeField] minigameObject activateObject;
+    public virtual void StartMinigame()
     {
         gameObject.SetActive(true);
         transform.position = Camera.main.transform.position + Camera.main.transform.forward * 0.5f;
@@ -21,10 +23,10 @@ public class minigame : MonoBehaviour
         gameObject.SetActive(false);
         miniGameManager.Instance.endMinigame();
     }
-    public void nextState()
-    {
-        activateObject.setState(minigameObject.miniGameObjState.Active);
-    }
+    //public void nextState()
+    //{
+    //    activateObject.setState(minigameObject.ObjState.Active);
+    //}
     private void Start()
     {
         gameObject.SetActive(false);

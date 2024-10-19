@@ -15,5 +15,6 @@ public class InteractEvent
         animCall,
         timelineCall,
         dialogueCall,
+        changeObjectState
     }
 }

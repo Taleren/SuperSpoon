@@ -10,7 +10,7 @@ public class gameManager : MonoBehaviour
   [SerializeField]  CinemachineVirtualCamera mainCamera;
     [SerializeField] float savedCameraSpeedX;
     [SerializeField] float savedCameraSpeedY;
-
+    Action changeState;
     public GameState currentState { get; private set; }
     private void Awake()
     {
@@ -78,6 +78,11 @@ public class gameManager : MonoBehaviour
             default:
                 break;
         }
+        changeState.Invoke();
+    }
+    public void setChangeStateEvent(Action action)
+    {
+        changeState += action;
     }
     public enum GameState
     {

@@ -14,5 +14,7 @@ public class eventCalls
     public TimelineAsset timelineObj;
   public GameObject obj;
     public Animator animator;
+    [SerializeField, SerializeReference]    public basicObject interactObject;
+  public  basicObject.ObjState newState;
     
 }

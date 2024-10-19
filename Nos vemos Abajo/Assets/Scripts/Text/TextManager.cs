@@ -142,6 +142,7 @@ public class TextManager : MonoBehaviour
     }
     public IEnumerator SetConversacion()
     {
+        print(_numParrafos);
         for (int i = 1; i < _numParrafos; i++)
         {
             getParrafo((i).ToString());
@@ -151,7 +152,9 @@ public class TextManager : MonoBehaviour
             yield return StartCoroutine(Typewriter());
             yield return _finalDelay;
             _texBox.text = string.Empty;
+            print("siguiente parrafo");
         }
+        print("terminado");
     }
 
     private IEnumerator Typewriter() 

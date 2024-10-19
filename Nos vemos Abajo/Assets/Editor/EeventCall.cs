@@ -12,7 +12,8 @@ public class EeventCall : PropertyDrawer
     SerializedProperty timelineObj;
     SerializedProperty obj;
     SerializedProperty animator;
-
+    SerializedProperty interactObject;
+    SerializedProperty newState;
     private void OnEnable()
     {
         //callType = serializedObject.FindProperty("callType");
@@ -27,6 +28,8 @@ public class EeventCall : PropertyDrawer
         obj = property.FindPropertyRelative("obj");
 
         animator = property.FindPropertyRelative("animator");
+        newState = property.FindPropertyRelative("newState");
+        interactObject = property.FindPropertyRelative("interactObject");
 
         EditorGUI.BeginProperty(position, label, property);
         Rect foldOutBox = new Rect(position.min.x, position.min.y,position.size.x,EditorGUIUtility.singleLineHeight);
@@ -48,6 +51,10 @@ public class EeventCall : PropertyDrawer
             case InteractEvent.eventCallTypes.dialogueCall:
                 DrawStringProperty(position,"Dialogue Key");
 
+                break;
+            case InteractEvent.eventCallTypes.changeObjectState:
+                DrawNewState(position);
+                DrawInteractObject(position);
                 break;
                       default:
                 break;
@@ -121,6 +128,26 @@ public class EeventCall : PropertyDrawer
              position.size.x * .8f, EditorGUIUtility.singleLineHeight);
 
         EditorGUI.PropertyField(drawArea,obj, new GUIContent(name));
+    }
+    private void DrawInteractObject(Rect position)
+    {
+        EditorGUIUtility.labelWidth = 100;
+
+        Rect drawArea = new Rect(position.min.x,
+             position.min.y + 2 * EditorGUIUtility.singleLineHeight,
+             position.size.x * .8f, EditorGUIUtility.singleLineHeight);
+
+        EditorGUI.PropertyField(drawArea, interactObject, new GUIContent(interactObject.name));
+    }
+    private void DrawNewState(Rect position)
+    {
+        EditorGUIUtility.labelWidth = 100;
+
+        Rect drawArea = new Rect(position.min.x,
+             position.min.y + 3.2f * EditorGUIUtility.singleLineHeight,
+             position.size.x * .8f, EditorGUIUtility.singleLineHeight);
+
+        EditorGUI.PropertyField(drawArea, newState, new GUIContent(newState.name));
     }
 }
 

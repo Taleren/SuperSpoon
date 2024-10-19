@@ -6,8 +6,7 @@ using UnityEngine.Events;
 
 public class minigameObject : basicObject
 {
-  [SerializeField] private  miniGameObjState startState;
-    private miniGameObjState currentState;
+  [SerializeField] private  ObjState startState;
    minigame _fatherMinigame;
   [SerializeField]  List<eventData> eventList;
     // Start is called before the first frame update
@@ -57,16 +56,8 @@ public class minigameObject : basicObject
     {
         currentState = startState;
     }
-    public enum miniGameObjState
-    {
-        Off,
-        Locked,
-        Active
-    }
-    public void setState(miniGameObjState _state)
-    {
-        currentState = _state;
-    }
+  
+  
     public void nextCall()
     {
         eventManager.Instance.playCall();
@@ -76,7 +67,7 @@ public class minigameObject : basicObject
 public class eventData
 {
     public string HoverText;
-    public minigameObject.miniGameObjState state;
+    public minigameObject.ObjState state;
    public InteractEvent interactEvent;
    public UnityEvent minigameEvent;
 }
