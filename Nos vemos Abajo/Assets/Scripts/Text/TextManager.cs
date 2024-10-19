@@ -154,7 +154,8 @@ public class TextManager : MonoBehaviour
                         character == ';' || character == '!' || character == '-' || character == '\n')
                     { 
                         yield return _interpunctuationDelay;
-                        //INSERTAR SONIDO
+                        SoundManager.instance.PlaySound("salchipapa", transform.position, gameObject);
+                    
                     }
                     else 
                     { 
