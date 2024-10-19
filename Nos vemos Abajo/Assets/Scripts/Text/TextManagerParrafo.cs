@@ -5,26 +5,25 @@ using System.Linq;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(TMP_Text))]
 
-public class TextManager : MonoBehaviour
+public class TextManagerParrafo : MonoBehaviour
 {
    private TMP_Text _texBox;
 
-    // Indices
-    private int IndiceCaracterVisibleActualmente;
-    private int IndiceLineaActual = 0;
+    // prot
+    [Header("Test String")]
+    //[SerializeField] private int _IndiceParrafoInicio;
+    [SerializeField] private int _numParrafos ;
 
-    // Corrutina
+    private int IndiceCaracterVisibleActualmente;
     private Coroutine _typewriterCoroutine;
-    
+
     // Delay
     private WaitForSeconds _simpleDelay;
     private WaitForSeconds _interpunctuationDelay;
     private WaitForSeconds _finalDelay;
-    private WaitForSeconds _tSalto;
 
     // Tiempo espera
     [Header("Typewriter Settings")]
@@ -32,13 +31,12 @@ public class TextManager : MonoBehaviour
     [SerializeField] private float interpunctuationDelay = 0.5f;
     [SerializeField] private float finalDelay = 1.0f;
 
-
-    // Parar saltar
-    public bool pausado { get; private set; } = false;
+    // Saltar texto
+    public bool CurrentlySkipping {  get; private set; }
 
 
     // Excel
-    [Header("Documento de texto en .csv ")]
+    List<List<string>> dialogs;
     [SerializeField] TextAsset textDialogue;
     Dictionary<string, List<string> > DialogueHash;
 
@@ -50,7 +48,7 @@ public class TextManager : MonoBehaviour
         _simpleDelay = new WaitForSeconds(1/characterPerSecond);
         _interpunctuationDelay = new WaitForSeconds(interpunctuationDelay);
         _finalDelay = new WaitForSeconds(finalDelay);
-        _tSalto = new WaitForSeconds(0);
+
 
         //Dialogo
         DialogueHash = new Dictionary<string, List<string>>();
@@ -85,30 +83,35 @@ public class TextManager : MonoBehaviour
         }
         else
         {
-            print("Dialogue not found " + key);
+            print("Dialogue not found" + key);
             return null;
         }
     }
 
-    // Imprimir por pantalla los subtitulos a través de la caja de texto
-    public void getSubs(string basekey)
+    // Párrafo a partir del índice de la primera línea
+    public void getParrafo(string basekey)
     {
-        if (_typewriterCoroutine != null)
-            StopCoroutine(_typewriterCoroutine);
 
-        _texBox.text = string.Empty;
-        _texBox.maxVisibleCharacters = 0;
-        IndiceCaracterVisibleActualmente = 0;
-        
-        _texBox.text += getLine(basekey)[0] + "\n";
-        
+        dialogs = new List<List<string>>();
+        int i = 0;
+
+        List<string> dialog = getLine(basekey);
+        while (dialog != null)
+        {
+            i++;
+            dialogs.Add(dialog);
+            dialog = getLine(basekey + "_" + i);
+        }
+
+        SetParrafo();
     }
 
 
 
     private void Start()
     {
-        StartCoroutine(Typewriter());
+        _typewriterCoroutine = StartCoroutine(SetConversacion());
+
     }
 
     private void Update()
@@ -117,81 +120,85 @@ public class TextManager : MonoBehaviour
         {
             if (_texBox.maxVisibleCharacters != _texBox.textInfo.characterCount - 1)
                 Skip();
-            
-        }
-        if (Input.GetKeyDown("a"))
-        {
-            Pause();
-        }
-        if (Input.GetKeyDown("s"))
-        {
-            Continue();
         }
     }
 
-    
+ 
+    public void SetParrafo()
+    {
+        if (_typewriterCoroutine != null)
+            StopCoroutine(_typewriterCoroutine);
+
+        _texBox.maxVisibleCharacters = 0;
+        IndiceCaracterVisibleActualmente = 0;
+
+
+        int i = 0;
+        while(i < dialogs.Count-1)
+        {
+            i++;
+            _texBox.text += dialogs[i][0]+"\n";
+        }
+    }
+    public IEnumerator SetConversacion()
+    {
+        for (int i = 1; i < _numParrafos; i++)
+        {
+            getParrafo((i).ToString());
+
+            _texBox.maxVisibleCharacters = 0; 
+
+            yield return StartCoroutine(Typewriter());
+            yield return _finalDelay;
+            _texBox.text = string.Empty;
+        }
+    }
 
     private IEnumerator Typewriter() 
     { 
         TMP_TextInfo textInfo = _texBox.textInfo;
         _texBox.ForceMeshUpdate();
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();   
 
-        
-        while (DialogueHash[IndiceLineaActual.ToString()] != null && !pausado  )
-        {
-            // Texto
-            getSubs(IndiceLineaActual.ToString());
-            // Delay + typewriter
-            while (IndiceCaracterVisibleActualmente < textInfo.characterCount) 
-                { 
-                    char character = textInfo.characterInfo[IndiceCaracterVisibleActualmente].character;
+        // Delay
+        while (IndiceCaracterVisibleActualmente < textInfo.characterCount) 
+        { 
+            char character = textInfo.characterInfo[IndiceCaracterVisibleActualmente].character;
 
-                    _texBox.maxVisibleCharacters++;
+            _texBox.maxVisibleCharacters++;
 
-                    if (character == '?' || character == '.' || character == ',' || character == ':' ||
-                        character == ';' || character == '!' || character == '-' || character == '\n')
-                    { 
-                        yield return _interpunctuationDelay;
-                        //INSERTAR SONIDO
-                    }
-                    else 
-                    { 
-                        yield return _simpleDelay; 
-                    }
-            
-                    IndiceCaracterVisibleActualmente++;
+            if (!CurrentlySkipping && 
+                (character == '?' || character == '.' || character == ',' || character == ':' ||
+                character == ';' || character == '!' || character == '-' || character == '\n'))
+            { 
+                yield return _interpunctuationDelay;
             }
-            IndiceLineaActual++;
-            // Parada final
-            yield return _finalDelay;
+            else 
+            { 
+                yield return _simpleDelay; 
+            }
+            
+            IndiceCaracterVisibleActualmente++;
+            
         }
+
 
     }
     
 
     void Skip() 
     {
+        StopCoroutine(_typewriterCoroutine);
         TMP_TextInfo textInfo = _texBox.textInfo;
         _texBox.maxVisibleCharacters = textInfo.characterCount;
-        StopCoroutine(Typewriter());
         return;
     }
 
-    void Pause()
-    {
-        pausado = true;
-        StopCoroutine(Typewriter());
-        
-        return;
-    }
-    void Continue()
-    {
-        if (!pausado) return;
 
-        pausado = false;
-        StartCoroutine(Typewriter());
-        return;
-    }
+
 
 }
+
+//Tengo este código en unity y quiero que los parrafos se muestrende
+//forma que cuando se termine de escribir uno, espero unos segundos,
+//vacíe el cuadro de texto y empiece a escribir el siguiente
