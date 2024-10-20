@@ -57,7 +57,8 @@ public class eventManager : MonoBehaviour
                     timelineManager.Instance.callTimeline(Call.timelineObj, () => { print("siguiente call"); playCall(); });
                     break;
                 case InteractEvent.eventCallTypes.dialogueCall:
-                    gameManager.Instance.callPingPong("Playing Dialogue: " + Call.nameKey, () => { print("siguiente call"); playCall(); });
+                    TextManager.Instance.playDialogue(Call.nameKey, () => { print("siguiente call"); playCall(); });
+                   // gameManager.Instance.callPingPong("Playing Dialogue: " + Call.nameKey, () => { print("siguiente call"); playCall(); });
 
 
                     break;

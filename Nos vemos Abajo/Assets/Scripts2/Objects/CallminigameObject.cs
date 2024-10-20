@@ -9,6 +9,6 @@ public class CallminigameObject : basicObject
     {
         eventManager.Instance.startEvent(intEvent, () => { miniGameManager.Instance.LoadMinigame(_Minigame); });
         LeaveHover();
-
+ 
     }
 }

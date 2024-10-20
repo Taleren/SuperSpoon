@@ -7,4 +7,6 @@ public interface IObject
     public void EnterHover();
     public void LeaveHover();
 
+    public basicObject.ObjState getState();
+
 }

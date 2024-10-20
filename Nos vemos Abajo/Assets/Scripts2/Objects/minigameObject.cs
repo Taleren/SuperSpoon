@@ -6,12 +6,13 @@ using UnityEngine.Events;
 
 public class minigameObject : basicObject
 {
-  [SerializeField] private  ObjState startState;
    minigame _fatherMinigame;
   [SerializeField]  List<eventData> eventList;
+    [SerializeField] bool resetState = true;
     // Start is called before the first frame update
-    void Start()
+public   override void Start()
     {
+        base.Start();
         _fatherMinigame = GetComponentInParent<minigame>();
     }
 
@@ -22,10 +23,10 @@ public class minigameObject : basicObject
     }
     public override void Interact()
     {
-        eventData curEvent = getState();
+        eventData curEvent = getStateEvents();
         eventManager.Instance.startEvent(curEvent.interactEvent, () => { curEvent.minigameEvent.Invoke(); });
     }
-  private eventData getState()
+  private eventData getStateEvents()
     {
         foreach (eventData _event in eventList)
         {
@@ -42,7 +43,7 @@ public class minigameObject : basicObject
     {
         if (showName)
         {
-            string txt = getState().HoverText;
+            string txt = getStateEvents().HoverText;
             if (string.IsNullOrEmpty(txt))
             {
                 txt = Hoverkey;
@@ -54,7 +55,12 @@ public class minigameObject : basicObject
     }
     public void startMinigame()
     {
-        currentState = startState;
+        if (resetState)
+        {
+
+            currentState = startState;
+        }
+    
     }
   
   

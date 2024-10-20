@@ -39,11 +39,11 @@ public class CursorCamara : MonoBehaviour
             if (Physics.Raycast(rayContinuo, out hitContinuo, Mathf.Infinity, currentMask))
             {
                 IObject _obj = hitContinuo.transform.gameObject.GetComponent<IObject>();
-                if (_obj == null)
+                if (_obj == null || _obj.getState() == basicObject.ObjState.Off)
                 {
                     leaveCurrent();
                 }
-                if (_obj != currentObject)
+                if (_obj != currentObject && _obj.getState() != basicObject.ObjState.Off)
                 {
                     leaveCurrent();
                     currentObject = _obj;

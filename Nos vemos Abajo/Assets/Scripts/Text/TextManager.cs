@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
@@ -15,7 +16,8 @@ public class TextManager : MonoBehaviour
 
     // Indices
     private int IndiceCaracterVisibleActualmente;
-    private int IndiceLineaActual = 0;
+    [SerializeField] private int IndiceLineaActual;
+    private string DialogoActual;
 
     // Corrutina
     private Coroutine _typewriterCoroutine;
@@ -42,9 +44,15 @@ public class TextManager : MonoBehaviour
     [SerializeField] TextAsset textDialogue;
     Dictionary<string, List<string> > DialogueHash;
 
+    public static TextManager Instance;
 
+   private Action nextAction;
     private void Awake()
     {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
         _texBox = GetComponent<TMP_Text>();
 
         _simpleDelay = new WaitForSeconds(1/characterPerSecond);
@@ -69,6 +77,7 @@ public class TextManager : MonoBehaviour
                     string[] dialoguestring = trimString.Split(';');
                     List<string> dialogue = new List<string>(dialoguestring);
                     dialogue.RemoveAt(0);
+                    //print(dialoguestring[0]);
                     DialogueHash.Add(dialoguestring[0], dialogue);
                 }
             }
@@ -93,14 +102,14 @@ public class TextManager : MonoBehaviour
     // Imprimir por pantalla los subtitulos a trav�s de la caja de texto
     public void getSubs(string basekey)
     {
-        if (_typewriterCoroutine != null)
-            StopCoroutine(_typewriterCoroutine);
+        //if (_typewriterCoroutine != null)
+        //    StopCoroutine(_typewriterCoroutine);
 
-        _texBox.text = string.Empty;
+        //_texBox.text = string.Empty;
         _texBox.maxVisibleCharacters = 0;
         IndiceCaracterVisibleActualmente = 0;
         
-        _texBox.text += getLine(basekey)[0] + "\n";
+        _texBox.text = getLine(basekey)[0] + "\n";
         
     }
 
@@ -108,7 +117,7 @@ public class TextManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(Typewriter());
+    _typewriterCoroutine =  StartCoroutine(Typewriter("Introtutorial_"));
     }
 
     private void Update()
@@ -127,25 +136,32 @@ public class TextManager : MonoBehaviour
         {
             Continue();
         }
-        print("terminado");
     }
 
-    
+    public void playDialogue(string linea, Action action)
+    {
+        nextAction = action;
+        _typewriterCoroutine = StartCoroutine(Typewriter(linea));
+    }
 
-    private IEnumerator Typewriter() 
-    { 
-        TMP_TextInfo textInfo = _texBox.textInfo;
-        _texBox.ForceMeshUpdate();
-        yield return new WaitForEndOfFrame();
-
-        
-        while (DialogueHash[IndiceLineaActual.ToString()] != null && !pausado  )
+    private IEnumerator Typewriter(string linea) 
+    {
+        print("ss");
+        DialogoActual = linea;
+       
+        while (getLine(DialogoActual + IndiceLineaActual.ToString())/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null && !pausado  )
         {
             // Texto
-            getSubs(IndiceLineaActual.ToString());
+            getSubs(DialogoActual + IndiceLineaActual.ToString());
+            print(DialogoActual + IndiceLineaActual.ToString());
+            _texBox.ForceMeshUpdate();
+            TMP_TextInfo textInfo = _texBox.textInfo;
+
+            yield return new WaitForEndOfFrame();
             // Delay + typewriter
             while (IndiceCaracterVisibleActualmente < textInfo.characterCount) 
-                { 
+                {
+                print("hey");
                     char character = textInfo.characterInfo[IndiceCaracterVisibleActualmente].character;
 
                     _texBox.maxVisibleCharacters++;
@@ -154,7 +170,7 @@ public class TextManager : MonoBehaviour
                         character == ';' || character == '!' || character == '-' || character == '\n')
                     { 
                         yield return _interpunctuationDelay;
-                        SoundManager.instance.PlaySound("salchipapa", transform.position, gameObject);
+                      //  SoundManager.instance.PlaySound("salchipapa", transform.position, gameObject);
                     
                     }
                     else 
@@ -166,9 +182,12 @@ public class TextManager : MonoBehaviour
             }
             IndiceLineaActual++;
             // Parada final
+            print("parada final");
             yield return _finalDelay;
         }
-
+        _texBox.text = string.Empty;
+        nextAction.Invoke();
+        print("terminado");
     }
     
 
@@ -176,14 +195,14 @@ public class TextManager : MonoBehaviour
     {
         TMP_TextInfo textInfo = _texBox.textInfo;
         _texBox.maxVisibleCharacters = textInfo.characterCount;
-        StopCoroutine(Typewriter());
+        StopCoroutine(_typewriterCoroutine);
         return;
     }
 
     void Pause()
     {
         pausado = true;
-        StopCoroutine(Typewriter());
+        StopCoroutine(_typewriterCoroutine);
         
         return;
     }
@@ -192,7 +211,7 @@ public class TextManager : MonoBehaviour
         if (!pausado) return;
 
         pausado = false;
-        StartCoroutine(Typewriter());
+     _typewriterCoroutine =   StartCoroutine(Typewriter(""));
         return;
     }
 

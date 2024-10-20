@@ -11,6 +11,7 @@ public class gameManager : MonoBehaviour
     [SerializeField] float savedCameraSpeedX;
     [SerializeField] float savedCameraSpeedY;
     Action changeState;
+    Action startGame;
     public GameState currentState { get; private set; }
     private void Awake()
     {
@@ -28,6 +29,7 @@ public class gameManager : MonoBehaviour
     {
         mainCamera = (CinemachineVirtualCamera)Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
         print(mainCamera);
+<<<<<<< Updated upstream
         if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
         {
             savedCameraSpeedX = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed;
@@ -35,6 +37,18 @@ public class gameManager : MonoBehaviour
         }
 
         //setState(GameState.FreePlay);
+=======
+        savedCameraSpeedX = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed;
+        savedCameraSpeedY = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed;
+        StartCoroutine(delayStart());
+    }
+    IEnumerator delayStart()
+    {
+        yield return new WaitForEndOfFrame();
+        startTheGame();
+
+
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
@@ -88,11 +102,15 @@ public class gameManager : MonoBehaviour
             default:
                 break;
         }
-        changeState.Invoke();
+        changeState?.Invoke();
     }
     public void setChangeStateEvent(Action action)
     {
         changeState += action;
+    }
+    public void subscribeGameStart(Action action)
+    {
+        startGame += action;
     }
     public enum GameState
     {
@@ -101,4 +119,11 @@ public class gameManager : MonoBehaviour
         Minigame
 
     }
+    public void startTheGame()
+    {
+        setState(GameState.FreePlay);
+
+        startGame?.Invoke();
+    }
+    
 }

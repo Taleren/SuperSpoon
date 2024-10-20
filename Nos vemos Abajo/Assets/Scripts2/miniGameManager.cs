@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class miniGameManager : MonoBehaviour
 {
     public static miniGameManager Instance;
@@ -23,9 +23,11 @@ public class miniGameManager : MonoBehaviour
         currentMinigame = _minigame;
         _minigame.StartMinigame();
     }
-    public void endMinigame()
+    public void endMinigame(InteractEvent postEvent)
     {
+        
         gameManager.Instance.setState(gameManager.GameState.FreePlay);
+        eventManager.Instance.startEvent(postEvent,()=>{ });
 
     }
     // Start is called before the first frame update

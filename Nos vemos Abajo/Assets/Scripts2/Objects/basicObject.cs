@@ -11,8 +11,8 @@ public class basicObject : MonoBehaviour,IObject
     public string Hoverkey;
     public bool showName = true;
     MaterialPropertyBlock materialPropertyBlock;
-    protected ObjState currentState;
-
+  [SerializeField]  protected ObjState currentState;
+    [SerializeField] protected ObjState startState;
 
     public virtual void EnterHover()
 
@@ -57,6 +57,21 @@ public class basicObject : MonoBehaviour,IObject
     }
     public void setState(ObjState _state)
     {
+        print(name);
         currentState = _state;
     }
+    public void StartGame()
+    {
+        currentState = startState;
+        //print(name+currentState);
+
+    }
+
+    public  virtual void Start()
+    {
+        gameManager.Instance.subscribeGameStart(this.StartGame);
+        print(name);
+    }
+    public ObjState getState() => currentState;
+    
 }

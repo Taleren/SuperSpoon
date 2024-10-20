@@ -309,7 +309,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 7c17fc7ceca7a4b4d8a55f91afdfd0f4, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -360,6 +360,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onEndEvent:
+    eventOrder:
+    - callType: 3
+      nameKey: 
+      timelineObj: {fileID: 0}
+      obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 2039075654}
+      newState: 2
+  postEndEvent:
     eventOrder: []
 --- !u!114 &276860837
 MonoBehaviour:
@@ -1051,6 +1060,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onEndEvent:
+    eventOrder: []
+  postEndEvent:
     eventOrder: []
   correctCode: 0200000002000000
   currentCode: 0300000005000000
@@ -6587,6 +6598,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   Hoverkey: Rueda Activada
   showName: 1
+  currentState: 0
   startState: 1
   eventList:
   - HoverText: Rueda Desactivada
@@ -6629,6 +6641,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  resetState: 0
 --- !u!4 &933375822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9b28ec1d079583741be303977b85cc09,
@@ -6937,6 +6950,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   Hoverkey: 
   showName: 1
+  currentState: 0
   startState: 2
   eventList:
   - HoverText: Boton
@@ -6958,6 +6972,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  resetState: 0
 --- !u!1001 &1036897733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7143,162 +7158,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1081805842
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1081805844}
-  - component: {fileID: 1081805843}
-  - component: {fileID: 1081805845}
-  - component: {fileID: 1081805846}
-  - component: {fileID: 1081805849}
-  - component: {fileID: 1081805848}
-  - component: {fileID: 1081805847}
-  - component: {fileID: 1081805850}
-  m_Layer: 0
-  m_Name: Managers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1081805843
+--- !u!114 &1081805847 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 789043545454809456, guid: e2ef83d051b9ce14f950b72ef0025746,
+    type: 3}
+  m_PrefabInstance: {fileID: 6461339573008011450}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081805842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c3420ad0e6d0d1489430fc8e650cf64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1081805844
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081805842}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.628189, y: -0.69207, z: 0.5897074}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1081805845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081805842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19e752d707bb889489c332d6a83732b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 899814233}
-  savedCameraSpeedX: 0
-  savedCameraSpeedY: 0
---- !u!114 &1081805846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081805842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ca73e0331e0c2b438b61f6e8d099cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1081805847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081805842}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals: []
-    m_Events: []
---- !u!114 &1081805848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081805842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 293a14b38d2e9734c86deafe0d4e3b71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  signalAssetEventPairs:
-  - signalAsset: {fileID: 11400000, guid: 935a939c30167f841a365c85a197828d, type: 2}
-    events:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1081805849}
-          m_TargetAssemblyTypeName: timelineManager, Assembly-CSharp
-          m_MethodName: parenting
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 1
---- !u!114 &1081805849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081805842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cdbe4644bfe17342a3d803d3f2efe7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  director: {fileID: 0}
-  ObjectsToSerilialize: []
-  listPropertyName:
-  - 9ff9522b1e8e6c24e8027ad2a006b1ed
-  - 0fb4b470138e4a74aa47f9c09788ffa9
-  listReference:
-  - {fileID: 1691921400}
-  - {fileID: 1735259935}
---- !u!114 &1081805850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081805842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6358ae0fa8b5a514b94e5f76dc1f56d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exposedSo: {fileID: 0}
-  listPropertyName: []
-  listReference: []
 --- !u!4 &1158779357 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9b28ec1d079583741be303977b85cc09,
@@ -12515,6 +12386,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   Hoverkey: 
   showName: 1
+  currentState: 0
   startState: 2
   eventList:
   - HoverText: Boton
@@ -12536,6 +12408,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  resetState: 0
 --- !u!4 &1212426346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cb2473cabd53ae74d820984bfb0969d4,
@@ -12587,6 +12460,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   Hoverkey: Boton
   showName: 1
+  currentState: 0
   startState: 2
   eventList:
   - HoverText: 
@@ -12610,6 +12484,7 @@ MonoBehaviour:
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
+  resetState: 0
 --- !u!95 &1291839062 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7414445114331687125, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
@@ -13117,7 +12992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1600473423
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13886,10 +13761,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intEvent:
-    eventOrder: []
+    eventOrder:
+    - callType: 2
+      nameKey: EntrarFarol
+      timelineObj: {fileID: 0}
+      obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 0}
+      newState: 0
   outline: {fileID: 363060179}
-  Hoverkey: Farol
+  Hoverkey: DescFarol
   showName: 1
+  currentState: 0
+  startState: 2
   _Minigame: {fileID: 276860835}
 --- !u!1001 &1700610829
 PrefabInstance:
@@ -14025,6 +13909,8 @@ MonoBehaviour:
   outline: {fileID: 532204366}
   Hoverkey: feliz navidad del equipo de baloncesto de somosaguas
   showName: 1
+  currentState: 0
+  startState: 0
 --- !u!1 &1730286740
 GameObject:
   m_ObjectHideFlags: 0
@@ -14198,6 +14084,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   Hoverkey: Boton
   showName: 1
+  currentState: 0
   startState: 2
   eventList:
   - HoverText: 
@@ -14219,6 +14106,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  resetState: 0
 --- !u!4 &1739794794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1721646259006524467, guid: bc0ce33aa67670f46862aa7ef7cd50b7,
@@ -14278,6 +14166,7 @@ MonoBehaviour:
   outline: {fileID: 976044501}
   Hoverkey: Bloqueado
   showName: 1
+  currentState: 0
   startState: 0
   eventList:
   - HoverText: Desbloqueado
@@ -14306,6 +14195,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  resetState: 0
 --- !u!65 &1776314569
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14738,7 +14628,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d05e96f8c722ad84298a172002373e65,
         type: 3}
       propertyPath: m_Name
-      value: farol
+      value: CallerFarol
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d05e96f8c722ad84298a172002373e65,
         type: 3}
@@ -14820,6 +14710,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   Hoverkey: Rueda Activada
   showName: 1
+  currentState: 0
   startState: 1
   eventList:
   - HoverText: Rueda Desactivada
@@ -14860,6 +14751,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  resetState: 0
 --- !u!135 &1974797202
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15116,7 +15008,7 @@ GameObject:
   - component: {fileID: 2039075655}
   - component: {fileID: 2039075654}
   m_Layer: 6
-  m_Name: Cube (2)
+  m_Name: CallerCajaFuerte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15139,6 +15031,8 @@ MonoBehaviour:
   outline: {fileID: 1600473420}
   Hoverkey: 
   showName: 1
+  currentState: 0
+  startState: 0
   _Minigame: {fileID: 583798692}
 --- !u!65 &2039075655
 BoxCollider:
@@ -15449,6 +15343,89 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47a682beef286b646b88bcab699577fa, type: 3}
+--- !u!1001 &6461339573008011450
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1496849953838099355, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 899814233}
+    - target: {fileID: 2233476293656153644, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: listReference.Array.data[0]
+      value: 
+      objectReference: {fileID: 1691921400}
+    - target: {fileID: 2233476293656153644, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: listReference.Array.data[1]
+      value: 
+      objectReference: {fileID: 1735259935}
+    - target: {fileID: 6668687188726420604, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: m_Name
+      value: Managers
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738376026943322592, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.628189
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738376026943322592, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.69207
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738376026943322592, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5897074
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738376026943322592, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738376026943322592, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738376026943322592, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738376026943322592, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738376026943322592, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738376026943322592, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738376026943322592, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e2ef83d051b9ce14f950b72ef0025746, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -15462,7 +15439,7 @@ SceneRoots:
   - {fileID: 465540782}
   - {fileID: 1817098503}
   - {fileID: 1730286742}
-  - {fileID: 1081805844}
+  - {fileID: 6461339573008011450}
   - {fileID: 1185072033}
   - {fileID: 978005993}
   - {fileID: 940640634}

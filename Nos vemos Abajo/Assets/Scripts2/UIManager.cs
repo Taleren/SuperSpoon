@@ -22,8 +22,13 @@ public class UIManager : MonoBehaviour
     }
     public void showObjectName(string textKey)
     {
+
         //aqui se llamaria al textManager y eso
-        objText.text = textKey;
+        List<string> A = TextManager.Instance.getLine(textKey);
+        if (A != null)
+        {
+            objText.text = A[0];
+        }
         hoverGroup.alpha = 1;
 
     }
