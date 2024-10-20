@@ -28,10 +28,13 @@ public class gameManager : MonoBehaviour
     {
         mainCamera = (CinemachineVirtualCamera)Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
         print(mainCamera);
-        savedCameraSpeedX = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed;
-        savedCameraSpeedY = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed;
+        if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
+        {
+            savedCameraSpeedX = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed;
+            savedCameraSpeedY = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed;
+        }
 
-        setState(GameState.FreePlay);
+        //setState(GameState.FreePlay);
     }
 
     // Update is called once per frame
@@ -55,23 +58,30 @@ public class gameManager : MonoBehaviour
         switch (newstate)
         {
             case GameState.Paused:
-
-                mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0;
-                mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed =0; 
                 setCursor(true);
+
+                if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
+                {
+                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0;
+                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0;
+                }
+
                 break;
             case GameState.FreePlay:
-                mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = savedCameraSpeedX;
-                mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = savedCameraSpeedY;
-
-
+                if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
+                {
+                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = savedCameraSpeedX;
+                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = savedCameraSpeedY;
+                }
                 setCursor(false);
 
                 break;
             case GameState.Minigame:
-
-                mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0;
-                mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0;
+                if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
+                {
+                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0;
+                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0;
+                }
                 setCursor(true);
 
                 break;
