@@ -1236,9 +1236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e752d707bb889489c332d6a83732b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  savedCameraSpeedX: 0
-  savedCameraSpeedY: 0
+  mainCamera: {fileID: 899814233}
+  savedCameraSpeedX: 300
+  savedCameraSpeedY: 300
 --- !u!1001 &1232801355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1520,6 +1520,8 @@ MonoBehaviour:
   outline: {fileID: 0}
   Hoverkey: Una caja
   showName: 1
+  currentState: 0
+  startState: 0
 --- !u!64 &1281118348
 MeshCollider:
   m_ObjectHideFlags: 0

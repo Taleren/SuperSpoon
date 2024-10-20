@@ -62,7 +62,7 @@ public class UIMenu : MonoBehaviour
         SoundManager.instance.PlaySound("gritoMujer", GameObject.Find("PRUEBASONIDO").transform.position);
         yield return new WaitForSeconds(2f);
         SoundManager.instance.PlaySound("golpeIntro", GameObject.Find("PRUEBASONIDO").transform.position);
-        gameManager.Instance.setState(gameManager.GameState.FreePlay);
+        gameManager.Instance.startTheGame();
         yield return null;
 
     }

@@ -27,28 +27,16 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCamera = (CinemachineVirtualCamera)Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
-        print(mainCamera);
-<<<<<<< Updated upstream
-        if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
-        {
-            savedCameraSpeedX = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed;
-            savedCameraSpeedY = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed;
-        }
-
-        //setState(GameState.FreePlay);
-=======
-        savedCameraSpeedX = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed;
-        savedCameraSpeedY = mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed;
-        StartCoroutine(delayStart());
+      //  mainCamera = (CinemachineVirtualCamera)Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
+     
+       // StartCoroutine(delayStart());
     }
     IEnumerator delayStart()
     {
         yield return new WaitForEndOfFrame();
-        startTheGame();
+        //startTheGame();
 
 
->>>>>>> Stashed changes
     }
 
     // Update is called once per frame
