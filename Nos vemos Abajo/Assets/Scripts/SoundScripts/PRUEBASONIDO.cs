@@ -17,12 +17,16 @@ public class PRUEBASONIDO : MonoBehaviour
     void Update()
     {
         // Movimiento continuo de un lado a otro usando Mathf.PingPong
-        float movement = Mathf.PingPong(Time.time * speed, distance);
-        transform.position = startPosition + new Vector3(0, 0, movement);
+        //float movement = Mathf.PingPong(Time.time * speed, distance);
+        //transform.position = startPosition + new Vector3(0, 0, movement);
 
         if (Input.GetKeyDown(KeyCode.Space)) 
         {
-            SoundManager.instance.PlaySound("salchipapa", transform.position, gameObject);
+            SoundManager.instance.PlaySound("vientoFuerte", transform.position, gameObject);
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            SoundManager.instance.PlaySound("cogerFarol", transform.position, gameObject);
         }
     }
 }
