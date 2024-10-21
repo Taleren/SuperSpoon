@@ -117,7 +117,8 @@ public class TextManager : MonoBehaviour
 
     private void Start()
     {
-    _typewriterCoroutine =  StartCoroutine(Typewriter("Introtutorial_"));
+        _texBox.text = string.Empty;
+        gameManager.Instance.subscribeGameStart(StartGame);
     }
 
     private void Update()
@@ -142,6 +143,7 @@ public class TextManager : MonoBehaviour
     {
         nextAction = action;
         _typewriterCoroutine = StartCoroutine(Typewriter(linea));
+        IndiceLineaActual = 0;
     }
 
     private IEnumerator Typewriter(string linea) 
@@ -149,11 +151,11 @@ public class TextManager : MonoBehaviour
         print("ss");
         DialogoActual = linea;
        
-        while (getLine(DialogoActual + IndiceLineaActual.ToString())/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null && !pausado  )
+        while (getLine(DialogoActual +"_"+ IndiceLineaActual.ToString())/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null && !pausado  )
         {
             // Texto
-            getSubs(DialogoActual + IndiceLineaActual.ToString());
-            print(DialogoActual + IndiceLineaActual.ToString());
+            getSubs(DialogoActual + "_" + IndiceLineaActual.ToString());
+            print(DialogoActual + "_" + IndiceLineaActual.ToString());
             _texBox.ForceMeshUpdate();
             TMP_TextInfo textInfo = _texBox.textInfo;
 
@@ -186,7 +188,7 @@ public class TextManager : MonoBehaviour
             yield return _finalDelay;
         }
         _texBox.text = string.Empty;
-        nextAction.Invoke();
+        nextAction?.Invoke();
         print("terminado");
     }
     
@@ -214,5 +216,10 @@ public class TextManager : MonoBehaviour
      _typewriterCoroutine =   StartCoroutine(Typewriter(""));
         return;
     }
+    public void StartGame()
+    {
+        print("hello intro");
+        _typewriterCoroutine = StartCoroutine(Typewriter("Introtutorial"));
 
+    }
 }

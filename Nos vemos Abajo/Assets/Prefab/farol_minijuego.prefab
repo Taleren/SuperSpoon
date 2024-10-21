@@ -259,6 +259,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d05e96f8c722ad84298a172002373e65,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.3713667
       objectReference: {fileID: 0}
@@ -317,10 +332,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: farol
       objectReference: {fileID: 0}
+    - target: {fileID: -4347035094701630918, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.828045
+      objectReference: {fileID: 0}
+    - target: {fileID: -2577548232221058511, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3
+      objectReference: {fileID: 0}
     - target: {fileID: -2484921068739079471, guid: d05e96f8c722ad84298a172002373e65,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2484921068739079471, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.58232814
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d05e96f8c722ad84298a172002373e65,
         type: 3}
@@ -332,10 +362,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: manecilla
       objectReference: {fileID: 0}
+    - target: {fileID: 4170350671897760774, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8513859187771203891, guid: d05e96f8c722ad84298a172002373e65,
         type: 3}
       propertyPath: m_Name
       value: boton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513859187771203891, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -353,15 +393,97 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4102308189174937832}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3336078302037397397}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2601022118363640444}
+    - targetCorrespondingSourceObject: {fileID: -5568371526223589888, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3958836388687135380}
     - targetCorrespondingSourceObject: {fileID: 8513859187771203891, guid: d05e96f8c722ad84298a172002373e65,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7414445114331687125}
+    - targetCorrespondingSourceObject: {fileID: 8513859187771203891, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2166562049939276120}
+    - targetCorrespondingSourceObject: {fileID: 8513859187771203891, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2908863510258724494}
     - targetCorrespondingSourceObject: {fileID: 4170350671897760774, guid: d05e96f8c722ad84298a172002373e65,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1476816658020607515}
+    - targetCorrespondingSourceObject: {fileID: 4170350671897760774, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8246893647645337283}
+    - targetCorrespondingSourceObject: {fileID: 4170350671897760774, guid: d05e96f8c722ad84298a172002373e65,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8829343325795456120}
   m_SourcePrefab: {fileID: 100100000, guid: d05e96f8c722ad84298a172002373e65, type: 3}
+--- !u!1 &1261575864341731181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d05e96f8c722ad84298a172002373e65,
+    type: 3}
+  m_PrefabInstance: {fileID: 2108649178212510268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3336078302037397397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261575864341731181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d1290098b74d7429c4c2f767ec7a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    eventOrder:
+    - callType: 2
+      nameKey: EntrarFarol
+      timelineObj: {fileID: 0}
+      obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 0}
+      newState: 0
+  onEndEvent:
+    eventOrder:
+    - callType: 3
+      nameKey: 
+      timelineObj: {fileID: 0}
+      obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 0}
+      newState: 2
+  postEndEvent:
+    eventOrder: []
+--- !u!114 &2601022118363640444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261575864341731181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bcb093110b04a8469a00137efbd0a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actions: {fileID: -944628639613478452, guid: 3a911b01047126f44b6a0a80da2d33fa,
+    type: 3}
+  _speed: 10
+  _inverted: 0
 --- !u!1 &2640062204363259450 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4170350671897760774, guid: d05e96f8c722ad84298a172002373e65,
@@ -389,6 +511,116 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8246893647645337283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2640062204363259450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6a67ab26d3b234daafdc005ce23735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intEvent:
+    eventOrder: []
+  outline: {fileID: 0}
+  Hoverkey: DescValvula
+  showName: 0
+  currentState: 0
+  startState: 1
+  eventList:
+  - HoverText: Rueda Desactivada
+    state: 1
+    interactEvent:
+      eventOrder:
+      - callType: 0
+        nameKey: ValvulaFarol_Giro
+        timelineObj: {fileID: 0}
+        obj: {fileID: 0}
+        animator: {fileID: 1476816658020607515}
+        interactObject: {fileID: 0}
+        newState: 0
+    minigameEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - HoverText: 
+    state: 2
+    interactEvent:
+      eventOrder:
+      - callType: 0
+        nameKey: ValvulaFarol_Giro
+        timelineObj: {fileID: 0}
+        obj: {fileID: 0}
+        animator: {fileID: 1476816658020607515}
+        interactObject: {fileID: 0}
+        newState: 0
+    minigameEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3336078302037397397}
+          m_TargetAssemblyTypeName: minigame, Assembly-CSharp
+          m_MethodName: endMinigame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  resetState: 0
+--- !u!65 &8829343325795456120
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2640062204363259450}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.003937185, y: 0.0037339074, z: 0.003937185}
+  m_Center: {x: -0.000030649124, y: -0.0010556749, z: -0.000012720236}
+--- !u!1 &3457153557844567100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5568371526223589888, guid: d05e96f8c722ad84298a172002373e65,
+    type: 3}
+  m_PrefabInstance: {fileID: 2108649178212510268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3958836388687135380
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457153557844567100}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: d05e96f8c722ad84298a172002373e65, type: 3}
 --- !u!4 &4665909762664888557 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2484921068739079471, guid: d05e96f8c722ad84298a172002373e65,
@@ -434,3 +666,67 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2166562049939276120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738345878910061327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6a67ab26d3b234daafdc005ce23735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intEvent:
+    eventOrder: []
+  outline: {fileID: 0}
+  Hoverkey: DescBoton
+  showName: 1
+  currentState: 0
+  startState: 2
+  eventList:
+  - HoverText: 
+    state: 2
+    interactEvent:
+      eventOrder:
+      - callType: 0
+        nameKey: BotonFarol_Pulsar
+        timelineObj: {fileID: 0}
+        obj: {fileID: 0}
+        animator: {fileID: 7414445114331687125}
+        interactObject: {fileID: 0}
+        newState: 0
+      - callType: 3
+        nameKey: BotonFarol_Pulsar
+        timelineObj: {fileID: 0}
+        obj: {fileID: 0}
+        animator: {fileID: 7414445114331687125}
+        interactObject: {fileID: 8246893647645337283}
+        newState: 2
+    minigameEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  resetState: 0
+--- !u!64 &2908863510258724494
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738345878910061327}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7387706064836869012, guid: d05e96f8c722ad84298a172002373e65, type: 3}
