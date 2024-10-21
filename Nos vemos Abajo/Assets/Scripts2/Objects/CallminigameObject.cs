@@ -5,9 +5,20 @@ using UnityEngine;
 public class CallminigameObject : basicObject
 {
     [SerializeField] protected minigame _Minigame;
+    [SerializeField] protected ObjState targetState;
+
     public override void Interact()
     {
-        eventManager.Instance.startEvent(intEvent, () => { miniGameManager.Instance.LoadMinigame(_Minigame); });
+
+        if (currentState == targetState)
+        {
+            eventManager.Instance.startEvent(intEvent, () => { miniGameManager.Instance.LoadMinigame(_Minigame); });
+        }
+        else
+        {
+            eventManager.Instance.startEvent(intEvent, () => {  });
+
+        }
         LeaveHover();
  
     }

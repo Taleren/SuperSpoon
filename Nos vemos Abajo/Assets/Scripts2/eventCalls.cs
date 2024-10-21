@@ -5,16 +5,19 @@ using UnityEngine;
 using UnityEngine.Timeline;
 
 [Serializable]
-public class eventCalls 
+public class eventCalls
 {
 
 
     public InteractEvent.eventCallTypes callType;
     public string nameKey;
     public TimelineAsset timelineObj;
-  public GameObject obj;
+    public Transform Transform;
+    public bool Boolean;
+        public bool PlayWithBefore;
+    public GameObject obj;
     public Animator animator;
-    [SerializeField, SerializeReference]    public basicObject interactObject;
-  public  basicObject.ObjState newState;
-    
+    [SerializeField, SerializeReference] public basicObject interactObject;
+    public basicObject.ObjState newState;
+
 }

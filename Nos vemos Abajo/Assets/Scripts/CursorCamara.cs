@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class CursorCamara : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -12,6 +12,7 @@ public class CursorCamara : MonoBehaviour
     public LayerMask clickableminigame;
     private LayerMask currentMask;
 
+    [SerializeField] private Image cursor;
     void Start()
     {
         cam = Camera.main;
@@ -91,11 +92,16 @@ public class CursorCamara : MonoBehaviour
         switch (gameManager.Instance.currentState)
         {
             case gameManager.GameState.Paused:
+                cursor.enabled = false;
                 break;
             case gameManager.GameState.FreePlay:
+                cursor.enabled = true;
+
                 currentMask = clickable;
                 break;
             case gameManager.GameState.Minigame:
+                cursor.enabled = false;
+
                 currentMask = clickableminigame;
 
                 break;

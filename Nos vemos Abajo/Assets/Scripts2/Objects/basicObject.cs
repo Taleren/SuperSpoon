@@ -11,16 +11,28 @@ public class basicObject : MonoBehaviour,IObject
     public string Hoverkey;
     public bool showName = true;
     MaterialPropertyBlock materialPropertyBlock;
-  [SerializeField]  protected ObjState currentState;
     [SerializeField] protected ObjState startState;
+
+    [SerializeField]  protected ObjState currentState;
+    [SerializeField] protected List<eventData> eventList;
 
     public virtual void EnterHover()
 
     {
+        string txt = null;
         if (showName)
         {
-            UIManager.Instance.showObjectName(Hoverkey);
+            eventData curEvent = getStateEvents();
+            if (curEvent != null)
+                txt = getStateEvents().HoverText;
+            if (string.IsNullOrEmpty(txt))
+            {
+                txt = Hoverkey;
+            }
+
+            UIManager.Instance.showObjectName(txt);
         }
+       
         //materialPropertyBlock = new MaterialPropertyBlock();
         //materialPropertyBlock.SetColor("_Color", Color.white);
         //materialPropertyBlock.SetFloat("_isOutlined", 1.0f);
@@ -33,8 +45,13 @@ public class basicObject : MonoBehaviour,IObject
 
     public virtual void Interact()
     {
-        eventManager.Instance.startEvent(intEvent,()=> { print("Termine"); });
-        LeaveHover();
+       
+        eventData curEvent = getStateEvents();
+        if(curEvent == null)
+        {
+            curEvent.interactEvent = intEvent;
+        }
+        eventManager.Instance.startEvent(curEvent.interactEvent, () => { });
     }
 
     public virtual void LeaveHover()
@@ -73,5 +90,25 @@ public class basicObject : MonoBehaviour,IObject
         print(name);
     }
     public ObjState getState() => currentState;
-    
+    protected eventData getStateEvents()
+    {
+        foreach (eventData _event in eventList)
+        {
+            if (_event.state == currentState)
+            {
+                return _event;
+            }
+        }
+        print("State event is null " + currentState);
+        return null;
+
+    }
+}
+[Serializable]
+public class eventData
+{
+    public string HoverText;
+    public minigameObject.ObjState state;
+    public InteractEvent interactEvent;
+    public UnityEvent minigameEvent;
 }

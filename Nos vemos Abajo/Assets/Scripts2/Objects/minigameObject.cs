@@ -7,7 +7,6 @@ using UnityEngine.Events;
 public class minigameObject : basicObject
 {
    minigame _fatherMinigame;
-  [SerializeField]  List<eventData> eventList;
     [SerializeField] bool resetState = true;
     // Start is called before the first frame update
 public   override void Start()
@@ -17,40 +16,17 @@ public   override void Start()
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     public override void Interact()
     {
         eventData curEvent = getStateEvents();
         eventManager.Instance.startEvent(curEvent.interactEvent, () => { curEvent.minigameEvent.Invoke(); });
+        LeaveHover();
     }
-  private eventData getStateEvents()
-    {
-        foreach (eventData _event in eventList)
-        {
-            if (_event.state==currentState)
-            {
-                return _event;
-            }
-        }
-        print("State event is null " + currentState);
-    return null;
-
-    }
+  
     public override void EnterHover()
     {
-        if (showName)
-        {
-            string txt = getStateEvents().HoverText;
-            if (string.IsNullOrEmpty(txt))
-            {
-                txt = Hoverkey;
-            }
-
-            UIManager.Instance.showObjectName(txt);
-        }
+        base.EnterHover();
        
     }
     public void startMinigame()
@@ -69,11 +45,4 @@ public   override void Start()
         eventManager.Instance.playCall();
     }
 }
-[Serializable]
-public class eventData
-{
-    public string HoverText;
-    public minigameObject.ObjState state;
-   public InteractEvent interactEvent;
-   public UnityEvent minigameEvent;
-}
+
