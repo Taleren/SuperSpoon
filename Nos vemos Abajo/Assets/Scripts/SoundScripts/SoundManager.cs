@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections;
 
 public class SoundManager : MonoBehaviour
 {
@@ -21,9 +22,9 @@ public class SoundManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
     }
-
+    
     // Método para reproducir un sonido en una posición específica
-    public void PlaySound(string soundName, Vector3 soundPosition, GameObject parent = null)
+    public void PlaySound(string soundName, Vector3 soundPosition, GameObject parent = null, Action action = null)
     {
         Sound s = Array.Find(sounds, sound => sound.name == soundName);
 
@@ -49,12 +50,20 @@ public class SoundManager : MonoBehaviour
 
         // Reproducir el sonido
         tempAudioSource.Play();
-
+        if(action != null)
+        {
+            StartCoroutine(waitForAction(action, s.clip.length));
+        }
         // Si el sonido no está en loop, destruir el objeto después de que el clip haya terminado
         if (!s.loop)
         {
             Destroy(tempAudioObject, s.clip.length);
         }
+    }
+    IEnumerator waitForAction(Action action,float time)
+    {
+     yield return new   WaitForSeconds(time);
+        action?.Invoke();
     }
 
 }

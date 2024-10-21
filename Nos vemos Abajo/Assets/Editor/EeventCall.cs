@@ -14,6 +14,9 @@ public class EeventCall : PropertyDrawer
     SerializedProperty animator;
     SerializedProperty interactObject;
     SerializedProperty newState;
+    SerializedProperty Boolean;
+    SerializedProperty PlayWithBefore;
+    SerializedProperty Transform;
     private void OnEnable()
     {
         //callType = serializedObject.FindProperty("callType");
@@ -26,7 +29,10 @@ public class EeventCall : PropertyDrawer
         nameKey = property.FindPropertyRelative("nameKey");
         timelineObj = property.FindPropertyRelative("timelineObj");
         obj = property.FindPropertyRelative("obj");
+        Transform = property.FindPropertyRelative("Transform");
+        PlayWithBefore = property.FindPropertyRelative("PlayWithBefore");
 
+        Boolean = property.FindPropertyRelative("Boolean");
         animator = property.FindPropertyRelative("animator");
         newState = property.FindPropertyRelative("newState");
         interactObject = property.FindPropertyRelative("interactObject");
@@ -43,18 +49,35 @@ public class EeventCall : PropertyDrawer
             case InteractEvent.eventCallTypes.animCall:
                 DrawAnimProperty(position);
                 DrawStringProperty(position, "Animation Key");
+                DrawCallWithBefore(position, 4.8f);
 
                 break;
             case InteractEvent.eventCallTypes.timelineCall:
                 DrawTimelineObj(position);
+                DrawCallWithBefore(position, 3.2f);
+
                 break;
             case InteractEvent.eventCallTypes.dialogueCall:
                 DrawStringProperty(position,"Dialogue Key");
+                DrawCallWithBefore(position, 3.2f);
 
                 break;
             case InteractEvent.eventCallTypes.changeObjectState:
                 DrawNewState(position);
                 DrawInteractObject(position);
+                DrawCallWithBefore(position, 4.8f);
+
+                break;
+            case InteractEvent.eventCallTypes.activateObject:
+                DrawGameObject(position,"Objeto");
+                DrawCallWithBefore(position, 3.2f);
+
+                break;
+            case InteractEvent.eventCallTypes.soundState:
+                DrawGameObject(position, "Objeto");
+                DrawStringProperty(position, "Animation Key");
+                DrawPosition(position);
+                DrawCallWithBefore(position, 6);
                 break;
                       default:
                 break;
@@ -70,7 +93,7 @@ public class EeventCall : PropertyDrawer
         //Mas grande si dropdown
         if (property.isExpanded)
         {
-            totalLine += 4;
+            totalLine += 5;
         }
 
       return totalLine * EditorGUIUtility.singleLineHeight;
@@ -108,6 +131,16 @@ public class EeventCall : PropertyDrawer
 
         EditorGUI.PropertyField(drawArea, nameKey, new GUIContent(name));
     }
+    private void DrawCallWithBefore(Rect position,float xpos)
+    {
+        EditorGUIUtility.labelWidth = 100;
+
+        Rect drawArea = new Rect(position.min.x,
+             position.min.y + xpos * EditorGUIUtility.singleLineHeight,
+             position.size.x * .8f, EditorGUIUtility.singleLineHeight);
+
+        EditorGUI.PropertyField(drawArea, PlayWithBefore, new GUIContent(PlayWithBefore.name));
+    }
     private void DrawTimelineObj(Rect position)
     {
         EditorGUIUtility.labelWidth = 100;
@@ -119,6 +152,16 @@ public class EeventCall : PropertyDrawer
         EditorGUI.PropertyField(drawArea, timelineObj, new GUIContent(timelineObj.name));
 
     }
+    private void DrawBoolean(Rect position)
+    {
+        EditorGUIUtility.labelWidth = 100;
+
+        Rect drawArea = new Rect(position.min.x,
+             position.min.y + 3.2f * EditorGUIUtility.singleLineHeight,
+             position.size.x * .8f, EditorGUIUtility.singleLineHeight);
+
+        EditorGUI.PropertyField(drawArea, Boolean, new GUIContent(Boolean.name));
+    }
     private void DrawGameObject(Rect position,string name)
     {
         EditorGUIUtility.labelWidth = 100;
@@ -128,6 +171,16 @@ public class EeventCall : PropertyDrawer
              position.size.x * .8f, EditorGUIUtility.singleLineHeight);
 
         EditorGUI.PropertyField(drawArea,obj, new GUIContent(name));
+    }
+    private void DrawPosition(Rect position)
+    {
+        EditorGUIUtility.labelWidth = 100;
+
+        Rect drawArea = new Rect(position.min.x,
+             position.min.y + 4.4f * EditorGUIUtility.singleLineHeight,
+             position.size.x * .8f, EditorGUIUtility.singleLineHeight);
+
+        EditorGUI.PropertyField(drawArea, Transform, new GUIContent(Transform.name));
     }
     private void DrawInteractObject(Rect position)
     {
