@@ -20,6 +20,7 @@ public class UIMenu : MonoBehaviour
 
     private void Start()
     {
+        SoundManager.instance.PlaySound("ventisca", transform.position);
         transicionPanel.SetActive(false);
         gameManager.Instance.setState(gameManager.GameState.Paused);
     }
@@ -56,9 +57,9 @@ public class UIMenu : MonoBehaviour
         transicionPanel.SetActive(true);
         yield return new WaitForSeconds(3.5f);
         transicionPanel.SetActive(false);
-        SoundManager.instance.PlaySound("gritoMujer", GameObject.Find("PRUEBASONIDO").transform.position);
+        SoundManager.instance.PlaySound("gritoMujer", GameObject.Find("SonidosIntroObjeto").transform.position);
         yield return new WaitForSeconds(2f);
-        SoundManager.instance.PlaySound("golpeIntro", GameObject.Find("PRUEBASONIDO").transform.position);
+        SoundManager.instance.PlaySound("golpeIntro", GameObject.Find("SonidosIntroObjeto").transform.position);
         gameManager.Instance.startTheGame();
         yield return null;
 
