@@ -42,6 +42,8 @@ public class eventManager : MonoBehaviour
 
     public void playCall()
     {
+        callIndex++;
+
         print("Play call");
         print(currentCalls.Length);
         if (callIndex < currentCalls.Length)
@@ -52,34 +54,33 @@ public class eventManager : MonoBehaviour
             {
                 act = () => { playCall(); };
             }
-                switch (Call.callType)
-                {
-                    case InteractEvent.eventCallTypes.animCall:
-                        Call.animator.Play(Call.nameKey, -1, 0.0f);
-                        break;
-                    case InteractEvent.eventCallTypes.timelineCall:
-                        timelineManager.Instance.callTimeline(Call.timelineObj, act);
-                        break;
-                    case InteractEvent.eventCallTypes.dialogueCall:
-                        TextManager.Instance.playDialogue(Call.nameKey,act);
-                        // gameManager.Instance.callPingPong("Playing Dialogue: " + Call.nameKey, () => { print("siguiente call"); playCall(); });
+            switch (Call.callType)
+            {
+                case InteractEvent.eventCallTypes.animCall:
+                    Call.animator.Play(Call.nameKey, -1, 0.0f);
+                    break;
+                case InteractEvent.eventCallTypes.timelineCall:
+                    timelineManager.Instance.callTimeline(Call.timelineObj, act);
+                    break;
+                case InteractEvent.eventCallTypes.dialogueCall:
+                    TextManager.Instance.playDialogue(Call.nameKey, act);
+                    // gameManager.Instance.callPingPong("Playing Dialogue: " + Call.nameKey, () => { print("siguiente call"); playCall(); });
 
 
-                        break;
-                    case InteractEvent.eventCallTypes.changeObjectState:
-                        Call.interactObject.setState(Call.newState);
-                        break;
-                    case InteractEvent.eventCallTypes.soundState:
-                        SoundManager.instance.PlaySound(Call.nameKey, Call.Transform.position, Call.obj);
-                        break;
-                    case InteractEvent.eventCallTypes.activateObject:
-                        Call.obj.SetActive(Call.Boolean);
-                        break;
-                    default:
-                        break;
-                }
-            callIndex++;
-            if (currentCalls[callIndex].PlayWithBefore)
+                    break;
+                case InteractEvent.eventCallTypes.changeObjectState:
+                    Call.interactObject.setState(Call.newState);
+                    break;
+                case InteractEvent.eventCallTypes.soundState:
+                    SoundManager.instance.PlaySound(Call.nameKey, Call.Transform.position, Call.obj);
+                    break;
+                case InteractEvent.eventCallTypes.activateObject:
+                    Call.obj.SetActive(Call.Boolean);
+                    break;
+                default:
+                    break;
+            }
+            if (callIndex+1 < currentCalls.Length && currentCalls[callIndex+1].PlayWithBefore)
             {
                 playCall();
             }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CallminigameObject : basicObject
 {
     [SerializeField] protected minigame _Minigame;
-    [SerializeField] protected ObjState targetState;
+    [SerializeField] protected ObjState targetState =ObjState.Active ;
 
     public override void Interact()
     {

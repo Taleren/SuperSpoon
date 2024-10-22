@@ -265,6 +265,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -3610915552102312140, guid: 7c17fc7ceca7a4b4d8a55f91afdfd0f4, type: 2}
     value: {fileID: 1081805847}
+  - key: {fileID: -1322001296866932977, guid: 7c17fc7ceca7a4b4d8a55f91afdfd0f4, type: 2}
+    value: {fileID: 1275692547}
   m_ExposedReferences:
     m_References:
     - 9ff9522b1e8e6c24e8027ad2a006b1ed: {fileID: 1691921400}
@@ -982,6 +984,9 @@ MonoBehaviour:
     - callType: 2
       nameKey: Final
       timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
       interactObject: {fileID: 0}
@@ -6748,8 +6753,8 @@ MonoBehaviour:
   outline: {fileID: 0}
   Hoverkey: DescCerrojo
   showName: 1
-  currentState: 0
   startState: 2
+  currentState: 0
   eventList:
   - HoverText: DescCerrojo
     state: 2
@@ -12266,8 +12271,8 @@ MonoBehaviour:
   outline: {fileID: 0}
   Hoverkey: DescCerrojo
   showName: 1
-  currentState: 0
   startState: 2
+  currentState: 0
   eventList:
   - HoverText: DescCerrojo
     state: 2
@@ -12295,6 +12300,134 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1873661908}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1275692546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1275692548}
+  - component: {fileID: 1275692547}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1275692547
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275692546}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1275692548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275692546}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.3713667, y: 0.0329365, z: 4.7709947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1319140304
 GameObject:
   m_ObjectHideFlags: 0
@@ -13633,6 +13766,9 @@ MonoBehaviour:
     - callType: 2
       nameKey: EntrarFarol
       timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
       interactObject: {fileID: 0}
@@ -13640,10 +13776,11 @@ MonoBehaviour:
   outline: {fileID: 363060179}
   Hoverkey: DescFarol
   showName: 1
-  currentState: 0
   startState: 2
+  currentState: 0
   eventList: []
   _Minigame: {fileID: 276860835}
+  targetState: 0
 --- !u!1001 &1700610829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13778,8 +13915,8 @@ MonoBehaviour:
   outline: {fileID: 532204366}
   Hoverkey: feliz navidad del equipo de baloncesto de somosaguas
   showName: 1
-  currentState: 0
   startState: 0
+  currentState: 0
   eventList: []
 --- !u!1 &1730286740
 GameObject:
@@ -13954,8 +14091,8 @@ MonoBehaviour:
   outline: {fileID: 0}
   Hoverkey: Boton
   showName: 1
-  currentState: 0
   startState: 2
+  currentState: 0
   eventList:
   - HoverText: 
     state: 2
@@ -14036,8 +14173,8 @@ MonoBehaviour:
   outline: {fileID: 976044501}
   Hoverkey: Bloqueado
   showName: 1
-  currentState: 0
   startState: 0
+  currentState: 0
   eventList:
   - HoverText: Desbloqueado
     state: 2
@@ -14046,6 +14183,9 @@ MonoBehaviour:
       - callType: 2
         nameKey: 0
         timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
         interactObject: {fileID: 0}
@@ -14717,7 +14857,7 @@ PrefabInstance:
     - target: {fileID: 6117018860106382915, guid: 3b61b457f0d8e154bab72267753e7480,
         type: 3}
       propertyPath: m_Name
-      value: Canvas (1)
+      value: TextCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 6117018860106382915, guid: 3b61b457f0d8e154bab72267753e7480,
         type: 3}
@@ -14786,8 +14926,8 @@ MonoBehaviour:
   outline: {fileID: 0}
   Hoverkey: Rueda Activada
   showName: 1
-  currentState: 0
   startState: 1
+  currentState: 0
   eventList:
   - HoverText: Rueda Desactivada
     state: 1
@@ -15107,10 +15247,11 @@ MonoBehaviour:
   outline: {fileID: 1600473420}
   Hoverkey: 
   showName: 1
-  currentState: 0
   startState: 0
+  currentState: 0
   eventList: []
   _Minigame: {fileID: 583798692}
+  targetState: 0
 --- !u!65 &2039075655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15630,3 +15771,4 @@ SceneRoots:
   - {fileID: 1144366464}
   - {fileID: 1087095119}
   - {fileID: 1936464915}
+  - {fileID: 1275692548}

@@ -59,7 +59,7 @@ public class EeventCall : PropertyDrawer
                 break;
             case InteractEvent.eventCallTypes.dialogueCall:
                 DrawStringProperty(position,"Dialogue Key");
-                DrawCallWithBefore(position, 3.2f);
+                DrawCallWithBefore(position, 4.8f);
 
                 break;
             case InteractEvent.eventCallTypes.changeObjectState:
@@ -75,7 +75,7 @@ public class EeventCall : PropertyDrawer
                 break;
             case InteractEvent.eventCallTypes.soundState:
                 DrawGameObject(position, "Objeto");
-                DrawStringProperty(position, "Animation Key");
+                DrawStringProperty(position, "Sound Key");
                 DrawPosition(position);
                 DrawCallWithBefore(position, 6);
                 break;
@@ -93,7 +93,7 @@ public class EeventCall : PropertyDrawer
         //Mas grande si dropdown
         if (property.isExpanded)
         {
-            totalLine += 5;
+            totalLine += 6;
         }
 
       return totalLine * EditorGUIUtility.singleLineHeight;

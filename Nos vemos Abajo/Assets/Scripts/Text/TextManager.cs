@@ -46,7 +46,7 @@ public class TextManager : MonoBehaviour
 
     public static TextManager Instance;
 
-   private Action nextAction;
+   private List<Action> nextAction;
     private void Awake()
     {
         if(Instance == null)
@@ -82,7 +82,7 @@ public class TextManager : MonoBehaviour
                 }
             }
         }
-
+        nextAction = new List<Action>();
     }
 
     // L�nea a partir de �ndice
@@ -141,9 +141,11 @@ public class TextManager : MonoBehaviour
 
     public void playDialogue(string linea, Action action)
     {
-        nextAction = action;
-        _typewriterCoroutine = StartCoroutine(Typewriter(linea));
+        nextAction.Add(action);
         IndiceLineaActual = 0;
+
+        _typewriterCoroutine = StartCoroutine(Typewriter(linea));
+
     }
 
     private IEnumerator Typewriter(string linea) 
@@ -163,7 +165,6 @@ public class TextManager : MonoBehaviour
             // Delay + typewriter
             while (IndiceCaracterVisibleActualmente < textInfo.characterCount) 
                 {
-                print("hey");
                     char character = textInfo.characterInfo[IndiceCaracterVisibleActualmente].character;
 
                     _texBox.maxVisibleCharacters++;
@@ -188,7 +189,11 @@ public class TextManager : MonoBehaviour
             yield return _finalDelay;
         }
         _texBox.text = string.Empty;
-        nextAction?.Invoke();
+        if (nextAction.Count > 0)
+        {
+            nextAction[0]?.Invoke();
+            nextAction.RemoveAt(0);
+        }
         print("terminado");
     }
     

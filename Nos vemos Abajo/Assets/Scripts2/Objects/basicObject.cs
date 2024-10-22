@@ -49,8 +49,10 @@ public class basicObject : MonoBehaviour,IObject
         eventData curEvent = getStateEvents();
         if(curEvent == null)
         {
+            curEvent = new eventData();
             curEvent.interactEvent = intEvent;
         }
+        
         eventManager.Instance.startEvent(curEvent.interactEvent, () => { });
     }
 
@@ -87,6 +89,10 @@ public class basicObject : MonoBehaviour,IObject
     public  virtual void Start()
     {
         gameManager.Instance.subscribeGameStart(this.StartGame);
+        if (outline != null)
+        {
+            outline.SetActive(false);
+        }
         print(name);
     }
     public ObjState getState() => currentState;
