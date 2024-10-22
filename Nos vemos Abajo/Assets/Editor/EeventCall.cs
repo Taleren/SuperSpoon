@@ -70,7 +70,8 @@ public class EeventCall : PropertyDrawer
                 break;
             case InteractEvent.eventCallTypes.activateObject:
                 DrawGameObject(position,"Objeto");
-                DrawCallWithBefore(position, 3.2f);
+                DrawBoolean(position);
+                DrawCallWithBefore(position, 4.8f);
 
                 break;
             case InteractEvent.eventCallTypes.soundState:
@@ -160,7 +161,7 @@ public class EeventCall : PropertyDrawer
              position.min.y + 3.2f * EditorGUIUtility.singleLineHeight,
              position.size.x * .8f, EditorGUIUtility.singleLineHeight);
 
-        EditorGUI.PropertyField(drawArea, Boolean, new GUIContent(Boolean.name));
+        EditorGUI.PropertyField(drawArea, Boolean, new GUIContent("Active"));
     }
     private void DrawGameObject(Rect position,string name)
     {

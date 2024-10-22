@@ -58,6 +58,7 @@ public class eventManager : MonoBehaviour
             {
                 case InteractEvent.eventCallTypes.animCall:
                     Call.animator.Play(Call.nameKey, -1, 0.0f);
+
                     break;
                 case InteractEvent.eventCallTypes.timelineCall:
                     timelineManager.Instance.callTimeline(Call.timelineObj, act);
@@ -70,12 +71,16 @@ public class eventManager : MonoBehaviour
                     break;
                 case InteractEvent.eventCallTypes.changeObjectState:
                     Call.interactObject.setState(Call.newState);
+                    playCall();
+
                     break;
                 case InteractEvent.eventCallTypes.soundState:
                     SoundManager.instance.PlaySound(Call.nameKey, Call.Transform.position, Call.obj);
                     break;
                 case InteractEvent.eventCallTypes.activateObject:
                     Call.obj.SetActive(Call.Boolean);
+                    playCall();
+
                     break;
                 default:
                     break;
