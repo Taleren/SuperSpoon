@@ -226,8 +226,8 @@ public class TextManager : MonoBehaviour
     }
     public void StartGame()
     {
-        print("hello intro");
-        _typewriterCoroutine = StartCoroutine(Typewriter("Introtutorial"));
+       // print("hello intro");
+       // _typewriterCoroutine = StartCoroutine(Typewriter("Introtutorial"));
 
     }
 }

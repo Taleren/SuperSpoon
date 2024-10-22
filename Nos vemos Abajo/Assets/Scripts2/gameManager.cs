@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class gameManager : MonoBehaviour
 {
+
     public static gameManager Instance;
   [SerializeField]  CinemachineVirtualCamera mainCamera;
     public float savedCameraSpeedX;
@@ -14,6 +15,8 @@ public class gameManager : MonoBehaviour
     Action startGame;
     [SerializeField] GameObject  hands;
   [SerializeField]  Canvas gameCursorCanvas;
+    [SerializeField] protected InteractEvent startGameEvent;
+
     public GameState currentState { get; private set; }
     private void Awake()
     {
@@ -126,6 +129,9 @@ public class gameManager : MonoBehaviour
         hands.SetActive(false);
 
         startGame?.Invoke();
+
+        eventManager.Instance.startEvent(startGameEvent, () => { });
+
     }
-    
+
 }

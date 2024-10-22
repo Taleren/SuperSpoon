@@ -71,7 +71,10 @@ public class eventManager : MonoBehaviour
                     break;
                 case InteractEvent.eventCallTypes.changeObjectState:
                     Call.interactObject.setState(Call.newState);
-                    playCall();
+                    if (!Call.PlayWithBefore)
+                    {
+                        playCall();
+                    }
 
                     break;
                 case InteractEvent.eventCallTypes.soundState:
@@ -79,8 +82,10 @@ public class eventManager : MonoBehaviour
                     break;
                 case InteractEvent.eventCallTypes.activateObject:
                     Call.obj.SetActive(Call.Boolean);
-                    playCall();
-
+                    if (!Call.PlayWithBefore)
+                    {
+                        playCall();
+                    }
                     break;
                 default:
                     break;
