@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 6652630288746953406}
   - component: {fileID: 5073736227703384397}
   m_Layer: 0
-  m_Name: PRUEBASONIDO
+  m_Name: SonidosIntroObjeto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
