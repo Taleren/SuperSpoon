@@ -13,6 +13,7 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
     [SerializeField] private PlayableDirector director;
     Action currentNextAction;
     GameObject obj;
+    [SerializeField] GameObject pointerSound;
 
     public List<GameObject> ObjectsToSerilialize;
 
@@ -55,7 +56,10 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
         obj.Resolve(this).transform.SetParent(parent.Resolve(this).transform);
         
     }
-
+    public void callSound(string name)
+    {
+        SoundManager.instance.PlaySound(name,pointerSound.transform.position);
+    }
     public List<PropertyName> listPropertyName;
     public List<UnityEngine.Object> listReference;
     
