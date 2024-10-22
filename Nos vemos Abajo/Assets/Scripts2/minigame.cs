@@ -11,12 +11,13 @@ public class minigame : MonoBehaviour
     [SerializeField] protected InteractEvent onEndEvent;
 
  [SerializeField]   Vector3 startPos;
-  [SerializeField]  Quaternion startRot;
+  [SerializeField]  Vector3 startRot;
     // [SerializeField] minigameObject activateObject;
     public virtual void StartMinigame()
     {
         //gameObject.SetActive(true);
         transform.position = Camera.main.transform.position + Camera.main.transform.forward * 0.5f;
+        transform.eulerAngles = startRot;
         eventManager.Instance.startEvent(startEvent, () => { });
 
         foreach (minigameObject item in GetComponentsInChildren<minigameObject>())
@@ -27,7 +28,7 @@ public class minigame : MonoBehaviour
     public void endMinigame()
     {
         transform.position = startPos;
-        transform.rotation = startRot;
+        transform.eulerAngles = startRot;
 
         // gameObject.SetActive(false);
         miniGameManager.Instance.endMinigame(onEndEvent);
@@ -39,15 +40,14 @@ public class minigame : MonoBehaviour
     private void Start()
     {
         startPos = transform.position;
-        startRot = transform.rotation;
+        startRot = transform.eulerAngles;
         gameManager.Instance.subscribeGameStart(startGame);
        // gameObject.SetActive(false);
 
     }
   public void startGame()
     {
-        transform.position = startPos;
-        transform.rotation = startRot;
+       
     }
     
 
