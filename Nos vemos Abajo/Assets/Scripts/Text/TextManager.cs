@@ -41,7 +41,7 @@ public class TextManager : MonoBehaviour
 
     // Excel
     [Header("Documento de texto en .csv ")]
-    [SerializeField] TextAsset textDialogue;
+    [SerializeField] TextAsset[] textDialogues;
     Dictionary<string, List<string> > DialogueHash;
 
     public static TextManager Instance;
@@ -64,21 +64,24 @@ public class TextManager : MonoBehaviour
         DialogueHash = new Dictionary<string, List<string>>();
         string[] strings;
 
-        if (textDialogue != null)
+        foreach (var textDialogue in textDialogues)
         {
-            strings = textDialogue.text.Split('\r');
-
-            for (int i = 1; i < strings.Length; i++)
+            if (textDialogue != null)
             {
-                string trimString = strings[i].Trim();
+                strings = textDialogue.text.Split('\r');
 
-                if (!string.IsNullOrWhiteSpace(trimString))
+                for (int i = 1; i < strings.Length; i++)
                 {
-                    string[] dialoguestring = trimString.Split(';');
-                    List<string> dialogue = new List<string>(dialoguestring);
-                    dialogue.RemoveAt(0);
-                    //print(dialoguestring[0]);
-                    DialogueHash.Add(dialoguestring[0], dialogue);
+                    string trimString = strings[i].Trim();
+
+                    if (!string.IsNullOrWhiteSpace(trimString))
+                    {
+                        string[] dialoguestring = trimString.Split(';');
+                        List<string> dialogue = new List<string>(dialoguestring);
+                        dialogue.RemoveAt(0);
+                        //print(dialoguestring[0]);
+                        DialogueHash.Add(dialoguestring[0], dialogue);
+                    }
                 }
             }
         }

@@ -12,6 +12,8 @@ public class gameManager : MonoBehaviour
     public float savedCameraSpeedY;
     Action changeState;
     Action startGame;
+    [SerializeField] GameObject  hands;
+  [SerializeField]  Canvas gameCursorCanvas;
     public GameState currentState { get; private set; }
     private void Awake()
     {
@@ -27,9 +29,12 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hands.SetActive(false);
+        setCursor(true);
+        setGameCursor(false);
         //mainCamera = (CinemachineVirtualCamera)Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
-     
-       // StartCoroutine(delayStart());
+
+        // StartCoroutine(delayStart());
     }
     IEnumerator delayStart()
     {
@@ -54,19 +59,25 @@ public class gameManager : MonoBehaviour
         Cursor.visible = free;
         Cursor.lockState = free ? CursorLockMode.None : CursorLockMode.Locked;
     }
+    void setGameCursor(bool show)
+    {
+        gameCursorCanvas.gameObject.SetActive(show);
+    }
     public void setState(GameState newstate)
     {
         currentState = newstate;
         switch (newstate)
         {
             case GameState.Paused:
-                setCursor(true);
 
                 if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
                 {
                     mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0;
                     mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0;
                 }
+                setCursor(true);
+
+                setGameCursor(false);
 
                 break;
             case GameState.FreePlay:
@@ -76,6 +87,7 @@ public class gameManager : MonoBehaviour
                     mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = savedCameraSpeedY;
                 }
                 setCursor(false);
+                setGameCursor(true);
 
                 break;
             case GameState.Minigame:
@@ -85,6 +97,7 @@ public class gameManager : MonoBehaviour
                     mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0;
                 }
                 setCursor(true);
+                setGameCursor(false);
 
                 break;
             default:
@@ -110,6 +123,7 @@ public class gameManager : MonoBehaviour
     public void startTheGame()
     {
         setState(GameState.FreePlay);
+        hands.SetActive(false);
 
         startGame?.Invoke();
     }

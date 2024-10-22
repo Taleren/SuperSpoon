@@ -7,6 +7,7 @@ public class multipleTapMinigame : minigame
     [SerializeField] int numberTaps;
     private int currentTaps;
     [SerializeField] protected InteractEvent onFinishTap;
+    [SerializeReference] bool endOnTap = false;
     public override void StartMinigame()
     {
         base.StartMinigame();
@@ -17,7 +18,15 @@ public class multipleTapMinigame : minigame
         currentTaps++;
         if(currentTaps>= numberTaps)
         {
-            eventManager.Instance.startEvent(onFinishTap, () => { });
+            if (endOnTap)
+            {
+                eventManager.Instance.startEvent(onFinishTap, () => { this.endMinigame(); });
+
+            }
+            else
+            {
+                eventManager.Instance.startEvent(onFinishTap, () => { });
+            }
         }
     }
 }

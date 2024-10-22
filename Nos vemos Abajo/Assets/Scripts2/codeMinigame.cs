@@ -7,11 +7,13 @@ public class codeMinigame : minigame
 {
  [SerializeField]   int[] correctCode;
   [SerializeField]  int[] currentCode;
-   [SerializeField] minigameObject LastObject;
+   //[SerializeField] minigameObject LastObject;
     [SerializeField] int MaxVal;
    [SerializeField] TMP_Text[] texts;
+    [SerializeField] protected InteractEvent onCodeEvent;
 
-   public bool Check()
+
+    public bool Check()
     {
         for (int i = 0; i < correctCode.Length; i++)
         {
@@ -28,13 +30,12 @@ public class codeMinigame : minigame
         texts[i].text =currentCode[i].ToString();
         if (Check())
         {
-            LastObject.setState(basicObject.ObjState.Active);
+            eventManager.Instance.startEvent(onCodeEvent, () => { });
         }
     }
     public override void StartMinigame()
     {
         base.StartMinigame();
-        LastObject.setState(basicObject.ObjState.Locked);
         for (int i = 0; i < texts.Length; i++)
         {
             texts[i].text = currentCode[i].ToString();
