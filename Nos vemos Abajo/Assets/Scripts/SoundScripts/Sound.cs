@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 [Serializable]
 public class Sound
@@ -19,6 +20,8 @@ public class Sound
     public float pitch = 1f; // El pitch o "tono" del sonido
 
     public bool loop; // Si el sonido debe repetirse en bucle
+
+    public AudioMixerGroup audioMixerGroup; //EL audioMixerGroup al que está agregado
 
     [HideInInspector]
     public AudioSource source; // El AudioSource que reproducirá este sonido

@@ -8,6 +8,8 @@ public class UIMenu : MonoBehaviour
 {
     public GameObject optionsPanel;
 
+    public GameObject botonesMenu;
+
     public CinemachineVirtualCamera camMenu;
 
     private Camera cam;
@@ -32,19 +34,14 @@ public class UIMenu : MonoBehaviour
     }
     public void OptionsPanel()
     {
-        if (Time.timeScale == 1f)
-        {
-            Time.timeScale = 0;
-            optionsPanel.SetActive(true);
-        }
+        optionsPanel.SetActive(true);
+        botonesMenu.SetActive(false);
+        
     }
     public void OptionsPanelVolver()
     {
-        if (Time.timeScale == 0f)
-        {
-            Time.timeScale = 1f;
-            optionsPanel.SetActive(false);
-        }
+        optionsPanel.SetActive(false);
+        botonesMenu.SetActive(true);
     }
 
 

@@ -8,8 +8,8 @@ public class gameManager : MonoBehaviour
 {
     public static gameManager Instance;
   [SerializeField]  CinemachineVirtualCamera mainCamera;
-    [SerializeField] float savedCameraSpeedX;
-    [SerializeField] float savedCameraSpeedY;
+    public float savedCameraSpeedX;
+    public float savedCameraSpeedY;
     Action changeState;
     Action startGame;
     public GameState currentState { get; private set; }

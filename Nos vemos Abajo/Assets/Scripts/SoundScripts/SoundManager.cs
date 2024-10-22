@@ -42,6 +42,7 @@ public class SoundManager : MonoBehaviour
         AudioSource tempAudioSource = tempAudioObject.AddComponent<AudioSource>();
 
         // Configurar las propiedades del AudioSource
+        tempAudioObject.GetComponent<AudioSource>().outputAudioMixerGroup = s.audioMixerGroup;
         tempAudioSource.clip = s.clip;
         tempAudioSource.volume = s.volume;
         tempAudioSource.pitch = s.pitch;

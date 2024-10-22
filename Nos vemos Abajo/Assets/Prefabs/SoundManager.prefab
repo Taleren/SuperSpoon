@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3572879101952197073
+--- !u!1 &5564945901378052476
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8554963658800888546}
-  - component: {fileID: 569910253917338366}
+  - component: {fileID: 6084048057270343981}
+  - component: {fileID: 3054931025741865956}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8554963658800888546
+--- !u!4 &6084048057270343981
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3572879101952197073}
+  m_GameObject: {fileID: 5564945901378052476}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,13 +32,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &569910253917338366
+--- !u!114 &3054931025741865956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3572879101952197073}
+  m_GameObject: {fileID: 5564945901378052476}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44baa1ee933041e4e9cbba7d908f561a, type: 3}
@@ -51,6 +51,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: ventisca
     clip: {fileID: 8300000, guid: aa0667306772d1b48a96a4711443f464, type: 3}
@@ -58,6 +59,7 @@ MonoBehaviour:
     spatialBlend: 0
     pitch: 1
     loop: 1
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: susto
     clip: {fileID: 8300000, guid: 544f65c95844cd14383e11b44db419f6, type: 3}
@@ -65,6 +67,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: cogerCuchillo
     clip: {fileID: 8300000, guid: aa40aa9bfd5789141be4ba4748e007df, type: 3}
@@ -72,6 +75,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: risaIncomoda
     clip: {fileID: 8300000, guid: d49c6f2061c21d14ab01d2e0b17c5414, type: 3}
@@ -79,6 +83,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: hablar
     clip: {fileID: 8300000, guid: 058bcee779453d440a411dcd6a6da21b, type: 3}
@@ -86,6 +91,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: gritoMujer
     clip: {fileID: 8300000, guid: 351b75cfb589efa47b8d065eeb15aeae, type: 3}
@@ -93,6 +99,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: golpeIntro
     clip: {fileID: 8300000, guid: 857bce7c4dc05ce4bab908b51abf375c, type: 3}
@@ -100,6 +107,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: cortarCuerda
     clip: {fileID: 8300000, guid: d693187fb3f5cb640b8b4ea794df05bb, type: 3}
@@ -107,6 +115,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1.1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: cogerFarol
     clip: {fileID: 8300000, guid: 466d10236caed0c44a10ff6b6d27ba35, type: 3}
@@ -114,6 +123,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: botonFarol
     clip: {fileID: 8300000, guid: 7b294f3ac35d83b4e955918f9959dfe0, type: 3}
@@ -121,6 +131,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: valvulaFarol
     clip: {fileID: 8300000, guid: 08d150d2b0155da45a9d7881655d74b2, type: 3}
@@ -128,6 +139,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: cogerBoli
     clip: {fileID: 8300000, guid: 3be67530ee0f2544996e999ca1fab5d5, type: 3}
@@ -135,6 +147,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: firmar
     clip: {fileID: 8300000, guid: 2cf1bc7ec3143184aa5cd1e2e5faff12, type: 3}
@@ -142,6 +155,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: vientoFuerte
     clip: {fileID: 8300000, guid: d28d01254af275942a0e06ed14874bab, type: 3}
@@ -149,6 +163,7 @@ MonoBehaviour:
     spatialBlend: 0
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: sonidomiedo1
     clip: {fileID: 8300000, guid: e43ce413a08fcad43b2f80ecae6e9796, type: 3}
@@ -156,6 +171,7 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: sonidomiedo2
     clip: {fileID: 8300000, guid: cd814aa99df885d46a5956b2754a76ac, type: 3}
@@ -163,4 +179,5 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
