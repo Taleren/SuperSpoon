@@ -1790,6 +1790,16 @@ MonoBehaviour:
         animator: {fileID: 0}
         interactObject: {fileID: 323526445}
         newState: 2
+      - callType: 2
+        nameKey: IntroFarol
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        PlayWithBefore: 0
+        obj: {fileID: 1114746202}
+        animator: {fileID: 0}
+        interactObject: {fileID: 323526445}
+        newState: 2
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -36121,9 +36131,29 @@ PrefabInstance:
       propertyPath: transicionPanel
       value: 
       objectReference: {fileID: 812966390}
+    - target: {fileID: 3332356625638603387, guid: d980f305b40ccf14e937e141d82b84c3,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3332356625638603387, guid: d980f305b40ccf14e937e141d82b84c3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3994406326144046342, guid: d980f305b40ccf14e937e141d82b84c3,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915700441431899883, guid: d980f305b40ccf14e937e141d82b84c3,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915700441431899883, guid: d980f305b40ccf14e937e141d82b84c3,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6695853239524833687, guid: d980f305b40ccf14e937e141d82b84c3,
@@ -36240,6 +36270,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RaycastTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8215613840070031762, guid: d980f305b40ccf14e937e141d82b84c3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000030517578
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
