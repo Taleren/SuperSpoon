@@ -19,7 +19,7 @@ public class MenuPausa : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && gameManager.Instance.currentState == gameManager.GameState.FreePlay) 
+        if (Input.GetKeyDown(KeyCode.Escape) && gameManager.Instance.currentState == gameManager.GameState.FreePlay) 
         {
             menuPausa.SetActive(true);
             gameManager.Instance.setState(gameManager.GameState.Paused);
