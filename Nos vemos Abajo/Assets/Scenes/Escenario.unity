@@ -534,6 +534,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: boli
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 04222376ee9b7924f8b35ae9def826cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3411,6 +3416,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1693408574}
   m_SourcePrefab: {fileID: 100100000, guid: b2ca8c176ae4b36469786dc3acc47fb8, type: 3}
+--- !u!1 &417650013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c31cc4b6a67bfca44930ddb22e3d7da7,
+    type: 3}
+  m_PrefabInstance: {fileID: 121846049}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &418925112
 GameObject:
   m_ObjectHideFlags: 0
@@ -3809,6 +3820,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450689880}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &452925770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8aa539244bfd0334abd3678bae1711c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 326878014}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &465540781
 GameObject:
   m_ObjectHideFlags: 0
@@ -5527,6 +5544,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2ca8c176ae4b36469786dc3acc47fb8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11467,7 +11489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &764566926
 Transform:
   m_ObjectHideFlags: 0
@@ -17355,7 +17377,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e6469d42aa465754e9ec5d889b86cede,
         type: 3}
       propertyPath: m_Name
-      value: hojaMonitor
+      value: CallerContrato
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e6469d42aa465754e9ec5d889b86cede,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e6469d42aa465754e9ec5d889b86cede,
         type: 3}
@@ -17370,7 +17397,15 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1594542221}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6469d42aa465754e9ec5d889b86cede,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 979881071}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6469d42aa465754e9ec5d889b86cede,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 979881070}
   m_SourcePrefab: {fileID: 100100000, guid: e6469d42aa465754e9ec5d889b86cede, type: 3}
 --- !u!4 &904995272 stripped
 Transform:
@@ -18074,6 +18109,74 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 904995271}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &979881070
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979881069}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &979881071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979881069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54afd0d9c9763af47bbb5eded4c118cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intEvent:
+    eventOrder: []
+  outline: {fileID: 1733505162}
+  Hoverkey: DescContrato
+  showName: 1
+  startState: 1
+  currentState: 0
+  eventList:
+  - HoverText: 
+    state: 1
+    interactEvent:
+      eventOrder:
+      - callType: 2
+        nameKey: PutoCogeElBoli
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        PlayWithBefore: 0
+        obj: {fileID: 0}
+        animator: {fileID: 0}
+        interactObject: {fileID: 0}
+        newState: 0
+    minigameEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - HoverText: 
+    state: 2
+    interactEvent:
+      eventOrder: []
+    minigameEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  _Minigame: {fileID: 1029489020}
+  targetState: 2
 --- !u!1001 &993690100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18488,6 +18591,16 @@ MonoBehaviour:
     eventOrder: []
   onEndEvent:
     eventOrder:
+    - callType: 2
+      nameKey: Cuerda
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      PlayWithBefore: 0
+      obj: {fileID: 776506412}
+      animator: {fileID: 0}
+      interactObject: {fileID: 2020479462}
+      newState: 2
     - callType: 3
       nameKey: 
       timelineObj: {fileID: 0}
@@ -18496,7 +18609,7 @@ MonoBehaviour:
       PlayWithBefore: 0
       obj: {fileID: 776506412}
       animator: {fileID: 0}
-      interactObject: {fileID: 776506414}
+      interactObject: {fileID: 2020479462}
       newState: 2
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
@@ -19135,6 +19248,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cuerdaDesatada
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b639c4afa40725245a2dc5ae87c863f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24745,10 +24863,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intEvent:
     eventOrder: []
-  outline: {fileID: 1345857481}
+  outline: {fileID: 452925770}
   Hoverkey: DescBoli
   showName: 1
-  startState: 0
+  startState: 1
   currentState: 0
   eventList:
   - HoverText: DescBoli
@@ -24764,6 +24882,26 @@ MonoBehaviour:
         obj: {fileID: 1213361771}
         animator: {fileID: 0}
         interactObject: {fileID: 764566927}
+        newState: 2
+      - callType: 5
+        nameKey: 
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 1
+        PlayWithBefore: 0
+        obj: {fileID: 1982041735}
+        animator: {fileID: 0}
+        interactObject: {fileID: 764566927}
+        newState: 2
+      - callType: 5
+        nameKey: 
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 1
+        PlayWithBefore: 0
+        obj: {fileID: 501553545}
+        animator: {fileID: 0}
+        interactObject: {fileID: 979881071}
         newState: 2
       - callType: 0
         nameKey: Manos_Coger1
@@ -24783,7 +24921,7 @@ MonoBehaviour:
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
-        interactObject: {fileID: 764566927}
+        interactObject: {fileID: 979881071}
         newState: 2
     minigameEvent:
       m_PersistentCalls:
@@ -30109,7 +30247,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 817025f71ae38d54a8dc5931b00d94d0,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35209,8 +35347,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
+      propertyPath: onEndEvent.eventOrder.Array.data[1].Boolean
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[1].nameKey
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: onEndEvent.eventOrder.Array.data[2].Boolean
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -35306,7 +35454,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[4].interactObject
       value: 
-      objectReference: {fileID: 41821338}
+      objectReference: {fileID: 1213361775}
     - target: {fileID: 3457153557844567100, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: m_Name
@@ -36029,7 +36177,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f4b0bc5bd0631bc49adf1895e69729c7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4083501151425157549, guid: f4b0bc5bd0631bc49adf1895e69729c7,
         type: 3}
@@ -39269,6 +39417,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1733505162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: de4b26795059fb14eb5d0011f39f0bfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1594542220}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1737381499 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6155312134857600655, guid: 10554dab2874de9409bd19f04932b0fc,
@@ -39770,12 +39924,17 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2051259d1f3e9534aaaa73ab313608db,
         type: 3}
       propertyPath: m_Name
-      value: cuerdaAtada
+      value: CallerCuerdaHielo
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2051259d1f3e9534aaaa73ab313608db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2051259d1f3e9534aaaa73ab313608db,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -39784,7 +39943,15 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 121846050}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2051259d1f3e9534aaaa73ab313608db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2020479462}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2051259d1f3e9534aaaa73ab313608db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2020479461}
   m_SourcePrefab: {fileID: 100100000, guid: 2051259d1f3e9534aaaa73ab313608db, type: 3}
 --- !u!4 &1804914336 stripped
 Transform:
@@ -41164,6 +41331,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b28ec1d079583741be303977b85cc09, type: 3}
+--- !u!1 &1982041735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 04222376ee9b7924f8b35ae9def826cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 97650369}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2003750814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41337,6 +41510,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Weight: 1
   m_Effectors: []
+--- !u!1 &2020479460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2051259d1f3e9534aaaa73ab313608db,
+    type: 3}
+  m_PrefabInstance: {fileID: 1804914335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &2020479461
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020479460}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &2020479462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020479460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54afd0d9c9763af47bbb5eded4c118cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intEvent:
+    eventOrder: []
+  outline: {fileID: 417650013}
+  Hoverkey: DescCuerdaCong
+  showName: 1
+  startState: 1
+  currentState: 0
+  eventList: []
+  _Minigame: {fileID: 106585457}
+  targetState: 2
 --- !u!4 &2034321563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1823972528098998594, guid: 10554dab2874de9409bd19f04932b0fc,
