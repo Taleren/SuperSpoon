@@ -64,7 +64,7 @@ public class gameManager : MonoBehaviour
     }
     void setGameCursor(bool show)
     {
-        gameCursorCanvas.gameObject.SetActive(show);
+        //gameCursorCanvas.gameObject.SetActive(show);
     }
     public void setState(GameState newstate)
     {
@@ -75,8 +75,8 @@ public class gameManager : MonoBehaviour
 
                 if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
                 {
-                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0;
-                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0;
+                    setCameraSpeed(false);
+
                 }
                 setCursor(true);
 
@@ -86,8 +86,8 @@ public class gameManager : MonoBehaviour
             case GameState.FreePlay:
                 if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
                 {
-                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = savedCameraSpeedX;
-                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = savedCameraSpeedY;
+                    setCameraSpeed(true);
+
                 }
                 setCursor(false);
                 setGameCursor(true);
@@ -96,17 +96,30 @@ public class gameManager : MonoBehaviour
             case GameState.Minigame:
                 if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
                 {
-                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0;
-                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0;
+                    setCameraSpeed(false);
                 }
                 setCursor(true);
                 setGameCursor(false);
 
                 break;
+            case GameState.onInteract:
+                if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
+                {
+                    setCameraSpeed(true);
+                }
+                setCursor(false);
+                setGameCursor(false);
+                break;
             default:
                 break;
         }
         changeState?.Invoke();
+    }
+    public void setCameraSpeed(bool isOn)
+    {
+        mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = isOn ? savedCameraSpeedX : 0;
+        mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = isOn ? savedCameraSpeedY : 0;
+
     }
     public void setChangeStateEvent(Action action)
     {
@@ -120,7 +133,8 @@ public class gameManager : MonoBehaviour
     {
         Paused,
         FreePlay,
-        Minigame
+        Minigame,
+        onInteract
 
     }
     public void startTheGame()
@@ -130,7 +144,7 @@ public class gameManager : MonoBehaviour
 
         startGame?.Invoke();
 
-        eventManager.Instance.startEvent(startGameEvent, () => { });
+        eventManager.Instance.startEvent(startGameEvent, () => { gameManager.Instance.setState(gameManager.GameState.FreePlay); });
 
     }
 

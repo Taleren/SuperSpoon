@@ -27,7 +27,7 @@ public class miniGameManager : MonoBehaviour
     {
         
         gameManager.Instance.setState(gameManager.GameState.FreePlay);
-        eventManager.Instance.startEvent(postEvent,()=>{ });
+        eventManager.Instance.startEvent(postEvent,()=> { gameManager.Instance.setState(gameManager.GameState.FreePlay); });
 
     }
     // Start is called before the first frame update

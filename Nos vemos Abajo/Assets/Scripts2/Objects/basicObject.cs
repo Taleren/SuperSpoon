@@ -53,7 +53,8 @@ public class basicObject : MonoBehaviour,IObject
             curEvent.interactEvent = intEvent;
         }
         
-        eventManager.Instance.startEvent(curEvent.interactEvent, () => { });
+        eventManager.Instance.startEvent(curEvent.interactEvent, () => {
+  gameManager.Instance.setState(gameManager.GameState.FreePlay);        });
     }
 
     public virtual void LeaveHover()
@@ -93,7 +94,6 @@ public class basicObject : MonoBehaviour,IObject
         {
             outline.SetActive(false);
         }
-        print(name);
     }
     public ObjState getState() => currentState;
     protected eventData getStateEvents()

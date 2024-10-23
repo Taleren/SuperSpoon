@@ -155,14 +155,14 @@ public class TextManager : MonoBehaviour
 
     private IEnumerator Typewriter(string linea)
     {
-        print("ss");
+     //   print("ss");
         DialogoActual = linea;
 
         while (getLine(DialogoActual + "_" + IndiceLineaActual.ToString())/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null && !pausado)
         {
             // Texto
             getSubs(DialogoActual + "_" + IndiceLineaActual.ToString());
-            print(DialogoActual + "_" + IndiceLineaActual.ToString());
+          //  print(DialogoActual + "_" + IndiceLineaActual.ToString());
             _texBox.ForceMeshUpdate();
             TMP_TextInfo textInfo = _texBox.textInfo;
 
@@ -192,7 +192,7 @@ public class TextManager : MonoBehaviour
             }
             IndiceLineaActual++;
             // Parada final
-            print("parada final");
+          //  print("parada final");
             yield return _finalDelay;
         }
         _texBox.text = string.Empty;
