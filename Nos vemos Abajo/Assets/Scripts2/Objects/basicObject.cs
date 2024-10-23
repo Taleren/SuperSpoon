@@ -77,7 +77,7 @@ public class basicObject : MonoBehaviour,IObject
     }
     public void setState(ObjState _state)
     {
-        print(name);
+     //   print(name);
         currentState = _state;
     }
     public void StartGame()
