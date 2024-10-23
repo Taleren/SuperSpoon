@@ -230,4 +230,14 @@ public class TextManager : MonoBehaviour
        // _typewriterCoroutine = StartCoroutine(Typewriter("Introtutorial"));
 
     }
+    public void SkipAll()
+    {
+        StopCoroutine(_typewriterCoroutine);
+        _texBox.text = string.Empty;
+        if (nextAction.Count > 0)
+        {
+            nextAction[0]?.Invoke();
+            nextAction.RemoveAt(0);
+        }
+    }
 }
