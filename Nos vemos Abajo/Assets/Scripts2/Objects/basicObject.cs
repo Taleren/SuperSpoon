@@ -93,7 +93,6 @@ public class basicObject : MonoBehaviour,IObject
         {
             outline.SetActive(false);
         }
-        print(name);
     }
     public ObjState getState() => currentState;
     protected eventData getStateEvents()

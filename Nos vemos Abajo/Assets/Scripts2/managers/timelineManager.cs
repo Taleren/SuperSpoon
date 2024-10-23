@@ -32,12 +32,16 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
     }
     public void callTimeline(TimelineAsset timeline, Action _action)
     {
+        gameManager.Instance.setCameraSpeed(false);
+
         currentNextAction = _action;
         director.playableAsset = timeline;
         director.Play();
     }
     public void endTimeline()
     {
+        gameManager.Instance.setCameraSpeed(true);
+
         currentNextAction.Invoke();
     }
     // Start is called before the first frame update
