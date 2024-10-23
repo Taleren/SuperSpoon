@@ -2,7 +2,7 @@
 Comienzo_0;Buena caída, ¿eh?
 Intro_0;Esperemos que haya salido todo bien.
 Intro_1;
-Intro_2;¡Es broma! *
+Intro_2;¡Es broma!<link="risaIncomoda"></link>
 Intro_3;He hecho esto miles de veces. Estará bien.
 Explica_0;¿Eh? ¿No recuerdas el itinerario?
 Explica_1;La caída ha dejado a Sonya a una altura controlada.
@@ -13,7 +13,7 @@ Cuchillo_0;Bueno, haz los honores: corta la cuerda.
 IntroFarol_0;Perfecto....
 IntroFarol_1;Bueno, ¡no la hagamos esperar!
 IntroFarol_2;Vamos a preparar tu salto, eres el siguiente.
-IntroFarol_3;La ventisca está fuerte, si no saltas rápido, el viento podría alterar tu trayectoria. *
+IntroFarol_3;La ventisca está fuerte, si no saltas rápido, el viento podría alterar tu trayectoria.<link="risaIncomoda"></link>
 IntroFarol_4;Necesitaremos luz. Enciende ese farolillo de allí.
 Consentimiento_0;Antes de que se me olvide, tienes que firmarme esta hoja de consentimiento.
 Formalidad_0;No te preocupes, es solo una formalidad.
@@ -30,7 +30,7 @@ CintaAislante_0;Ah eso....
 CintaAislante_1;No te preocupes.
 CintaAislante_2;Esa cinta cumple con todas las medidas de seguridad.
 CintaAislante_3;Es una cinta especial para la reparación de cuerdas de escalada,
-CintaAislante_4;y está instalada por un profesional -un servidor- y no compromete la seguridad del salto. *
+CintaAislante_4;y está instalada por un profesional -un servidor- y no compromete la seguridad del salto.<link="risaIncomoda"></link>
 CintaAislante_5;
 CintaAislante_6;A continuación abre la caja de los mosquetones.
 CintaAislante_7;Es esa caja de herramientas que hay ahí.
@@ -77,6 +77,6 @@ Final_17;¿Sabes lo que pasaría si por tu culpa sucediera un accidente?
 Final_18;¿¡Sabes lo que le pasaría a mi vida, a mi negocio...?!
 Final_19;
 Final_20;Perdón.
-Final_21;Me he dejado llevar *
+Final_21;Me he dejado llevar.<link="risaIncomoda"></link>
 Final_22;
 Final_23;Salta. Venga.

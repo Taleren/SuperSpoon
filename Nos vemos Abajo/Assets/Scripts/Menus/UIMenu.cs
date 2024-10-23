@@ -55,11 +55,12 @@ public class UIMenu : MonoBehaviour
     IEnumerator transicion()
     {
         transicionPanel.SetActive(true);
-        yield return new WaitForSeconds(3.5f);
-        transicionPanel.SetActive(false);
-        SoundManager.instance.PlaySound("gritoMujer", GameObject.Find("SonidosIntroObjeto").transform.position);
         yield return new WaitForSeconds(2f);
-        SoundManager.instance.PlaySound("golpeIntro", GameObject.Find("SonidosIntroObjeto").transform.position);
+        SoundManager.instance.PlaySound("gritoMujer", GameObject.Find("SonidosIntroObjeto").transform.position);
+        yield return new WaitForSeconds(3f);
+        transicionPanel.SetActive(false);
+        SoundManager.instance.PlaySound("susto", GameObject.Find("SonidosIntroObjeto").transform.position);
+        yield return new WaitForSeconds(2f);
         gameManager.Instance.startTheGame();
         yield return null;
 
