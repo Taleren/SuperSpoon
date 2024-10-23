@@ -68,6 +68,8 @@ public class gameManager : MonoBehaviour
     }
     public void setState(GameState newstate)
     {
+        print("setState");
+        print(newstate);
         currentState = newstate;
         switch (newstate)
         {
@@ -96,17 +98,23 @@ public class gameManager : MonoBehaviour
             case GameState.Minigame:
                 if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
                 {
+                    print("set speed");
                     setCameraSpeed(false);
+                }
+                else
+                {
+                    print("minigame mal");
+
                 }
                 setCursor(true);
                 setGameCursor(false);
 
                 break;
             case GameState.onInteract:
-                if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
-                {
-                    setCameraSpeed(true);
-                }
+                //if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
+                //{
+                //    setCameraSpeed(true);
+                //}
                 setCursor(false);
                 setGameCursor(false);
                 break;

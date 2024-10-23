@@ -20,7 +20,7 @@ public   override void Start()
     public override void Interact()
     {
         eventData curEvent = getStateEvents();
-        eventManager.Instance.startEvent(curEvent.interactEvent, () => { curEvent.minigameEvent?.Invoke(); });
+        eventManager.Instance.startEvent(curEvent.interactEvent, () => { curEvent.minigameEvent?.Invoke(); gameManager.Instance.setState(gameManager.GameState.Minigame); });
         LeaveHover();
     }
   
