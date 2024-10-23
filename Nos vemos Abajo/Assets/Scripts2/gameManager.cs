@@ -64,7 +64,7 @@ public class gameManager : MonoBehaviour
     }
     void setGameCursor(bool show)
     {
-        gameCursorCanvas.gameObject.SetActive(show);
+        //gameCursorCanvas.gameObject.SetActive(show);
     }
     public void setState(GameState newstate)
     {
@@ -102,6 +102,14 @@ public class gameManager : MonoBehaviour
                 setGameCursor(false);
 
                 break;
+            case GameState.onInteract:
+                if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
+                {
+                    setCameraSpeed(true);
+                }
+                setCursor(false);
+                setGameCursor(false);
+                break;
             default:
                 break;
         }
@@ -126,6 +134,7 @@ public class gameManager : MonoBehaviour
         Paused,
         FreePlay,
         Minigame,
+        onInteract
 
     }
     public void startTheGame()
@@ -135,7 +144,7 @@ public class gameManager : MonoBehaviour
 
         startGame?.Invoke();
 
-        eventManager.Instance.startEvent(startGameEvent, () => { });
+        eventManager.Instance.startEvent(startGameEvent, () => { gameManager.Instance.setState(gameManager.GameState.FreePlay); });
 
     }
 
