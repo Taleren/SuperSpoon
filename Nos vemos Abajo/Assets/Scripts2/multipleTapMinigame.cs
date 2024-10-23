@@ -25,7 +25,7 @@ public class multipleTapMinigame : minigame
             }
             else
             {
-                eventManager.Instance.startEvent(onFinishTap, () => { });
+                eventManager.Instance.startEvent(onFinishTap, () => { gameManager.Instance.setState(gameManager.GameState.FreePlay); });
             }
         }
     }

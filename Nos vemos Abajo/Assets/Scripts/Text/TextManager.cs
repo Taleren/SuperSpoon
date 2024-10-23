@@ -12,7 +12,7 @@ using UnityEngine.InputSystem;
 
 public class TextManager : MonoBehaviour
 {
-   private TMP_Text _texBox;
+    private TMP_Text _texBox;
 
     // Indices
     private int IndiceCaracterVisibleActualmente;
@@ -21,7 +21,7 @@ public class TextManager : MonoBehaviour
 
     // Corrutina
     private Coroutine _typewriterCoroutine;
-    
+
     // Delay
     private WaitForSeconds _simpleDelay;
     private WaitForSeconds _interpunctuationDelay;
@@ -42,20 +42,22 @@ public class TextManager : MonoBehaviour
     // Excel
     [Header("Documento de texto en .csv ")]
     [SerializeField] TextAsset[] textDialogues;
-    Dictionary<string, List<string> > DialogueHash;
+    Dictionary<string, List<string>> DialogueHash;
 
     public static TextManager Instance;
 
-   private List<Action> nextAction;
+    private string _currentKeyword;
+
+    private List<Action> nextAction;
     private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
         }
         _texBox = GetComponent<TMP_Text>();
 
-        _simpleDelay = new WaitForSeconds(1/characterPerSecond);
+        _simpleDelay = new WaitForSeconds(1 / characterPerSecond);
         _interpunctuationDelay = new WaitForSeconds(interpunctuationDelay);
         _finalDelay = new WaitForSeconds(finalDelay);
         _tSalto = new WaitForSeconds(0);
@@ -111,9 +113,9 @@ public class TextManager : MonoBehaviour
         //_texBox.text = string.Empty;
         _texBox.maxVisibleCharacters = 0;
         IndiceCaracterVisibleActualmente = 0;
-        
+
         _texBox.text = getLine(basekey)[0] + "\n";
-        
+
     }
 
 
@@ -126,11 +128,11 @@ public class TextManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown("space")) 
+        if (Input.GetKeyDown("space"))
         {
             if (_texBox.maxVisibleCharacters != _texBox.textInfo.characterCount - 1)
                 Skip();
-            
+
         }
         if (Input.GetKeyDown("a"))
         {
@@ -151,44 +153,46 @@ public class TextManager : MonoBehaviour
 
     }
 
-    private IEnumerator Typewriter(string linea) 
+    private IEnumerator Typewriter(string linea)
     {
-        print("ss");
+     //   print("ss");
         DialogoActual = linea;
-       
-        while (getLine(DialogoActual +"_"+ IndiceLineaActual.ToString())/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null && !pausado  )
+
+        while (getLine(DialogoActual + "_" + IndiceLineaActual.ToString())/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null && !pausado)
         {
             // Texto
             getSubs(DialogoActual + "_" + IndiceLineaActual.ToString());
-            print(DialogoActual + "_" + IndiceLineaActual.ToString());
+          //  print(DialogoActual + "_" + IndiceLineaActual.ToString());
             _texBox.ForceMeshUpdate();
             TMP_TextInfo textInfo = _texBox.textInfo;
 
             yield return new WaitForEndOfFrame();
+
+
+
             // Delay + typewriter
-            while (IndiceCaracterVisibleActualmente < textInfo.characterCount) 
+            while (IndiceCaracterVisibleActualmente < textInfo.characterCount)
+            {
+                char character = textInfo.characterInfo[IndiceCaracterVisibleActualmente].character;
+
+                _texBox.maxVisibleCharacters++;
+
+                if (character == '?' || character == '.' || character == ',' || character == ':' ||
+                    character == ';' || character == '!' || character == '-' || character == '\n')
                 {
-                    char character = textInfo.characterInfo[IndiceCaracterVisibleActualmente].character;
+                    yield return _interpunctuationDelay;
+                }
+                else
+                {
+                    SoundManager.instance.PlaySound("hablar", GameObject.Find("PERSONAJE").transform.position, GameObject.Find("PERSONAJE"));
+                    yield return _simpleDelay;
+                }
 
-                    _texBox.maxVisibleCharacters++;
-
-                    if (character == '?' || character == '.' || character == ',' || character == ':' ||
-                        character == ';' || character == '!' || character == '-' || character == '\n')
-                    { 
-                        yield return _interpunctuationDelay;
-                      //  SoundManager.instance.PlaySound("salchipapa", transform.position, gameObject);
-                    
-                    }
-                    else 
-                    { 
-                        yield return _simpleDelay; 
-                    }
-            
-                    IndiceCaracterVisibleActualmente++;
+                IndiceCaracterVisibleActualmente++;
             }
             IndiceLineaActual++;
             // Parada final
-            print("parada final");
+          //  print("parada final");
             yield return _finalDelay;
         }
         _texBox.text = string.Empty;
@@ -199,9 +203,9 @@ public class TextManager : MonoBehaviour
         }
         print("terminado");
     }
-    
 
-    void Skip() 
+
+    void Skip()
     {
         TMP_TextInfo textInfo = _texBox.textInfo;
         _texBox.maxVisibleCharacters = textInfo.characterCount;
@@ -213,7 +217,7 @@ public class TextManager : MonoBehaviour
     {
         pausado = true;
         StopCoroutine(_typewriterCoroutine);
-        
+
         return;
     }
     void Continue()
@@ -221,13 +225,13 @@ public class TextManager : MonoBehaviour
         if (!pausado) return;
 
         pausado = false;
-     _typewriterCoroutine =   StartCoroutine(Typewriter(""));
+        _typewriterCoroutine = StartCoroutine(Typewriter(""));
         return;
     }
     public void StartGame()
     {
-       // print("hello intro");
-       // _typewriterCoroutine = StartCoroutine(Typewriter("Introtutorial"));
+        // print("hello intro");
+        // _typewriterCoroutine = StartCoroutine(Typewriter("Introtutorial"));
 
     }
     public void SkipAll()
@@ -239,5 +243,34 @@ public class TextManager : MonoBehaviour
             nextAction[0]?.Invoke();
             nextAction.RemoveAt(0);
         }
+
+
+    }
+
+    private void OnEnable()
+    {
+        LinkEventInvokoer.LinkFound += reproducirSonido;
+    }
+
+    private void OnDisable()
+    {
+        LinkEventInvokoer.LinkFound -= reproducirSonido;
+    }
+
+    private void reproducirSonido(string keyword)
+    {
+        if (keyword == _currentKeyword) return;
+        _currentKeyword = keyword;
+
+        StartCoroutine(reproducirSonidoCR(keyword));
+    }
+
+    private IEnumerator reproducirSonidoCR(string keyword)
+    {
+        yield return new WaitForEndOfFrame();
+        SoundManager.instance.PlaySound(keyword, new Vector3(0,0,0));
+        Pause();
+        yield return new WaitForSeconds(SoundManager.instance.duracionSonido(keyword));
+        Continue();
     }
 }

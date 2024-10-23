@@ -79,7 +79,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: risaIncomoda
     clip: {fileID: 8300000, guid: d49c6f2061c21d14ab01d2e0b17c5414, type: 3}
-    volume: 0.2
+    volume: 0.3
     spatialBlend: 1
     pitch: 0.9
     loop: 0

@@ -16,7 +16,7 @@ public class CallminigameObject : basicObject
         }
         else
         {
-            eventManager.Instance.startEvent(intEvent, () => {  });
+            eventManager.Instance.startEvent(intEvent, () => { gameManager.Instance.setState(gameManager.GameState.FreePlay); });
 
         }
         LeaveHover();

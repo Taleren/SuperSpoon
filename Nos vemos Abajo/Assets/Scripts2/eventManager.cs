@@ -34,21 +34,26 @@ public class eventManager : MonoBehaviour
     }
     public void startEvent(InteractEvent _event,Action nextAction)
     {
-        currentCalls = _event.eventOrder;
-        currentNextAction = nextAction;
-        callIndex = -1;
-        playCall();
+        gameManager.Instance.setState(gameManager.GameState.onInteract);
+        
+            currentCalls = _event.eventOrder;
+            currentNextAction = nextAction;
+            callIndex = -1;
+            playCall();
+        
     }
 
     public void playCall()
     {
+
         callIndex++;
 
         print("Play call");
-        print(currentCalls.Length);
+        //print(currentCalls.Length);
         if (callIndex < currentCalls.Length)
         {
             eventCalls Call = currentCalls[callIndex];
+            print(Call.callType);
             Action act = () => { };
             if (!Call.PlayWithBefore)
             {
@@ -79,6 +84,10 @@ public class eventManager : MonoBehaviour
                     break;
                 case InteractEvent.eventCallTypes.soundState:
                     SoundManager.instance.PlaySound(Call.nameKey, Call.Transform.position, Call.obj);
+                    if (!Call.PlayWithBefore)
+                    {
+                        playCall();
+                    }
                     break;
                 case InteractEvent.eventCallTypes.activateObject:
                     Call.obj.SetActive(Call.Boolean);

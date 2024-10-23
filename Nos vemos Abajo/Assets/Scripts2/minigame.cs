@@ -18,7 +18,7 @@ public class minigame : MonoBehaviour
         //gameObject.SetActive(true);
         transform.position = Camera.main.transform.position + Camera.main.transform.forward * 0.5f;
         transform.eulerAngles = startRot;
-        eventManager.Instance.startEvent(startEvent, () => { });
+        eventManager.Instance.startEvent(startEvent, () => { gameManager.Instance.setState(gameManager.GameState.FreePlay); });
 
         foreach (minigameObject item in GetComponentsInChildren<minigameObject>())
         {

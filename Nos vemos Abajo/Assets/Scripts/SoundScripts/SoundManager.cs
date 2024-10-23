@@ -67,5 +67,12 @@ public class SoundManager : MonoBehaviour
         action?.Invoke();
     }
 
+    public float duracionSonido(string soundName)
+    {
+        float duracion;
+        Sound sonido = Array.Find(sounds, sound => sound.name == soundName);
+        duracion = sonido.clip.length;
+        return duracion;
+    }
 }
 

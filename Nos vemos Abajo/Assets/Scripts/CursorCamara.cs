@@ -11,6 +11,7 @@ public class CursorCamara : MonoBehaviour
     public LayerMask clickable;
     public LayerMask clickableminigame;
     private LayerMask currentMask;
+    public LayerMask none;
 
     [SerializeField] private Image cursor;
     void Start()
@@ -18,7 +19,7 @@ public class CursorCamara : MonoBehaviour
         cam = Camera.main;
         currentMask = clickable;
         gameManager.Instance.setChangeStateEvent(ChangeState);
-        // Cursor.visible = true;
+        cursor.enabled = false;
         // Cursor.lockState = CursorLockMode.Locked;
     }
     void leaveCurrent()
@@ -103,6 +104,11 @@ public class CursorCamara : MonoBehaviour
                 cursor.enabled = false;
 
                 currentMask = clickableminigame;
+
+                break;
+            case gameManager.GameState.onInteract:
+                cursor.enabled = false;
+                currentMask = none;
 
                 break;
             default:

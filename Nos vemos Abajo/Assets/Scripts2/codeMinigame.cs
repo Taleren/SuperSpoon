@@ -30,7 +30,7 @@ public class codeMinigame : minigame
         texts[i].text =currentCode[i].ToString();
         if (Check())
         {
-            eventManager.Instance.startEvent(onCodeEvent, () => { });
+            eventManager.Instance.startEvent(onCodeEvent, () => { gameManager.Instance.setState(gameManager.GameState.FreePlay); });
         }
     }
     public override void StartMinigame()
