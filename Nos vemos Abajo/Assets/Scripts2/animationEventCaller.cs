@@ -11,6 +11,7 @@ public class animationEventCaller : MonoBehaviour
     {
         eventManager.Instance.playCall();
     }
+    
     public void encenderFarol()
     {
         foreach (GameObject item in farolHijo)
@@ -22,7 +23,7 @@ public class animationEventCaller : MonoBehaviour
         propertyBlock.SetFloat("Emission", 1.0f);
         foreach (MeshRenderer item in meshr)
         {
-
+            print(item.name);
             item.SetPropertyBlock(propertyBlock);
 
         }

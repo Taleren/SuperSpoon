@@ -75,8 +75,8 @@ public class gameManager : MonoBehaviour
 
                 if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
                 {
-                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0;
-                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0;
+                    setCameraSpeed(false);
+
                 }
                 setCursor(true);
 
@@ -86,8 +86,8 @@ public class gameManager : MonoBehaviour
             case GameState.FreePlay:
                 if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
                 {
-                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = savedCameraSpeedX;
-                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = savedCameraSpeedY;
+                    setCameraSpeed(true);
+
                 }
                 setCursor(false);
                 setGameCursor(true);
@@ -96,8 +96,7 @@ public class gameManager : MonoBehaviour
             case GameState.Minigame:
                 if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
                 {
-                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = 0;
-                    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = 0;
+                    setCameraSpeed(false);
                 }
                 setCursor(true);
                 setGameCursor(false);
@@ -107,6 +106,12 @@ public class gameManager : MonoBehaviour
                 break;
         }
         changeState?.Invoke();
+    }
+    public void setCameraSpeed(bool isOn)
+    {
+        mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed = isOn ? savedCameraSpeedX : 0;
+        mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.m_MaxSpeed = isOn ? savedCameraSpeedY : 0;
+
     }
     public void setChangeStateEvent(Action action)
     {
@@ -120,7 +125,7 @@ public class gameManager : MonoBehaviour
     {
         Paused,
         FreePlay,
-        Minigame
+        Minigame,
 
     }
     public void startTheGame()
