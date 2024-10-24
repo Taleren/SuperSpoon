@@ -39,7 +39,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Fog_density: 2.77
-    - _Pixels: 3
+    - _Pixels: 4
     m_Colors:
     - _Fog_Color: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
