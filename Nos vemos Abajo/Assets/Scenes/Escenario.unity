@@ -38525,6 +38525,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5662352546177485347, guid: 3b61b457f0d8e154bab72267753e7480,
         type: 3}
+      propertyPath: unaManoEnLaCabeza
+      value: 
+      objectReference: {fileID: 1491262063}
+    - target: {fileID: 5662352546177485347, guid: 3b61b457f0d8e154bab72267753e7480,
+        type: 3}
       propertyPath: textDialogues.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -40287,6 +40292,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1491262063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3440663850312004499, guid: bb6e7b534cf2ba34d95095860b7e88c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2132941760}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &1498969089 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7202271454713460447, guid: d05e96f8c722ad84298a172002373e65,
