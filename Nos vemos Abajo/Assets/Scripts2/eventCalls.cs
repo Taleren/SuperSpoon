@@ -14,6 +14,7 @@ public class eventCalls
     public TimelineAsset timelineObj;
     public Transform Transform;
     public bool Boolean;
+    public float waitTime;
         public bool PlayWithBefore;
     public GameObject obj;
     public Animator animator;
