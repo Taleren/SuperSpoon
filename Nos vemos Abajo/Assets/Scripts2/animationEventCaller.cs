@@ -20,7 +20,7 @@ public class animationEventCaller : MonoBehaviour
 
         }
         MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
-        propertyBlock.SetFloat("Emission", 1.0f);
+        propertyBlock.SetFloat("_Emission", 1.0f);
         foreach (MeshRenderer item in meshr)
         {
             print(item.name);
