@@ -22,6 +22,7 @@ public class MenuPausa : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && gameManager.Instance.currentState == gameManager.GameState.FreePlay) 
         {
             menuPausa.SetActive(true);
+            Time.timeScale = 0f;
             gameManager.Instance.setState(gameManager.GameState.Paused);
         }
     }
@@ -29,6 +30,7 @@ public class MenuPausa : MonoBehaviour
     public void Continuar()
     {
         menuPausa.SetActive(false);
+        Time.timeScale = 1f;
         gameManager.Instance.setState(gameManager.GameState.FreePlay);
         Cursor.visible = false;
         

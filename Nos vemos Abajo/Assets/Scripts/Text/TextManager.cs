@@ -50,14 +50,6 @@ public class TextManager : MonoBehaviour
 
     private List<Action> nextAction;
 
-    // Animacion cabeza
-    public GameObject unaManoEnLaCabeza;
-    public float rotationSpeed = 30.0f;  // Velocidad máxima de rotación
-    public float oscillationFrequency = 2.0f; // Frecuencia de la oscilación (más alto = más rápido)
-    private float timeCounter = 0.0f; // Contador de tiempo
-
-    private bool rotameLaRadio = false;
-
     private void Awake()
     {
         if (Instance == null)
@@ -137,10 +129,6 @@ public class TextManager : MonoBehaviour
 
     private void Update()
     {
-        timeCounter += Time.deltaTime * oscillationFrequency;
-        float angle = Mathf.Sin(timeCounter) * rotationSpeed;
-
-
         if (Input.GetKeyDown("space"))
         {
             if (_texBox.maxVisibleCharacters != _texBox.textInfo.characterCount - 1)
@@ -158,10 +146,6 @@ public class TextManager : MonoBehaviour
         if (Input.GetKeyDown("z"))
         {
             SkipAll();
-        }
-        if (rotameLaRadio == true)
-        {
-            unaManoEnLaCabeza.transform.transform.rotation = Quaternion.Euler(0, 90, angle);
         }
     }
 
@@ -181,7 +165,6 @@ public class TextManager : MonoBehaviour
 
         while (getLine(DialogoActual + "_" + IndiceLineaActual.ToString())/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null && !pausado)
         {
-            rotameLaRadio = true; // ROTAME LA RADIO
             // Texto
             getSubs(DialogoActual + "_" + IndiceLineaActual.ToString());
           //  print(DialogoActual + "_" + IndiceLineaActual.ToString());
@@ -216,7 +199,6 @@ public class TextManager : MonoBehaviour
           //  print("parada final");
             yield return _finalDelay;
         }
-        rotameLaRadio = false; // ROTAME LA RADIO
         _texBox.text = string.Empty;
         if (nextAction.Count > 0)
         {
