@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: farol2
-  m_Shader: {fileID: -6465566751694194690, guid: 16eb1588358602545a941153f5a116b9,
+  m_Name: cintaMinigame
+  m_Shader: {fileID: -6465566751694194690, guid: 22b681433dab60e41a4cfa05396c7d52,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -24,20 +24,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Emissive:
-        m_Texture: {fileID: 2800000, guid: 1112d19b5c55b3d48a7f6aa18b3add26, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_29ecbe6c93494d00ab2f62ef40640f2c_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: bc92e9e3f2111554a8b148f89eab1aea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 61cdb851d828437449cfc89a5f0f77c4, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Transparency:
-        m_Texture: {fileID: 2800000, guid: 8906b2f1f8b034a468b7cfaa9725d524, type: 3}
+        m_Texture: {fileID: 2800000, guid: c28433504eb4a5142b95cda709ce1551, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -54,16 +46,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Emission: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _snow_quantity: 24.78
-    - _snow_scale: 10.68
+    - _Snow_Quantity: 0.8
+    - _Snow_Scale: 26
     m_Colors:
-    - _Base_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _EmissiveColor: {r: 1, g: 0.85253227, b: 0.5330188, a: 0}
+    - _Base_Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &6798107308141202809
+--- !u!114 &3762211310642064954
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
