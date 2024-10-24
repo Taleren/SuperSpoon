@@ -39904,6 +39904,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FarolMesh
       objectReference: {fileID: 0}
+    - target: {fileID: 4201275073591790596, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201275073591790596, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c59c8ee1219e7fc4d812cad547d45bb5, type: 2}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: showName
@@ -39949,6 +39959,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b0babd8d554a971489d8b08f01c5d116, type: 2}
+    - target: {fileID: 9179055124540310150, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179055124540310150, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c59c8ee1219e7fc4d812cad547d45bb5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
