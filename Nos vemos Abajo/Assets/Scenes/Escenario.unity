@@ -255,6 +255,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -906,6 +907,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -921,6 +923,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -2061,6 +2064,7 @@ MonoBehaviour:
         timelineObj: {fileID: 11400000, guid: e456afb44e1190b4cb6e13e9407b81ce, type: 2}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -2071,6 +2075,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -2081,6 +2086,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 1114746202}
         animator: {fileID: 0}
@@ -2091,6 +2097,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 1114746202}
         animator: {fileID: 0}
@@ -2101,6 +2108,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 1
         obj: {fileID: 1114746202}
         animator: {fileID: 501553548}
@@ -2111,6 +2119,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 1114746202}
         animator: {fileID: 501553548}
@@ -2300,7 +2309,7 @@ Transform:
   m_GameObject: {fileID: 300241837}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 57.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2607,6 +2616,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 554988046}
       animator: {fileID: 0}
@@ -2878,6 +2888,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -2888,6 +2899,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 1
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 1114746202}
         animator: {fileID: 0}
@@ -2898,6 +2910,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 312839127}
         animator: {fileID: 501553548}
@@ -2908,6 +2921,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 1
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 501553545}
         animator: {fileID: 0}
@@ -2918,6 +2932,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 1
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 501553545}
         animator: {fileID: 501553548}
@@ -2928,6 +2943,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 1
+        waitTime: 0
         PlayWithBefore: 1
         obj: {fileID: 501553545}
         animator: {fileID: 2132941807}
@@ -3127,6 +3143,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -3137,6 +3154,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -4647,6 +4665,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -5460,6 +5479,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -5814,6 +5834,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 912464370}
       animator: {fileID: 0}
@@ -6491,6 +6512,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -6823,6 +6845,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -6850,6 +6873,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -12683,6 +12707,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -12906,6 +12931,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -12916,6 +12942,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -12926,6 +12953,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 1
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 1241291447}
       animator: {fileID: 0}
@@ -12936,6 +12964,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 1623135199}
       animator: {fileID: 0}
@@ -12951,6 +12980,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -13066,6 +13096,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -19291,6 +19322,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -19923,10 +19955,22 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 1827318341}
       animator: {fileID: 0}
       interactObject: {fileID: 1827318342}
+      newState: 2
+    - callType: 3
+      nameKey: 
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      waitTime: 0
+      PlayWithBefore: 0
+      obj: {fileID: 1827318341}
+      animator: {fileID: 0}
+      interactObject: {fileID: 1776825814}
       newState: 2
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
@@ -20773,6 +20817,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 1982041735}
       animator: {fileID: 0}
@@ -20783,6 +20828,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 979881069}
       animator: {fileID: 0}
@@ -20793,6 +20839,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 776506412}
       animator: {fileID: 0}
@@ -20803,6 +20850,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 1
       obj: {fileID: 776506412}
       animator: {fileID: 2132941807}
@@ -20813,6 +20861,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 1
       obj: {fileID: 776506412}
       animator: {fileID: 501553548}
@@ -20823,6 +20872,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 776506412}
       animator: {fileID: 0}
@@ -21567,6 +21617,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -21577,6 +21628,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -27199,6 +27251,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 1213361771}
         animator: {fileID: 0}
@@ -27209,6 +27262,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 1
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 1982041735}
         animator: {fileID: 0}
@@ -27219,6 +27273,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 1
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 501553545}
         animator: {fileID: 0}
@@ -27229,6 +27284,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 501553548}
@@ -27239,6 +27295,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -32628,6 +32685,18 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1291500779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5564945901378052476, guid: 68d3633207918a1438e5116f634b9fc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 306664158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1291500781 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6084048057270343981, guid: 68d3633207918a1438e5116f634b9fc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 306664158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1293935984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32948,6 +33017,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -38987,6 +39057,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -39271,6 +39342,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -39281,6 +39353,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -40025,6 +40098,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -42033,6 +42107,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -42055,6 +42130,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -42065,6 +42141,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 1
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 484872023}
       animator: {fileID: 0}
@@ -42900,6 +42977,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -43607,6 +43685,120 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773265175}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1776825813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1776825816}
+  - component: {fileID: 1776825815}
+  - component: {fileID: 1776825814}
+  m_Layer: 6
+  m_Name: ObjetoLlamarSolo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1776825814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776825813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1d41f27a0d7624e93a433114fb4c36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intEvent:
+    eventOrder: []
+  outline: {fileID: 0}
+  Hoverkey: Desc?
+  showName: 1
+  startState: 0
+  currentState: 0
+  eventList:
+  - HoverText: 
+    state: 2
+    interactEvent:
+      eventOrder:
+      - callType: 6
+        nameKey: Furgoneta
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        waitTime: 2
+        PlayWithBefore: 0
+        obj: {fileID: 0}
+        animator: {fileID: 0}
+        interactObject: {fileID: 0}
+        newState: 0
+      - callType: 4
+        nameKey: susto
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 1291500781}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 1
+        obj: {fileID: 1291500779}
+        animator: {fileID: 0}
+        interactObject: {fileID: 0}
+        newState: 0
+      - callType: 2
+        nameKey: Furgoneta
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 1291500781}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 1291500779}
+        animator: {fileID: 0}
+        interactObject: {fileID: 0}
+        newState: 0
+    minigameEvent:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!65 &1776825815
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776825813}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.0059261, y: 5.326475, z: 1}
+  m_Center: {x: -1.4275985, y: 2.1632376, z: 0}
+--- !u!4 &1776825816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776825813}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.37, y: -1.12, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1778585814
 GameObject:
   m_ObjectHideFlags: 0
@@ -44890,6 +45082,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -45148,6 +45341,7 @@ MonoBehaviour:
         timelineObj: {fileID: 11400000, guid: efe4dab2ca527394aa4ecd86fd3f7f53, type: 2}
         Transform: {fileID: 0}
         Boolean: 1
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 501553545}
         animator: {fileID: 0}
@@ -45158,6 +45352,7 @@ MonoBehaviour:
         timelineObj: {fileID: 11400000, guid: efe4dab2ca527394aa4ecd86fd3f7f53, type: 2}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -46577,6 +46772,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -46604,6 +46800,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -46875,6 +47072,7 @@ MonoBehaviour:
         timelineObj: {fileID: 11400000, guid: 6edb840ed2deff44282d013a08e6f36a, type: 2}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -46885,6 +47083,7 @@ MonoBehaviour:
         timelineObj: {fileID: 11400000, guid: 6edb840ed2deff44282d013a08e6f36a, type: 2}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -47059,6 +47258,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 554988046}
       animator: {fileID: 0}
@@ -48739,6 +48939,7 @@ MonoBehaviour:
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
+      waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
@@ -49232,6 +49433,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -49242,6 +49444,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
         animator: {fileID: 0}
@@ -49252,6 +49455,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 1
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 674520721}
         animator: {fileID: 0}
@@ -49262,6 +49466,7 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 0
+        waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 1309077688}
         animator: {fileID: 0}
@@ -49452,3 +49657,4 @@ SceneRoots:
   - {fileID: 543450651805095452}
   - {fileID: 1095244341}
   - {fileID: 977112838}
+  - {fileID: 1776825816}

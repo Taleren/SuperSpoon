@@ -17,6 +17,7 @@ public class InteractEvent
         dialogueCall,
         changeObjectState,
         soundState,
-        activateObject
+        activateObject,
+        waitState
     }
 }

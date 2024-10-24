@@ -96,6 +96,9 @@ public class eventManager : MonoBehaviour
                         playCall();
                     }
                     break;
+                case InteractEvent.eventCallTypes.waitState:
+                    StartCoroutine(waitTime(Call.waitTime));
+                    break;
                 default:
                     break;
             }
@@ -110,6 +113,10 @@ public class eventManager : MonoBehaviour
             currentNextAction.Invoke();
         }
     }
-
+    IEnumerator waitTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        playCall();
+    }
    
 }

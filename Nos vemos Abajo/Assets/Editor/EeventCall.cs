@@ -17,6 +17,7 @@ public class EeventCall : PropertyDrawer
     SerializedProperty Boolean;
     SerializedProperty PlayWithBefore;
     SerializedProperty Transform;
+    SerializedProperty waitTime;
     private void OnEnable()
     {
         //callType = serializedObject.FindProperty("callType");
@@ -31,6 +32,7 @@ public class EeventCall : PropertyDrawer
         obj = property.FindPropertyRelative("obj");
         Transform = property.FindPropertyRelative("Transform");
         PlayWithBefore = property.FindPropertyRelative("PlayWithBefore");
+        waitTime = property.FindPropertyRelative("waitTime");
 
         Boolean = property.FindPropertyRelative("Boolean");
         animator = property.FindPropertyRelative("animator");
@@ -79,6 +81,9 @@ public class EeventCall : PropertyDrawer
                 DrawStringProperty(position, "Sound Key");
                 DrawPosition(position);
                 DrawCallWithBefore(position, 6);
+                break;
+            case InteractEvent.eventCallTypes.waitState:
+                DrawWaitTime(position);
                 break;
                       default:
                 break;
@@ -202,6 +207,16 @@ public class EeventCall : PropertyDrawer
              position.size.x * .8f, EditorGUIUtility.singleLineHeight);
 
         EditorGUI.PropertyField(drawArea, newState, new GUIContent(newState.name));
+    }
+    private void DrawWaitTime(Rect position)
+    {
+        EditorGUIUtility.labelWidth = 100;
+
+        Rect drawArea = new Rect(position.min.x,
+             position.min.y + 2f * EditorGUIUtility.singleLineHeight,
+             position.size.x * .8f, EditorGUIUtility.singleLineHeight);
+
+        EditorGUI.PropertyField(drawArea, waitTime, new GUIContent(waitTime.name));
     }
 }
 
