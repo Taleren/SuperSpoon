@@ -209,9 +209,9 @@ MonoBehaviour:
   intEvent:
     eventOrder: []
   outline: {fileID: 524889101}
-  Hoverkey: DescCuerdaCong
+  Hoverkey: DescCuerda
   showName: 1
-  startState: 1
+  startState: 2
   currentState: 0
   eventList: []
   _Minigame: {fileID: 1398626498}
