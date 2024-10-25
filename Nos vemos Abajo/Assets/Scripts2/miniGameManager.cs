@@ -25,7 +25,7 @@ public class miniGameManager : MonoBehaviour
     }
     public void endMinigame(InteractEvent postEvent)
     {
-        
+        print("end");
         gameManager.Instance.setState(gameManager.GameState.FreePlay);
         eventManager.Instance.startEvent(postEvent,()=> { gameManager.Instance.setState(gameManager.GameState.FreePlay); });
 
