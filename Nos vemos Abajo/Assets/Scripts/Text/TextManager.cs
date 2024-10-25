@@ -129,20 +129,6 @@ public class TextManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            if (_texBox.maxVisibleCharacters != _texBox.textInfo.characterCount - 1)
-                Skip();
-
-        }
-        if (Input.GetKeyDown("a"))
-        {
-            Pause();
-        }
-        if (Input.GetKeyDown("s"))
-        {
-            Continue();
-        }
         if (Input.GetKeyDown("z"))
         {
             SkipAll();
@@ -209,14 +195,7 @@ public class TextManager : MonoBehaviour
         print("terminado");
     }
 
-
-    void Skip()
-    {
-        TMP_TextInfo textInfo = _texBox.textInfo;
-        _texBox.maxVisibleCharacters = textInfo.characterCount;
-        StopCoroutine(_typewriterCoroutine);
-        return;
-    }
+    
 
     void Pause()
     {
