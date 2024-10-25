@@ -40,7 +40,7 @@ Furgoneta_0;Disculpa, había ido a la furgoneta a buscar unas cosas.
 Furgoneta_1;Espero no haberte asustado.
 Furgoneta_2;<link="cambiarPitch_hablar_0,85"></link>¿Qué?
 Furgoneta_3;¿Que todavía no has preparado la cuerda?
-Furgoneta_4;<link="cambiarPitch_hablar_0.95"></link>¡Pero serás inútil!
+Furgoneta_4;<link="cambiarPitch_hablar_0,95"></link>¡Pero serás inútil!
 Furgoneta_5;No me pagan lo suficiente por aguantar a domingueros inútiles,
 Furgoneta_6;luego suceden accidentes y la culpa es siempre del puto instructor.
 Furgoneta_7;
