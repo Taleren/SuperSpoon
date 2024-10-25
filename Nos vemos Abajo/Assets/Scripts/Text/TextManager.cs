@@ -260,8 +260,8 @@ public class TextManager : MonoBehaviour
                 StartCoroutine(cambiarPitchCR(splitArray[1], float.Parse(splitArray[2])));
                 break;
 
-            case "esperarSonido":
-                StartCoroutine(esperarSonidoCR(float.Parse(splitArray[1])));
+            case "esperarTiempo":
+                //StartCoroutine(esperarTiempoCR(float.Parse(splitArray[1])));
                 break;
 
         }
@@ -272,9 +272,10 @@ public class TextManager : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         SoundManager.instance.PlaySound(_soundName, new Vector3(0,0,0));
-        Pause();
+        //Pause();
         yield return new WaitForSeconds(SoundManager.instance.duracionSonido(_soundName));
-        Continue();
+        yield return new WaitForEndOfFrame();
+        //Continue();
     }
 
     private IEnumerator cambiarPitchCR(string _soundName, float nuevoPitch)
@@ -283,13 +284,14 @@ public class TextManager : MonoBehaviour
         SoundManager.instance.buscarSonido(_soundName).pitch = nuevoPitch;
         yield return new WaitForEndOfFrame();
     }
-
-    private IEnumerator esperarSonidoCR(float tiempoEspera)
+    // ME DA FALLOS Y NO CONTINUA HABLANDO EL SEÑOR Y NO SÉ POR QUÉ
+    /*
+    private IEnumerator esperarTiempoCR(float tiempoEspera)
     {
         yield return new WaitForEndOfFrame();
-        Pause();
+        //Pause();
         yield return new WaitForSeconds(tiempoEspera);
-        Continue();
+        //Continue();
 
-    }
+    }*/
 }
