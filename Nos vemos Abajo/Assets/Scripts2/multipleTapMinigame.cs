@@ -18,6 +18,18 @@ public class multipleTapMinigame : minigame
         base.StartMinigame();
         currentSnow = startSnow;
         currentTaps = 0;
+        if (meshr.Length > 0)
+        {
+            MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
+            propertyBlock.SetFloat("_Snow_Quantity", startSnow);
+
+            foreach (MeshRenderer item in meshr)
+            {
+                print(item.name);
+                item.SetPropertyBlock(propertyBlock);
+
+            }
+        }
     }
     public void Tap()
     {
