@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class gameManager : MonoBehaviour
 {
 
@@ -155,5 +155,8 @@ public class gameManager : MonoBehaviour
         eventManager.Instance.startEvent(startGameEvent, () => { gameManager.Instance.setState(gameManager.GameState.FreePlay); });
 
     }
-
+    public void goCredits()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
 }
