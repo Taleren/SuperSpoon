@@ -74,5 +74,11 @@ public class SoundManager : MonoBehaviour
         duracion = sonido.clip.length;
         return duracion;
     }
+
+    public Sound buscarSonido(string soundName)
+    {
+        Sound sonido = Array.Find(sounds, sound => sound.name == soundName);
+        return sonido;
+    }
 }
 

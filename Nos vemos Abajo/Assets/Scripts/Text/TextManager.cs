@@ -233,28 +233,63 @@ public class TextManager : MonoBehaviour
 
     private void OnEnable()
     {
-        LinkEventInvokoer.LinkFound += reproducirSonido;
+        LinkEventInvokoer.LinkFound += manejoDeLinks;
     }
 
     private void OnDisable()
     {
-        LinkEventInvokoer.LinkFound -= reproducirSonido;
+        LinkEventInvokoer.LinkFound -= manejoDeLinks;
     }
 
-    private void reproducirSonido(string keyword)
+    private void manejoDeLinks(string keyword)
     {
         if (keyword == _currentKeyword) return;
         _currentKeyword = keyword;
 
-        StartCoroutine(reproducirSonidoCR(keyword));
+        string[] splitArray = keyword.Split("_");
+        string codeLink = splitArray[0];
+
+        switch (codeLink) 
+        {
+
+            case "sonido":
+                StartCoroutine(reproducirSonidoCR(splitArray[1]));
+                break;
+
+            case "cambiarPitch":
+                StartCoroutine(cambiarPitchCR(splitArray[1], float.Parse(splitArray[2])));
+                break;
+
+            case "esperarSonido":
+                StartCoroutine(esperarSonidoCR(float.Parse(splitArray[1])));
+                break;
+
+        }
+
     }
 
-    private IEnumerator reproducirSonidoCR(string keyword)
+    private IEnumerator reproducirSonidoCR(string _soundName)
     {
         yield return new WaitForEndOfFrame();
-        SoundManager.instance.PlaySound(keyword, new Vector3(0,0,0));
+        SoundManager.instance.PlaySound(_soundName, new Vector3(0,0,0));
         Pause();
-        yield return new WaitForSeconds(SoundManager.instance.duracionSonido(keyword));
+        yield return new WaitForSeconds(SoundManager.instance.duracionSonido(_soundName));
         Continue();
+    }
+
+    private IEnumerator cambiarPitchCR(string _soundName, float nuevoPitch)
+    {
+        yield return new WaitForEndOfFrame();
+        SoundManager.instance.buscarSonido(_soundName).pitch = nuevoPitch;
+        yield return new WaitForEndOfFrame();
+    }
+
+    private IEnumerator esperarSonidoCR(float tiempoEspera)
+    {
+        yield return new WaitForEndOfFrame();
+        Pause();
+        yield return new WaitForSeconds(tiempoEspera);
+        Continue();
+
     }
 }
