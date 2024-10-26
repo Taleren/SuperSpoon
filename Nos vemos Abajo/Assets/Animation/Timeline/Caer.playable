@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: dad65b28c26583d4797d5efa61bebfbc, type: 2}
-  parameter: 
+  parameter: cogerFarol
   secondParameter: 0
 --- !u!114 &-8511010945643436864
 MonoBehaviour:
