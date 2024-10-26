@@ -167,7 +167,7 @@ public class TextManager : MonoBehaviour
             _texBox.ForceMeshUpdate();
             TMP_TextInfo textInfo = _texBox.textInfo;
 
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForFixedUpdate();
 
             // Delay + typewriter
             while (IndiceCaracterVisibleActualmente < textInfo.characterCount)
@@ -292,31 +292,31 @@ public class TextManager : MonoBehaviour
 
     private IEnumerator reproducirSonidoCR(string _soundName)
     {
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForFixedUpdate();
         SoundManager.instance.PlaySound(_soundName, new Vector3(0,0,0));
         Pause();
         yield return new WaitForSeconds(SoundManager.instance.duracionSonido(_soundName));
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForFixedUpdate();
         Continue();
     }
 
     private IEnumerator cambiarPitchCR(string _soundName, float nuevoPitch)
     {
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForFixedUpdate();
         SoundManager.instance.buscarSonido(_soundName).pitch = nuevoPitch;
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForFixedUpdate();
     }
 
     private IEnumerator cambiarVolumenCR(string _soundName, float nuevovolumen)
     {
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForFixedUpdate();
         SoundManager.instance.buscarSonido(_soundName).volume = nuevovolumen;
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForFixedUpdate();
     }
 
     private IEnumerator esperarTiempoCR(float tiempoEspera)
     {
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForFixedUpdate();
         Pause();
         yield return new WaitForSeconds(tiempoEspera);
         Continue();
