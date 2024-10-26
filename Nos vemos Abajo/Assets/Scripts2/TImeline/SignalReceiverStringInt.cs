@@ -8,7 +8,7 @@ using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
 
-public class SignalReceiverStringInt : MonoBehaviour
+public class SignalReceiverStringInt : MonoBehaviour, INotificationReceiver
 {
     public SignalAssetEventPair[] signalAssetEventPairs;
 

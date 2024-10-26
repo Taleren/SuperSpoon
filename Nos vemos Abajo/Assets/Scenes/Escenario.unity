@@ -9484,7 +9484,8 @@ Transform:
   m_LocalPosition: {x: 960, y: 540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1009964964}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &386911531
@@ -11838,7 +11839,7 @@ PrefabInstance:
     - target: {fileID: 789043545454809456, guid: e2ef83d051b9ce14f950b72ef0025746,
         type: 3}
       propertyPath: m_Events.m_Events.Array.data[3].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 789043545454809456, guid: e2ef83d051b9ce14f950b72ef0025746,
         type: 3}
@@ -27635,6 +27636,37 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 782232872}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1009964963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1009964964}
+  m_Layer: 0
+  m_Name: hijo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1009964964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009964963}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 384508886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1014343754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4427624183900485045, guid: ddfef36afb1652a4c98c32a1b371a092,
@@ -46897,7 +46929,12 @@ PrefabInstance:
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.size
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[0].nameKey
+      value: Farol
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -46913,6 +46950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[0].nameKey
       value: ValvulaFarol_GiroGas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[0].callType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -47152,7 +47194,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bc7ba2f154f29f84882d7cef34b59203, type: 2}
+      objectReference: {fileID: 2100000, guid: c59c8ee1219e7fc4d812cad547d45bb5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -54616,7 +54658,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
 --- !u!114 &1784555955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54630,10 +54672,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signalAssetEventPairs:
-  - signalAsset: {fileID: 0}
+  - signalAsset: {fileID: 11400000, guid: dad65b28c26583d4797d5efa61bebfbc, type: 2}
     events:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1754260483}
+          m_TargetAssemblyTypeName: timelineManager, Assembly-CSharp
+          m_MethodName: callSound
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
 --- !u!1 &1797622262
 GameObject:
   m_ObjectHideFlags: 0
