@@ -62,6 +62,7 @@ public class CursorCamara : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0))
             {
+                print("up");
                 if (currentObject != null)
                 {
                     currentObject.Interact();

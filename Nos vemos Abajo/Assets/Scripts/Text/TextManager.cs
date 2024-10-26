@@ -275,11 +275,11 @@ public class TextManager : MonoBehaviour
                 break;
 
             case "cambiarPitch":
-                StartCoroutine(cambiarPitchCR(splitArray[1], float.Parse(splitArray[2])));
+                StartCoroutine(cambiarPitchCR(splitArray[1], float.Parse(splitArray[2], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture)));
                 break;
 
             case "cambiarVolumen":
-                StartCoroutine(cambiarVolumenCR(splitArray[1], float.Parse(splitArray[2])));
+                StartCoroutine(cambiarVolumenCR(splitArray[1], float.Parse(splitArray[2], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture)));
                 break;
 
             case "esperarTiempo":

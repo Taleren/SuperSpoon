@@ -9910,7 +9910,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1009964964}
+  - {fileID: 1271476172}
+  - {fileID: 1897081830}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &386911531
@@ -19838,6 +19839,17 @@ MonoBehaviour:
         animator: {fileID: 0}
         interactObject: {fileID: 0}
         newState: 0
+      - callType: 6
+        nameKey: 
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        waitTime: 0.1
+        PlayWithBefore: 0
+        obj: {fileID: 99173430}
+        animator: {fileID: 0}
+        interactObject: {fileID: 0}
+        newState: 0
     minigameEvent:
       m_PersistentCalls:
         m_Calls:
@@ -28547,37 +28559,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 782232872}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1009964963
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1009964964}
-  m_Layer: 0
-  m_Name: hijo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1009964964
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009964963}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.629, y: -0.404, z: 0.575}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 384508886}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1014343754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4427624183900485045, guid: ddfef36afb1652a4c98c32a1b371a092,
@@ -36692,6 +36673,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1269929575}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1271476171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1271476172}
+  m_Layer: 0
+  m_Name: hijo (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1271476172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271476171}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.629, y: -0.404, z: 0.575}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 384508886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1273616165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58264,6 +58276,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889484227}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1897081829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1897081830}
+  m_Layer: 0
+  m_Name: hijo (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1897081830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897081829}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.591, y: 0.473, z: -0.072}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 384508886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1903089887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61563,7 +61606,18 @@ MonoBehaviour:
   startRot: {x: 0, y: 0, z: 0}
   numberTaps: 2
   onFinishTap:
-    eventOrder: []
+    eventOrder:
+    - callType: 6
+      nameKey: 
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      waitTime: 0.5
+      PlayWithBefore: 0
+      obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 0}
+      newState: 0
   endOnTap: 1
   meshr: []
   startSnow: 0
