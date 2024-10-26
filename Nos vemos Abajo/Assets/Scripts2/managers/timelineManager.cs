@@ -63,6 +63,7 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
     }
     public void callSound(string name,int val)
     {
+        print(name + val + "sonido");
         SoundManager.instance.PlaySound(name, fatherSoundPointers.transform.GetChild(val).transform.position, fatherSoundPointers.transform.GetChild(val).transform.gameObject);
     }
     public List<PropertyName> listPropertyName;
@@ -82,10 +83,10 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
     {
         TextManager.Instance.playDialogue(dialog, ()=> { });
     }
-    public void soundDialogue(string soundKey,int objectNum)
-    {
-       // SoundManager.instance.PlaySound();
-    }
+    //public void soundDialogue(string soundKey,int objectNum)
+    //{
+    //   // SoundManager.instance.PlaySound();
+    //}
     public void soundDialogueSimple(string soundKey)
     {
         SoundManager.instance.PlaySound(soundKey, Vector3.zero);
