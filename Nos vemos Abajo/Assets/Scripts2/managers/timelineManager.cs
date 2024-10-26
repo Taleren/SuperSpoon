@@ -77,7 +77,10 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
             listPropertyName.RemoveAt(index);
         }
     }
-
+    public void timelineDialogue(string dialog)
+    {
+        TextManager.Instance.playDialogue(dialog, ()=> { });
+    }
     public Object GetReferenceValue(PropertyName id, out bool idValid)
     {
         int index = listPropertyName.IndexOf(id);

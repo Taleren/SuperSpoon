@@ -1678,6 +1678,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde0d25a170598d46a0b9dc16b4527a5, type: 3}
   m_Name: ActivationPlayableAsset
   m_EditorClassIdentifier: 
+--- !u!114 &-5766028632605625664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d52802937de8384fabd93a2a2f3b7c2, type: 3}
+  m_Name: Signal Emmiterwith String
+  m_EditorClassIdentifier: 
+  m_Time: 6.616666666666666
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 38db0bcb91825a4438d7ecb306813e3e, type: 2}
+  parameter: TeGrita
+  secondParameter: 
 --- !u!114 &-5247110145548464156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17562,6 +17580,7 @@ MonoBehaviour:
   m_Markers:
     m_Objects:
     - {fileID: -2211388621306192171}
+    - {fileID: -5766028632605625664}
 --- !u!114 &6354196092001949629
 MonoBehaviour:
   m_ObjectHideFlags: 1
