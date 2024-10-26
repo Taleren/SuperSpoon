@@ -2839,8 +2839,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -21.800003, y: -0.20000076}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000030517578, y: -0.20000076}
+  m_SizeDelta: {x: -0.000061035, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3518972493156407694
 CanvasRenderer:
@@ -2870,7 +2870,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Salir
+  m_text: Volver al inicio
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7f2d546760b13e5458e03106c4251f41, type: 2}
   m_sharedMaterial: {fileID: 7357834005815754772, guid: 7f2d546760b13e5458e03106c4251f41,
@@ -2934,7 +2934,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -45.477905, w: 0}
+  m_margin: {x: 0, y: 0, z: -1.4708252, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3487,8 +3487,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -276}
-  m_SizeDelta: {x: 275, y: 100}
+  m_AnchoredPosition: {x: 0, y: -265.5}
+  m_SizeDelta: {x: 725.5724, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4284982870815965310
 CanvasRenderer:
@@ -4052,6 +4052,7 @@ MonoBehaviour:
   camMenu: {fileID: 0}
   menuInterfaz: {fileID: 9022851042820663219}
   transicionPanel: {fileID: 3994406326144046342}
+  rigidBodySound: {fileID: 0}
 --- !u!114 &1957959143614698725
 MonoBehaviour:
   m_ObjectHideFlags: 0

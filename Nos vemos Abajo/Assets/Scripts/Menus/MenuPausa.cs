@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
+using UnityEngine.SceneManagement;
 
 public class MenuPausa : MonoBehaviour
 {
@@ -56,7 +57,7 @@ public class MenuPausa : MonoBehaviour
 
     public void SalirJuegoPausa()
     {
-        Application.Quit();
-        print("Saliste del videojuego");
+        //string escenaActual = SceneManager.GetActiveScene().name;
+        //SceneManager.LoadScene(escenaActual);
     }
 }

@@ -60,7 +60,7 @@ public class CursorCamara : MonoBehaviour
 
             }
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonUp(0))
             {
                 if (currentObject != null)
                 {
