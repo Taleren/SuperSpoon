@@ -160,6 +160,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1741492411}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &11748526 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2082849893942340162, guid: 3b61b457f0d8e154bab72267753e7480,
+    type: 3}
+  m_PrefabInstance: {fileID: 1335852902}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &23848269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1684096040375407227, guid: 10554dab2874de9409bd19f04932b0fc,
@@ -6756,6 +6762,56 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1413242999}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &144190083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 144190084}
+  - component: {fileID: 144190085}
+  m_Layer: 5
+  m_Name: PeriodicoGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &144190084
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144190083}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 506711975}
+  - {fileID: 1528050364}
+  m_Father: {fileID: 11748526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &144190085
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144190083}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &157330906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7753,7 +7809,7 @@ MonoBehaviour:
   outline: {fileID: 969978216}
   Hoverkey: DescCuerda
   showName: 0
-  startState: 1
+  startState: 0
   currentState: 0
   eventList:
   - HoverText: DescCuerda
@@ -7832,7 +7888,7 @@ MonoBehaviour:
         obj: {fileID: 1114746202}
         animator: {fileID: 501553548}
         interactObject: {fileID: 260366464}
-        newState: 1
+        newState: 0
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -8225,7 +8281,7 @@ MonoBehaviour:
   outline: {fileID: 417650013}
   Hoverkey: DescCuerdaCong
   showName: 1
-  startState: 1
+  startState: 0
   currentState: 0
   eventList: []
   _Minigame: {fileID: 748258054}
@@ -11883,6 +11939,147 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 505473792}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &506711974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 506711975}
+  - component: {fileID: 506711977}
+  - component: {fileID: 506711976}
+  m_Layer: 5
+  m_Name: Periodico (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &506711975
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506711974}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 144190084}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -739, y: -69}
+  m_SizeDelta: {x: 312.7795, y: 835.9023}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &506711976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506711974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Ayer, d\xEDa lunes 13 de diciembre, un tr\xE1gico accidente de monta\xF1a
+    se cobr\xF3 la vida de tres j\xF3venes de 24, 25 y 30 a\xF1os.\nLos excursionistas
+    se encontraban junto con su monitor a lo alto de las monta\xF1as, a al estaci\xF3n
+    de High Pines, una de las estaciones para \"Bungee Jumping\" m\xE1s utilizadas
+    del estado. El lugar estaba en aquel momento gestionado por la empresa \"Snow
+    Voyage\", dirigida por una sola persona, Marcus McCarthy, el mismo que ejerci\xF3
+    de monitor para el salto aquella fat\xEDdica noche."
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: fa9e986ba835f394b98486b7a18671ee, type: 2}
+  m_sharedMaterial: {fileID: 134145400396486028, guid: fa9e986ba835f394b98486b7a18671ee,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 29
+  m_fontSizeBase: 29
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &506711977
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506711974}
+  m_CullTransparentMesh: 1
 --- !u!1 &510968235
 GameObject:
   m_ObjectHideFlags: 0
@@ -18442,7 +18639,7 @@ MonoBehaviour:
       obj: {fileID: 0}
       animator: {fileID: 0}
       interactObject: {fileID: 1670006075}
-      newState: 1
+      newState: 0
     - callType: 6
       nameKey: 
       timelineObj: {fileID: 0}
@@ -19784,7 +19981,7 @@ MonoBehaviour:
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
-      interactObject: {fileID: 1050393231}
+      interactObject: {fileID: 5684703548904941676}
       newState: 2
     - callType: 2
       nameKey: CintaAislante
@@ -29977,7 +30174,18 @@ MonoBehaviour:
   - HoverText: 
     state: 2
     interactEvent:
-      eventOrder: []
+      eventOrder:
+      - callType: 2
+        nameKey: Cerrojo
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 0}
+        animator: {fileID: 0}
+        interactObject: {fileID: 0}
+        newState: 0
     minigameEvent:
       m_PersistentCalls:
         m_Calls:
@@ -35843,7 +36051,7 @@ MonoBehaviour:
   outline: {fileID: 452925770}
   Hoverkey: DescBoli
   showName: 1
-  startState: 1
+  startState: 0
   currentState: 0
   eventList:
   - HoverText: DescBoli
@@ -36625,7 +36833,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: add1d4fedb33af84e9962cc7b1c29ca6, type: 2}
+      objectReference: {fileID: -6922793697723135513, guid: 8865ff6b5c420a448ac290097f94e33a,
+        type: 3}
     - target: {fileID: -1461304994638716399, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
       propertyPath: m_Enabled
@@ -36803,6 +37012,17 @@ MonoBehaviour:
       animator: {fileID: 0}
       interactObject: {fileID: 1776825814}
       newState: 2
+    - callType: 3
+      nameKey: 
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      waitTime: 0
+      PlayWithBefore: 0
+      obj: {fileID: 1827318341}
+      animator: {fileID: 0}
+      interactObject: {fileID: 1844133235}
+      newState: 0
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
 --- !u!114 &1273616173
@@ -48135,7 +48355,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2082849893942340162, guid: 3b61b457f0d8e154bab72267753e7480,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 144190084}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b61b457f0d8e154bab72267753e7480, type: 3}
 --- !u!1 &1343645545 stripped
@@ -51449,6 +51673,140 @@ RectTransform:
   m_AnchoredPosition: {x: -0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1528050363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528050364}
+  - component: {fileID: 1528050366}
+  - component: {fileID: 1528050365}
+  m_Layer: 5
+  m_Name: Titulo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1528050364
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528050363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 144190084}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -668.09, y: 445}
+  m_SizeDelta: {x: 454.5917, y: 125.7565}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1528050365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528050363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Fallecen tres personas en un accidente de puenting en la monta\xF1a (1993)"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 32
+  m_fontSizeBase: 32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1528050366
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528050363}
+  m_CullTransparentMesh: 1
 --- !u!1 &1534195762 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c31cc4b6a67bfca44930ddb22e3d7da7,
@@ -53146,7 +53504,7 @@ MonoBehaviour:
       obj: {fileID: 0}
       animator: {fileID: 0}
       interactObject: {fileID: 998058886}
-      newState: 1
+      newState: 0
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
   correctCode: 01000000090000000900000003000000
@@ -57078,7 +57436,7 @@ MonoBehaviour:
   outline: {fileID: 1127889602}
   Hoverkey: Desc?
   showName: 1
-  startState: 0
+  startState: 1
   currentState: 0
   eventList:
   - HoverText: 
@@ -61058,7 +61416,7 @@ MonoBehaviour:
       obj: {fileID: 0}
       animator: {fileID: 0}
       interactObject: {fileID: 30094755}
-      newState: 1
+      newState: 0
     - callType: 3
       nameKey: 
       timelineObj: {fileID: 0}
@@ -63571,6 +63929,17 @@ MonoBehaviour:
       animator: {fileID: 0}
       interactObject: {fileID: 1925567931}
       newState: 2
+    - callType: 3
+      nameKey: 
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      waitTime: 0
+      PlayWithBefore: 0
+      obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 5334037118979984761}
+      newState: 0
   outline: {fileID: 298255413}
   Hoverkey: DescMosqueton
   showName: 1

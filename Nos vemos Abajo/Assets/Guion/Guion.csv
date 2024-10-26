@@ -37,9 +37,9 @@ CintaAislante_5;
 CintaAislante_6;<link="cambiarPitch_hablar_1,3"></link>A continuación abre la caja de los mosquetones.
 CintaAislante_7;Es esa caja de herramientas que hay ahí.
 CintaAislante_8;Después ata la cuerda al mosquetón, ¿quieres?
-Cerrojo_0;<Parece que la caja está cerrada, >;
+Cerrojo_0;<link="cambiarVolumen_hablar_0"><Parece que la caja está cerrada, ></link>;
 Cerrojo_1;<voy a ver si encuentro el código del candado.>;
-Furgoneta_0;Disculpa, había ido a la furgoneta a buscar unas cosas.
+Furgoneta_0;<link="cambiarVolumen_hablar_0,4">Disculpa, había ido a la furgoneta a buscar unas cosas.</link>
 Furgoneta_1;Espero no haberte asustado.
 Furgoneta_2;<link="cambiarPitch_hablar_0,85"></link>¿Qué?
 Furgoneta_3;¿Que todavía no has preparado la cuerda?
