@@ -12,22 +12,25 @@ public class MenuPausa : MonoBehaviour
 
     public GameObject botonesPausa;
 
+    private gameManager.GameState gameStateAnterior;
+
     private void Start()
     {
         menuPausa.SetActive(false);
+
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            if (gameManager.Instance.currentState == gameManager.GameState.FreePlay)
+            if (gameManager.Instance.currentState != gameManager.GameState.Paused)
             {
+                gameStateAnterior = gameManager.Instance.currentState;
                 menuPausa.SetActive(true);
                 Time.timeScale = 0f;
                 gameManager.Instance.setState(gameManager.GameState.Paused);
             }
-            
         }
     }
 
@@ -35,7 +38,7 @@ public class MenuPausa : MonoBehaviour
     {
         menuPausa.SetActive(false);
         Time.timeScale = 1f;
-        gameManager.Instance.setState(gameManager.GameState.FreePlay);
+        gameManager.Instance.setState(gameStateAnterior);
         Cursor.visible = false;
         
     }

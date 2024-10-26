@@ -81,11 +81,11 @@ public class gameManager : MonoBehaviour
         {
             case GameState.Paused:
 
-                if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
-                {
-                    setCameraSpeed(false);
+                ////if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
+                //{
+                //    setCameraSpeed(false);
 
-                }
+                //}
                 setCursor(true);
 
                 setGameCursor(false);
