@@ -184,10 +184,13 @@ public class TextManager : MonoBehaviour
                 }
                 else
                 {
-                    SoundManager.instance.buscarSonido("hablar").pitch -= alternarPitch ? -0.1f : 0.1f;
-                    SoundManager.instance.PlaySound("hablar", GameObject.Find("PERSONAJE").transform.position, GameObject.Find("PERSONAJE"));
-                    alternarPitch = !alternarPitch;
-                    yield return _simpleDelay;
+                    if (GameObject.Find("PERSONAJE") != null)
+                    {
+                        SoundManager.instance.buscarSonido("hablar").pitch -= alternarPitch ? -0.1f : 0.1f;
+                        SoundManager.instance.PlaySound("hablar", GameObject.Find("PERSONAJE").transform.position, GameObject.Find("PERSONAJE"));
+                        alternarPitch = !alternarPitch;
+                        yield return _simpleDelay;
+                    }
                 }
                 yield return new WaitUntil(()=> pausado == false);
                 IndiceCaracterVisibleActualmente++;

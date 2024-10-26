@@ -6310,7 +6310,7 @@ MonoBehaviour:
       PlayWithBefore: 0
       obj: {fileID: 2132941761}
       animator: {fileID: 0}
-      interactObject: {fileID: 554988048}
+      interactObject: {fileID: 5684703548904941676}
       newState: 0
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
@@ -36733,22 +36733,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: -0.54712147
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0.19270848
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.75609976
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.30304244
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
