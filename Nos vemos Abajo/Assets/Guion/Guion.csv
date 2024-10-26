@@ -2,7 +2,7 @@
 Comienzo_0;Buena caída, ¿eh?<link="cambiarPitch_hablar_0,9"></link>
 Intro_0;Esperemos que haya salido todo bien.<link="cambiarPitch_hablar_1,5"></link>
 Intro_1;
-Intro_2;¡Es broma!<link="sonido_sonidomiedo1"></link>
+Intro_2;¡Es broma!<link="sonido_risaIncomoda"></link>
 Intro_3;<link="cambiarPitch_hablar_1,4"></link>He hecho esto miles de veces. Estará bien.
 Explica_0;<link="cambiarPitch_hablar_1,3"></link>¿Eh? ¿No recuerdas el itinerario?
 Explica_1;La caída ha dejado a Sonya a una altura controlada.
