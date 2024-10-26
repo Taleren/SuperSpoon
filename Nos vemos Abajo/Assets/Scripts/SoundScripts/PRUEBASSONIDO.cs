@@ -10,6 +10,29 @@ public class PRUEBASSONIDO : MonoBehaviour
     }
     void Update()
     {
-       
+        /*if (Input.GetKeyDown(KeyCode.Q))    
+        {
+            SoundManager.instance.PlaySound("abrirMechero", new Vector3(1, 1, 1));
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            SoundManager.instance.PlaySound("encenderMechero", new Vector3(1, 1, 1));
+        }
+        if (Input.GetKeyDown(KeyCode.E))    
+        {
+            SoundManager.instance.PlaySound("fuego", new Vector3(1, 1, 1));
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SoundManager.instance.PlaySound("fumar", new Vector3(1, 1, 1));
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            SoundManager.instance.PlaySound("cajaCigarros", new Vector3(1, 1, 1));
+        }
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            SoundManager.instance.PlaySound("golpeLata", new Vector3(1, 1, 1));
+        }*/
     }
 }
