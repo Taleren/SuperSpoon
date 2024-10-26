@@ -5,3 +5,8 @@ public class ParameterizedEmitter<T> : SignalEmitter
     public T parameter;
     public T secondParameter;
 }
+public class ParameterizedEmmiterTwo<T,T2> : SignalEmitter
+{
+    public T parameter;
+    public T2 secondParameter;
+}

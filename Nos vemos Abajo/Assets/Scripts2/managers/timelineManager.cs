@@ -81,6 +81,14 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
     {
         TextManager.Instance.playDialogue(dialog, ()=> { });
     }
+    public void soundDialogue(string soundKey,int objectNum)
+    {
+       // SoundManager.instance.PlaySound();
+    }
+    public void soundDialogueSimple(string soundKey)
+    {
+        SoundManager.instance.PlaySound(soundKey, Vector3.zero);
+    }
     public Object GetReferenceValue(PropertyName id, out bool idValid)
     {
         int index = listPropertyName.IndexOf(id);

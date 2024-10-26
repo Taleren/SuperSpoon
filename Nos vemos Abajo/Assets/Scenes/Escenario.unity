@@ -3689,6 +3689,17 @@ MonoBehaviour:
         animator: {fileID: 0}
         interactObject: {fileID: 260366464}
         newState: 2
+      - callType: 4
+        nameKey: cogerCuchillo
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 501553546}
+        Boolean: 1
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 501553545}
+        animator: {fileID: 2132941807}
+        interactObject: {fileID: 260366464}
+        newState: 2
       - callType: 0
         nameKey: Manos_Coger1
         timelineObj: {fileID: 0}
@@ -13224,7 +13235,7 @@ Transform:
   m_GameObject: {fileID: 623947673}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.49301702, z: -0, w: 0.87001973}
-  m_LocalPosition: {x: 2.846, y: -0.577, z: 1.778}
+  m_LocalPosition: {x: 1.97, y: -8.54, z: -18.54}
   m_LocalScale: {x: 0.005517866, y: 0.005517866, z: 0.005517866}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -22473,7 +22484,7 @@ PrefabInstance:
     - target: {fileID: 6652630288746953406, guid: de653c13174112e429301b84b2b71ca7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.86
+      value: -3.75
       objectReference: {fileID: 0}
     - target: {fileID: 6652630288746953406, guid: de653c13174112e429301b84b2b71ca7,
         type: 3}
@@ -54309,7 +54320,7 @@ Transform:
   m_GameObject: {fileID: 2102790549}
   serializedVersion: 2
   m_LocalRotation: {x: -0.78384864, y: -0.1442218, z: -0.19814041, w: 0.5705452}
-  m_LocalPosition: {x: -1.168, y: -0.304, z: 0.127}
+  m_LocalPosition: {x: 7.67, y: -8.33, z: -23.34}
   m_LocalScale: {x: 0.040377595, y: 0.040377595, z: 0.040377595}
   m_ConstrainProportionsScale: 1
   m_Children:

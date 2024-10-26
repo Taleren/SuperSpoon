@@ -149,7 +149,7 @@ public class TextManager : MonoBehaviour
      //   print("ss");
         DialogoActual = linea;
 
-        while (getLine(DialogoActual + "_" + IndiceLineaActual.ToString())/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null && !pausado)
+        while (getLine(DialogoActual + "_" + IndiceLineaActual.ToString())/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null )
         {
             // Texto
             getSubs(DialogoActual + "_" + IndiceLineaActual.ToString());
@@ -177,7 +177,7 @@ public class TextManager : MonoBehaviour
                     SoundManager.instance.PlaySound("hablar", GameObject.Find("PERSONAJE").transform.position, GameObject.Find("PERSONAJE"));
                     yield return _simpleDelay;
                 }
-
+                yield return new WaitUntil(()=> pausado == false);
                 IndiceCaracterVisibleActualmente++;
             }
             IndiceLineaActual++;
@@ -200,7 +200,7 @@ public class TextManager : MonoBehaviour
     void Pause()
     {
         pausado = true;
-        StopCoroutine(_typewriterCoroutine);
+       // StopCoroutine(_typewriterCoroutine);
 
         return;
     }
@@ -209,7 +209,7 @@ public class TextManager : MonoBehaviour
         if (!pausado) return;
 
         pausado = false;
-        _typewriterCoroutine = StartCoroutine(Typewriter(""));
+        //_typewriterCoroutine = StartCoroutine(Typewriter(""));
         return;
     }
     public void StartGame()
