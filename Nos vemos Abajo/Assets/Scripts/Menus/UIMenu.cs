@@ -18,6 +18,8 @@ public class UIMenu : MonoBehaviour
 
     public GameObject transicionPanel;
 
+    [SerializeField] GameObject rigidBodySound;
+
     private void Start()
     {
         SoundManager.instance.PlaySound("ventisca", transform.position);
@@ -55,12 +57,15 @@ public class UIMenu : MonoBehaviour
     IEnumerator transicion()
     {
         transicionPanel.SetActive(true);
+        rigidBodySound.gameObject.GetComponent<Rigidbody>().useGravity = true;
+
         yield return new WaitForSeconds(2f);
-        SoundManager.instance.PlaySound("gritoMujer", GameObject.Find("SonidosIntroObjeto").transform.position);
+        SoundManager.instance.PlaySound("gritoMujer", rigidBodySound.transform.position,rigidBodySound);
         yield return new WaitForSeconds(3f);
         transicionPanel.SetActive(false);
         SoundManager.instance.PlaySound("susto", GameObject.Find("SonidosIntroObjeto").transform.position);
         yield return new WaitForSeconds(2f);
+      Destroy(rigidBodySound);
         gameManager.Instance.startTheGame();
         yield return null;
 
