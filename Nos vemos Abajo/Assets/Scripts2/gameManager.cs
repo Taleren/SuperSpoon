@@ -38,6 +38,12 @@ public class gameManager : MonoBehaviour
         //mainCamera = (CinemachineVirtualCamera)Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
 
         // StartCoroutine(delayStart());
+        //if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
+        //{
+        //    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.Value = 141.2581f;
+        //    mainCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.Value = 11.84871f;
+
+        //}
     }
     IEnumerator delayStart()
     {
@@ -154,6 +160,8 @@ public class gameManager : MonoBehaviour
 
         eventManager.Instance.startEvent(startGameEvent, () => { gameManager.Instance.setState(gameManager.GameState.FreePlay); });
 
+       
+      
     }
     public void goCredits()
     {

@@ -677,17 +677,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2051259d1f3e9534aaaa73ab313608db,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.577
+      value: 11.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2051259d1f3e9534aaaa73ab313608db,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.384
+      value: -43.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2051259d1f3e9534aaaa73ab313608db,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.31
+      value: -43.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2051259d1f3e9534aaaa73ab313608db,
         type: 3}
@@ -979,6 +979,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3249036800136534216, guid: 10554dab2874de9409bd19f04932b0fc,
     type: 3}
   m_PrefabInstance: {fileID: 1741492411}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &97385005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 87e0e149ebb4a504da1bc782d2b2a41c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1887728321}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &97650369
 PrefabInstance:
@@ -2352,17 +2358,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 642b4fcf347dbcd48a831fc9f9c9589c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.19
+      value: -229
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 642b4fcf347dbcd48a831fc9f9c9589c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.88
+      value: 1377
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 642b4fcf347dbcd48a831fc9f9c9589c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.74
+      value: -664
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 642b4fcf347dbcd48a831fc9f9c9589c,
         type: 3}
@@ -4965,7 +4971,7 @@ Transform:
   m_GameObject: {fileID: 415551038}
   serializedVersion: 2
   m_LocalRotation: {x: -0.44437894, y: -0.36060753, z: -0.5167318, w: 0.63677144}
-  m_LocalPosition: {x: 0.008645668, y: 6.8411317, z: 0.6538976}
+  m_LocalPosition: {x: 4008, y: -607, z: -1124}
   m_LocalScale: {x: 405.17334, y: 405.1732, z: 405.17328}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6808,7 +6814,7 @@ Transform:
   m_GameObject: {fileID: 510968235}
   serializedVersion: 2
   m_LocalRotation: {x: 0.3309843, y: -0, z: -0, w: 0.9436363}
-  m_LocalPosition: {x: 0, y: -2.97, z: -3.28}
+  m_LocalPosition: {x: 0, y: -2.97, z: -16.02}
   m_LocalScale: {x: 0.13, y: 0.04, z: 0.45}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13114,7 +13120,7 @@ MonoBehaviour:
       Boolean: 1
       waitTime: 0
       PlayWithBefore: 0
-      obj: {fileID: 0}
+      obj: {fileID: 919132147738802745}
       animator: {fileID: 0}
       interactObject: {fileID: 0}
       newState: 0
@@ -13127,8 +13133,19 @@ MonoBehaviour:
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
-      interactObject: {fileID: 0}
+      interactObject: {fileID: 5334037118979984761}
       newState: 2
+    - callType: 3
+      nameKey: 
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 1
+      waitTime: 0.1
+      PlayWithBefore: 0
+      obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 1670006075}
+      newState: 1
     - callType: 6
       nameKey: 
       timelineObj: {fileID: 0}
@@ -14350,7 +14367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intEvent:
     eventOrder: []
-  outline: {fileID: 0}
+  outline: {fileID: 97385005}
   Hoverkey: DescMosquetones
   showName: 1
   startState: 0
@@ -20147,7 +20164,7 @@ Transform:
   m_GameObject: {fileID: 839995781}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0.011365056, y: -0.029902577, z: -0.00000009430304}
+  m_LocalPosition: {x: 71.8, y: -0.029902577, z: 115.7}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21893,6 +21910,17 @@ MonoBehaviour:
       animator: {fileID: 0}
       interactObject: {fileID: 1776825814}
       newState: 2
+    - callType: 3
+      nameKey: 
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      waitTime: 0
+      PlayWithBefore: 0
+      obj: {fileID: 1827318341}
+      animator: {fileID: 0}
+      interactObject: {fileID: 554988048}
+      newState: 1
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
 --- !u!114 &976033060
@@ -23478,7 +23506,7 @@ Transform:
   m_GameObject: {fileID: 1087153628}
   serializedVersion: 2
   m_LocalRotation: {x: -0.2283907, y: -0.70450175, z: -0.060641885, w: -0.6692067}
-  m_LocalPosition: {x: 0.0347086, y: 0.0044805747, z: 0.05052857}
+  m_LocalPosition: {x: 52.4, y: 17.34, z: 17.8}
   m_LocalScale: {x: 1.5331193, y: 1.6196837, z: 4.4334135}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24078,7 +24106,7 @@ Transform:
   m_GameObject: {fileID: 1133490155}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 1.2565458, y: -0.28624412, z: 0.00068718195}
+  m_LocalPosition: {x: 73.1, y: -0.28624412, z: 115.7}
   m_LocalScale: {x: 30.713102, y: 30.713102, z: 30.713102}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24358,7 +24386,7 @@ Transform:
   m_GameObject: {fileID: 1164576112}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0.000000014901161, z: -0.000000029802322, w: 0.70710677}
-  m_LocalPosition: {x: -1.0221559, y: 0.3170334, z: 0}
+  m_LocalPosition: {x: 70.8, y: 0.3170334, z: 115.7}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30498,7 +30526,7 @@ Transform:
   m_GameObject: {fileID: 1267777623}
   serializedVersion: 2
   m_LocalRotation: {x: -0.14558972, y: -0.69195646, z: -0.14558986, w: -0.69195634}
-  m_LocalPosition: {x: 0.00031185415, y: 0.0096594915, z: 0.053035427}
+  m_LocalPosition: {x: 52.3, y: 17.34, z: 17.8}
   m_LocalScale: {x: 3.6401696, y: 3.4147048, z: 3.7953217}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30684,7 +30712,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.73
+      value: -15.469999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
@@ -35898,7 +35926,7 @@ Transform:
   m_GameObject: {fileID: 1282144613}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071069, y: 0.000000029802319, z: 0.000000029802319, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 1.0200143, z: 0}
+  m_LocalPosition: {x: 4008, y: -613, z: -1125}
   m_LocalScale: {x: 85.738266, y: 29.681257, z: 62.204998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36462,7 +36490,51 @@ MonoBehaviour:
   - HoverText: DescContrato
     state: 2
     interactEvent:
-      eventOrder: []
+      eventOrder:
+      - callType: 0
+        nameKey: show2_reverse
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 0}
+        animator: {fileID: 2132941807}
+        interactObject: {fileID: 0}
+        newState: 0
+      - callType: 0
+        nameKey: New State
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 0}
+        animator: {fileID: 501553548}
+        interactObject: {fileID: 0}
+        newState: 0
+      - callType: 5
+        nameKey: New State
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 1982041735}
+        animator: {fileID: 501553548}
+        interactObject: {fileID: 0}
+        newState: 0
+      - callType: 5
+        nameKey: New State
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 979881069}
+        animator: {fileID: 501553548}
+        interactObject: {fileID: 0}
+        newState: 0
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -41488,7 +41560,7 @@ PrefabInstance:
     - target: {fileID: 1930307269904027095, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.28
+      value: -16.02
       objectReference: {fileID: 0}
     - target: {fileID: 1930307269904027095, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -41533,37 +41605,37 @@ PrefabInstance:
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[1].obj
       value: 
-      objectReference: {fileID: 1213361771}
+      objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[2].obj
       value: 
-      objectReference: {fileID: 979881069}
+      objectReference: {fileID: 1213361771}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[3].obj
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 979881069}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[0].nameKey
-      value: Consentimiento
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[1].Boolean
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[1].nameKey
-      value: 
+      value: Consentimiento
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -41577,13 +41649,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
+      propertyPath: onEndEvent.eventOrder.Array.data[3].Boolean
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[3].nameKey
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: onEndEvent.eventOrder.Array.data[4].nameKey
       value: Monitor_show2
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[0].callType
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: onEndEvent.eventOrder.Array.data[0].newState
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -41593,7 +41680,7 @@ PrefabInstance:
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[1].callType
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -41619,11 +41706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[3].animator
       value: 
-      objectReference: {fileID: 2132941807}
+      objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[3].callType
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -41632,8 +41719,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
+      propertyPath: onEndEvent.eventOrder.Array.data[4].animator
+      value: 
+      objectReference: {fileID: 2132941807}
+    - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[4].callType
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -41642,9 +41734,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
+      propertyPath: onEndEvent.eventOrder.Array.data[5].callType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: onEndEvent.eventOrder.Array.data[5].newState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[0].interactObject
       value: 
-      objectReference: {fileID: 41821338}
+      objectReference: {fileID: 323526445}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[1].interactObject
@@ -41663,6 +41765,11 @@ PrefabInstance:
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[4].interactObject
+      value: 
+      objectReference: {fileID: 41821338}
+    - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: onEndEvent.eventOrder.Array.data[5].interactObject
       value: 
       objectReference: {fileID: 1213361775}
     - target: {fileID: 3457153557844567100, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
@@ -42855,7 +42962,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393772710}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.046892732, z: -0, w: 0.99889994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -43762,7 +43869,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e6469d42aa465754e9ec5d889b86cede,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.4998553
+      value: -14.239855
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e6469d42aa465754e9ec5d889b86cede,
         type: 3}
@@ -43939,28 +44046,6 @@ MonoBehaviour:
     eventOrder: []
   onEndEvent:
     eventOrder:
-    - callType: 5
-      nameKey: Cuerda
-      timelineObj: {fileID: 0}
-      Transform: {fileID: 0}
-      Boolean: 0
-      waitTime: 0
-      PlayWithBefore: 0
-      obj: {fileID: 979881069}
-      animator: {fileID: 0}
-      interactObject: {fileID: 292711177}
-      newState: 2
-    - callType: 5
-      nameKey: Cuerda
-      timelineObj: {fileID: 0}
-      Transform: {fileID: 0}
-      Boolean: 0
-      waitTime: 0
-      PlayWithBefore: 0
-      obj: {fileID: 1982041735}
-      animator: {fileID: 0}
-      interactObject: {fileID: 292711177}
-      newState: 2
     - callType: 3
       nameKey: 
       timelineObj: {fileID: 0}
@@ -43982,28 +44067,6 @@ MonoBehaviour:
       obj: {fileID: 0}
       animator: {fileID: 0}
       interactObject: {fileID: 292711177}
-      newState: 2
-    - callType: 0
-      nameKey: Monitor_idle
-      timelineObj: {fileID: 0}
-      Transform: {fileID: 0}
-      Boolean: 1
-      waitTime: 0
-      PlayWithBefore: 1
-      obj: {fileID: 501553545}
-      animator: {fileID: 2132941807}
-      interactObject: {fileID: 260366464}
-      newState: 2
-    - callType: 0
-      nameKey: New State
-      timelineObj: {fileID: 0}
-      Transform: {fileID: 0}
-      Boolean: 0
-      waitTime: 0
-      PlayWithBefore: 1
-      obj: {fileID: 1114746202}
-      animator: {fileID: 501553548}
-      interactObject: {fileID: 323526445}
       newState: 2
     - callType: 2
       nameKey: Cuerda
@@ -44498,7 +44561,7 @@ Transform:
   m_GameObject: {fileID: 1461909393}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.89571494, y: 16.670713, z: 5.710302}
+  m_LocalPosition: {x: 4007, y: -222, z: -1253}
   m_LocalScale: {x: 1058.1049, y: 87.08534, z: 1058.1049}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -44849,7 +44912,7 @@ Transform:
   m_GameObject: {fileID: 1523208370}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 52.3, y: 17.33, z: 17.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46304,7 +46367,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4ac88c5fd02422b45a806c009ab939f4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.51
+      value: -16.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4ac88c5fd02422b45a806c009ab939f4,
         type: 3}
@@ -47274,6 +47337,17 @@ MonoBehaviour:
       animator: {fileID: 0}
       interactObject: {fileID: 484872028}
       newState: 2
+    - callType: 3
+      nameKey: 
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 1
+      waitTime: 0
+      PlayWithBefore: 0
+      obj: {fileID: 1827318341}
+      animator: {fileID: 0}
+      interactObject: {fileID: 1827318342}
+      newState: 1
 --- !u!114 &1657778578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47370,7 +47444,7 @@ Transform:
   m_GameObject: {fileID: 1657778576}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.97, z: -3.28}
+  m_LocalPosition: {x: 0, y: -2.97, z: -16.02}
   m_LocalScale: {x: 0.17999999, y: 0.17999999, z: 0.17999999}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -47879,7 +47953,7 @@ MonoBehaviour:
   startState: 0
   currentState: 0
   eventList: []
-  _Minigame: {fileID: 510968236}
+  _Minigame: {fileID: 623947676}
   targetState: 2
 --- !u!4 &1672818862 stripped
 Transform:
@@ -51197,17 +51271,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 642b4fcf347dbcd48a831fc9f9c9589c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.52
+      value: -237
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 642b4fcf347dbcd48a831fc9f9c9589c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.35
+      value: 1380
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 642b4fcf347dbcd48a831fc9f9c9589c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.69
+      value: -664
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 642b4fcf347dbcd48a831fc9f9c9589c,
         type: 3}
@@ -52170,17 +52244,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1af0fddc81dfff345a7dd4d1d761f9f9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4008
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1af0fddc81dfff345a7dd4d1d761f9f9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -614
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1af0fddc81dfff345a7dd4d1d761f9f9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1125
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1af0fddc81dfff345a7dd4d1d761f9f9,
         type: 3}
@@ -53263,7 +53337,7 @@ Transform:
   m_GameObject: {fileID: 2048528211}
   serializedVersion: 2
   m_LocalRotation: {x: -0.4455518, y: -0.35316584, z: -0.51560867, w: 0.6410188}
-  m_LocalPosition: {x: -2.5500762, y: 6.3646045, z: 1.0142871}
+  m_LocalPosition: {x: 4005, y: -607, z: -1124}
   m_LocalScale: {x: 405.17334, y: 405.1732, z: 405.17328}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -54097,17 +54171,6 @@ MonoBehaviour:
     eventOrder: []
   onEndEvent:
     eventOrder:
-    - callType: 5
-      nameKey: Nudo
-      timelineObj: {fileID: 0}
-      Transform: {fileID: 0}
-      Boolean: 1
-      waitTime: 0
-      PlayWithBefore: 0
-      obj: {fileID: 919132147738802745}
-      animator: {fileID: 0}
-      interactObject: {fileID: 0}
-      newState: 2
     - callType: 2
       nameKey: Nudo
       timelineObj: {fileID: 0}
@@ -54128,7 +54191,18 @@ MonoBehaviour:
       PlayWithBefore: 0
       obj: {fileID: 0}
       animator: {fileID: 0}
-      interactObject: {fileID: 5334037118979984761}
+      interactObject: {fileID: 30094755}
+      newState: 1
+    - callType: 3
+      nameKey: 
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      waitTime: 0
+      PlayWithBefore: 0
+      obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 1670006075}
       newState: 2
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
@@ -54276,7 +54350,7 @@ Transform:
   m_GameObject: {fileID: 2110378882}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.97, z: -3.28}
+  m_LocalPosition: {x: 0, y: -2.97, z: -16.02}
   m_LocalScale: {x: 0.17999999, y: 0.17999999, z: 0.17999999}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -55566,7 +55640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2135000747
 Transform:
   m_ObjectHideFlags: 0
@@ -55911,7 +55985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1365132098882819480
 GameObject:
   m_ObjectHideFlags: 0
@@ -56675,6 +56749,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 677259075312238132, guid: 4dffac926b7c9c2408766c5a9fcf0d75,
+        type: 3}
+      propertyPath: m_VerticalAxis.Value
+      value: 11.84871
+      objectReference: {fileID: 0}
+    - target: {fileID: 677259075312238132, guid: 4dffac926b7c9c2408766c5a9fcf0d75,
+        type: 3}
+      propertyPath: m_HorizontalAxis.Value
+      value: 141.2581
+      objectReference: {fileID: 0}
     - target: {fileID: 3732372868148015193, guid: 4dffac926b7c9c2408766c5a9fcf0d75,
         type: 3}
       propertyPath: m_Name
@@ -56735,6 +56819,11 @@ PrefabInstance:
       propertyPath: cursor
       value: 
       objectReference: {fileID: 879548411}
+    - target: {fileID: 6773911395155465481, guid: 4dffac926b7c9c2408766c5a9fcf0d75,
+        type: 3}
+      propertyPath: m_Priority
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6773911395155465481, guid: 4dffac926b7c9c2408766c5a9fcf0d75,
         type: 3}
       propertyPath: m_Lens.NearClipPlane

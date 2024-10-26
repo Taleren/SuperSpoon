@@ -19,11 +19,15 @@ public class MenuPausa : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && gameManager.Instance.currentState == gameManager.GameState.FreePlay) 
+        if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            menuPausa.SetActive(true);
-            Time.timeScale = 0f;
-            gameManager.Instance.setState(gameManager.GameState.Paused);
+            if (gameManager.Instance.currentState == gameManager.GameState.FreePlay)
+            {
+                menuPausa.SetActive(true);
+                Time.timeScale = 0f;
+                gameManager.Instance.setState(gameManager.GameState.Paused);
+            }
+            
         }
     }
 

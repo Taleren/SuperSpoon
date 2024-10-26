@@ -48,7 +48,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Snow_Quantity: 6.39
+    - _Snow_Quantity: 0
     - _Snow_Scale: 26
     m_Colors:
     - _Base_Color: {r: 1, g: 1, b: 1, a: 1}
