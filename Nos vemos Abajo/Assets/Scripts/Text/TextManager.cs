@@ -50,6 +50,8 @@ public class TextManager : MonoBehaviour
 
     private List<Action> nextAction;
 
+    private bool alternarPitch = true;
+
     private void Awake()
     {
         if (Instance == null)
@@ -182,7 +184,9 @@ public class TextManager : MonoBehaviour
                 }
                 else
                 {
+                    SoundManager.instance.buscarSonido("hablar").pitch -= alternarPitch ? -0.1f : 0.1f;
                     SoundManager.instance.PlaySound("hablar", GameObject.Find("PERSONAJE").transform.position, GameObject.Find("PERSONAJE"));
+                    alternarPitch = !alternarPitch;
                     yield return _simpleDelay;
                 }
                 yield return new WaitUntil(()=> pausado == false);
