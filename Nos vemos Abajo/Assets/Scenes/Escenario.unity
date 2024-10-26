@@ -316,7 +316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &31397879
 Transform:
   m_ObjectHideFlags: 0
@@ -25098,7 +25098,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -6629797300637803691, guid: 118fe26723a1b7a468fc82aeedbb69f8, type: 3}
@@ -25558,7 +25558,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -876546973899608171, guid: 5dbb245e0d8f9ed42aa59cf90e59d6c6, type: 3}
@@ -26893,7 +26893,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
@@ -27884,7 +27884,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
@@ -29108,7 +29108,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -3522955778539423533, guid: 118fe26723a1b7a468fc82aeedbb69f8, type: 3}
@@ -29347,7 +29347,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -2813467912831258332, guid: 118fe26723a1b7a468fc82aeedbb69f8, type: 3}
@@ -34850,7 +34850,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -876546973899608171, guid: 5dbb245e0d8f9ed42aa59cf90e59d6c6, type: 3}
@@ -35675,6 +35675,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: periodicoMesh
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 8865ff6b5c420a448ac290097f94e33a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 8865ff6b5c420a448ac290097f94e33a,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 8865ff6b5c420a448ac290097f94e33a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: add1d4fedb33af84e9962cc7b1c29ca6, type: 2}
     - target: {fileID: -1461304994638716399, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
       propertyPath: m_Enabled
@@ -47460,6 +47475,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 642b4fcf347dbcd48a831fc9f9c9589c,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1461304994638716399, guid: 642b4fcf347dbcd48a831fc9f9c9589c,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 642b4fcf347dbcd48a831fc9f9c9589c,
         type: 3}
       propertyPath: m_Name
@@ -51339,6 +51364,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8143710011712545758, guid: 4ac88c5fd02422b45a806c009ab939f4,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7664728788398519507, guid: 4ac88c5fd02422b45a806c009ab939f4,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -7146521406498821007, guid: 4ac88c5fd02422b45a806c009ab939f4,
         type: 3}
       propertyPath: m_Name
@@ -51373,6 +51408,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cuerpo_candado
+      objectReference: {fileID: 0}
+    - target: {fileID: -1120989108687609925, guid: 4ac88c5fd02422b45a806c009ab939f4,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -804731622281664130, guid: 4ac88c5fd02422b45a806c009ab939f4,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -466329591000292508, guid: 4ac88c5fd02422b45a806c009ab939f4,
         type: 3}
@@ -51409,10 +51454,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6745302439343835087, guid: 4ac88c5fd02422b45a806c009ab939f4,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071182760956848314, guid: 4ac88c5fd02422b45a806c009ab939f4,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: 4ac88c5fd02422b45a806c009ab939f4,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8513859187771203891, guid: 4ac88c5fd02422b45a806c009ab939f4,
         type: 3}
       propertyPath: m_Name
       value: tapa
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567717000986892130, guid: 4ac88c5fd02422b45a806c009ab939f4,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
