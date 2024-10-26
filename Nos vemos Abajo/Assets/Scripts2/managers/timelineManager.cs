@@ -13,9 +13,10 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
     [SerializeField] private PlayableDirector director;
     Action currentNextAction;
     GameObject obj;
-    [SerializeField] GameObject pointerSound;
 
     public List<GameObject> ObjectsToSerilialize;
+
+ [SerializeField]   Transform fatherSoundPointers;
 
     private void Awake()
     {
@@ -60,9 +61,9 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
         obj.Resolve(this).transform.SetParent(parent.Resolve(this).transform);
         
     }
-    public void callSound(string name)
+    public void callSound(string name,int val)
     {
-        SoundManager.instance.PlaySound(name,pointerSound.transform.position);
+        SoundManager.instance.PlaySound(name, fatherSoundPointers.transform.GetChild(val).transform.position, fatherSoundPointers.transform.GetChild(val).transform.gameObject);
     }
     public List<PropertyName> listPropertyName;
     public List<UnityEngine.Object> listReference;
