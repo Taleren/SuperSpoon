@@ -205,3 +205,51 @@ MonoBehaviour:
     loop: 0
     audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
+  - name: abrirMechero
+    clip: {fileID: 8300000, guid: c73e447e06f7dd14095925f9a24a9910, type: 3}
+    volume: 0.1
+    spatialBlend: 0
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
+    source: {fileID: 0}
+  - name: encenderMechero
+    clip: {fileID: 8300000, guid: d0fece85ad9d54b4bba181ea4aa34768, type: 3}
+    volume: 0.1
+    spatialBlend: 0
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
+    source: {fileID: 0}
+  - name: fuego
+    clip: {fileID: 8300000, guid: a8be0cc01338fb545a1849370adf4ea0, type: 3}
+    volume: 0.1
+    spatialBlend: 0
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
+    source: {fileID: 0}
+  - name: fumar
+    clip: {fileID: 8300000, guid: 3c8575d45ef449949bfe9f16e9b407a8, type: 3}
+    volume: 0.1
+    spatialBlend: 0
+    pitch: 0.9
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
+    source: {fileID: 0}
+  - name: cajaCigarros
+    clip: {fileID: 8300000, guid: 3858af33b6c7860438c3541bfa5b2a98, type: 3}
+    volume: 0.1
+    spatialBlend: 0
+    pitch: 0.89
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
+    source: {fileID: 0}
+  - name: golpeLata
+    clip: {fileID: 8300000, guid: 023cea9d57e608f4f94363227f858222, type: 3}
+    volume: 0.1
+    spatialBlend: 0
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
+    source: {fileID: 0}
