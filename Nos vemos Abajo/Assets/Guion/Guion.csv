@@ -28,6 +28,7 @@ Cuerda_2;Este frío puede hacer que las cuerdas pierdan elasticidad,
 Cuerda_3;y si saltas con una de esas puedes acabar con luxaciones en la columna,
 Cuerda_4;<link="cambiarPitch_hablar_1,1"></link>una pierna rota o quien sabe si algo peor.
 Cuerda_5;<link="cambiarPitch_hablar_1,3"></link>Quítale un poco el hielo de encima, con eso bastará.
+Cuerda_6;<link="cambiarPitch_hablar_1,3"></link>Debería ser suficiente con darle un par de toques.
 CintaAislante_0;<link="cambiarPitch_hablar_1,1"></link>Ah eso....
 CintaAislante_1;<link="cambiarPitch_hablar_1,3"></link>No te preocupes.
 CintaAislante_2;Esa cinta cumple con todas las medidas de seguridad.
@@ -38,7 +39,7 @@ CintaAislante_6;<link="cambiarPitch_hablar_1,3"></link>A continuación abre la c
 CintaAislante_7;Es esa caja de herramientas que hay ahí.
 CintaAislante_8;Después ata la cuerda al mosquetón, ¿quieres?
 Cerrojo_0;<link="cambiarVolumen_hablar_0"><Parece que la caja está cerrada, ></link>;
-Cerrojo_1;<voy a ver si encuentro el código del candado.>;
+Cerrojo_1;<quizá el monitor sepa algo...>;
 Furgoneta_0;<link="cambiarVolumen_hablar_0,4">Disculpa, había ido a la furgoneta a buscar unas cosas.</link>
 Furgoneta_1;Espero no haberte asustado.
 Furgoneta_2;<link="cambiarPitch_hablar_0,85"></link>¿Qué?
@@ -73,7 +74,7 @@ Final_9;<link="cambiarPitch_hablar_0,9"></link>Y ahí estás, parado como un pas
 Final_10;¿Tienes idea del rato que llevamos aquí?
 Final_11;Parece que sea la primera vez que haces un puto nudo en tu vida.
 Final_12;<link="cambiarPitch_hablar_1,1"></link>¡Me da igual que estés nervioso!
-Final_13;<link="cambiarPitch_hablar_0,8"></link>Los inútiles como tu me repugnan.
+Final_13;<link="cambiarPitch_hablar_0,8"></link>Los inútiles como tú me repugnan.
 Final_14;<link="cambiarPitch_hablar_0,9"></link>Piensas que esto es un juego, que puedes echar el rato admirando las vistas,
 Final_15;fumando o mirando a las musarañas, 
 Final_16;pero esto no es ningún puto juego.
