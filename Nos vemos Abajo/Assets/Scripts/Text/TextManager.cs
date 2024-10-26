@@ -133,6 +133,14 @@ public class TextManager : MonoBehaviour
         {
             SkipAll();
         }
+        if (Input.GetKeyDown("s"))
+        {
+            Pause();
+        }
+        if (Input.GetKeyDown("d"))
+        {
+            Continue();
+        }
     }
 
     public void playDialogue(string linea, Action action)
@@ -275,10 +283,10 @@ public class TextManager : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         SoundManager.instance.PlaySound(_soundName, new Vector3(0,0,0));
-        //Pause();
+        Pause();
         yield return new WaitForSeconds(SoundManager.instance.duracionSonido(_soundName));
         yield return new WaitForEndOfFrame();
-        //Continue();
+        Continue();
     }
 
     private IEnumerator cambiarPitchCR(string _soundName, float nuevoPitch)
@@ -287,14 +295,14 @@ public class TextManager : MonoBehaviour
         SoundManager.instance.buscarSonido(_soundName).pitch = nuevoPitch;
         yield return new WaitForEndOfFrame();
     }
-    // ME DA FALLOS Y NO CONTINUA HABLANDO EL SEÑOR Y NO SÉ POR QUÉ
-    /*
+    //ME DA FALLOS Y NO CONTINUA HABLANDO EL SEÑOR Y NO SÉ POR QUÉ
+
     private IEnumerator esperarTiempoCR(float tiempoEspera)
     {
         yield return new WaitForEndOfFrame();
-        //Pause();
+        Pause();
         yield return new WaitForSeconds(tiempoEspera);
-        //Continue();
+        Continue();
 
-    }*/
+    }
 }
