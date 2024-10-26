@@ -8989,6 +8989,8 @@ PlayableDirector:
     value: {fileID: 1754260481}
   - key: {fileID: 1308797179987770305, guid: afb0ea2d832b7b64a8adc5c10e3858a5, type: 2}
     value: {fileID: 1754260481}
+  - key: {fileID: -7509265112733355716, guid: afb0ea2d832b7b64a8adc5c10e3858a5, type: 2}
+    value: {fileID: 806651914}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &316879794
@@ -50199,6 +50201,51 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8923756382236688769}
     m_Modifications:
+    - target: {fileID: -1806680513116206669, guid: e725d76a4b1a8f346b69ee4729b8b019,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1806680513116206669, guid: e725d76a4b1a8f346b69ee4729b8b019,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9753e353cfea13d49858b64e598533d4, type: 2}
+    - target: {fileID: -1599826595754709761, guid: e725d76a4b1a8f346b69ee4729b8b019,
+        type: 3}
+      propertyPath: m_Name
+      value: outline_candado (fake)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e725d76a4b1a8f346b69ee4729b8b019,
+        type: 3}
+      propertyPath: m_Name
+      value: outline (fake)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071182760956848314, guid: e725d76a4b1a8f346b69ee4729b8b019,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7071182760956848314, guid: e725d76a4b1a8f346b69ee4729b8b019,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9753e353cfea13d49858b64e598533d4, type: 2}
+    - target: {fileID: 7202271454713460447, guid: e725d76a4b1a8f346b69ee4729b8b019,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: e725d76a4b1a8f346b69ee4729b8b019,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9753e353cfea13d49858b64e598533d4, type: 2}
+    - target: {fileID: 8513859187771203891, guid: e725d76a4b1a8f346b69ee4729b8b019,
+        type: 3}
+      propertyPath: m_Name
+      value: outline_tapa (fake)
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12fcb9af9ad6d834ab73d9580d92b5c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -50254,61 +50301,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 12fcb9af9ad6d834ab73d9580d92b5c2,
-        type: 3}
-      propertyPath: m_Name
-      value: caja2Smooth
-      objectReference: {fileID: 0}
-    - target: {fileID: -1806680513116206669, guid: e725d76a4b1a8f346b69ee4729b8b019,
-        type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -1806680513116206669, guid: e725d76a4b1a8f346b69ee4729b8b019,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9753e353cfea13d49858b64e598533d4, type: 2}
-    - target: {fileID: -1599826595754709761, guid: e725d76a4b1a8f346b69ee4729b8b019,
-        type: 3}
-      propertyPath: m_Name
-      value: outline_candado (fake)
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e725d76a4b1a8f346b69ee4729b8b019,
-        type: 3}
-      propertyPath: m_Name
-      value: outline (fake)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7071182760956848314, guid: e725d76a4b1a8f346b69ee4729b8b019,
-        type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7071182760956848314, guid: e725d76a4b1a8f346b69ee4729b8b019,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9753e353cfea13d49858b64e598533d4, type: 2}
-    - target: {fileID: 7202271454713460447, guid: e725d76a4b1a8f346b69ee4729b8b019,
-        type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7202271454713460447, guid: e725d76a4b1a8f346b69ee4729b8b019,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9753e353cfea13d49858b64e598533d4, type: 2}
-    - target: {fileID: 8513859187771203891, guid: e725d76a4b1a8f346b69ee4729b8b019,
-        type: 3}
-      propertyPath: m_Name
-      value: outline_tapa (fake)
-      objectReference: {fileID: 0}
     - target: {fileID: -1806680513116206669, guid: 12fcb9af9ad6d834ab73d9580d92b5c2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9753e353cfea13d49858b64e598533d4, type: 2}
+    - target: {fileID: 919132149155446097, guid: 12fcb9af9ad6d834ab73d9580d92b5c2,
+        type: 3}
+      propertyPath: m_Name
+      value: caja2Smooth
+      objectReference: {fileID: 0}
     - target: {fileID: 7071182760956848314, guid: 12fcb9af9ad6d834ab73d9580d92b5c2,
         type: 3}
       propertyPath: m_Materials.Array.size
@@ -61433,17 +61435,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f4b0bc5bd0631bc49adf1895e69729c7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.676
+      value: 0.6773
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f4b0bc5bd0631bc49adf1895e69729c7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.254
+      value: -0.2794
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f4b0bc5bd0631bc49adf1895e69729c7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.542
+      value: 0.5432
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f4b0bc5bd0631bc49adf1895e69729c7,
         type: 3}
