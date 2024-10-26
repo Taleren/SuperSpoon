@@ -220,7 +220,10 @@ public class TextManager : MonoBehaviour
     }
     public void SkipAll()
     {
-        StopCoroutine(_typewriterCoroutine);
+        if (_typewriterCoroutine != null)
+        {
+            StopCoroutine(_typewriterCoroutine);
+        }
         _texBox.text = string.Empty;
         if (nextAction.Count > 0)
         {

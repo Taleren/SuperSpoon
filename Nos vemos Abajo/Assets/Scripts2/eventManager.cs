@@ -49,11 +49,11 @@ public class eventManager : MonoBehaviour
         callIndex++;
 
        // print("Play call");
-        //print(currentCalls.Length);
+        print(currentCalls.Length+ " "+callIndex);
         if (callIndex < currentCalls.Length)
         {
             eventCalls Call = currentCalls[callIndex];
-          //  print(Call.callType);
+          print(Call.callType);
             Action act = () => { };
             if (!Call.PlayWithBefore)
             {

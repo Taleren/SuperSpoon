@@ -20164,7 +20164,7 @@ Transform:
   m_GameObject: {fileID: 839995781}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 71.8, y: -0.029902577, z: 115.7}
+  m_LocalPosition: {x: 0.011365056, y: -0.029902577, z: -0.00000009430304}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21148,6 +21148,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CallerContratoMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: e6469d42aa465754e9ec5d889b86cede,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -1461304994638716399, guid: e6469d42aa465754e9ec5d889b86cede,
         type: 3}
@@ -24106,7 +24111,7 @@ Transform:
   m_GameObject: {fileID: 1133490155}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 73.1, y: -0.28624412, z: 115.7}
+  m_LocalPosition: {x: 1.2565458, y: -0.28624412, z: 0.00068718195}
   m_LocalScale: {x: 30.713102, y: 30.713102, z: 30.713102}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24386,7 +24391,7 @@ Transform:
   m_GameObject: {fileID: 1164576112}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0.000000014901161, z: -0.000000029802322, w: 0.70710677}
-  m_LocalPosition: {x: 70.8, y: 0.3170334, z: 115.7}
+  m_LocalPosition: {x: -1.0221559, y: 0.3170334, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36508,7 +36513,7 @@ MonoBehaviour:
         Transform: {fileID: 0}
         Boolean: 0
         waitTime: 0
-        PlayWithBefore: 0
+        PlayWithBefore: 1
         obj: {fileID: 0}
         animator: {fileID: 501553548}
         interactObject: {fileID: 0}
@@ -46602,6 +46607,17 @@ MonoBehaviour:
       animator: {fileID: 0}
       interactObject: {fileID: 696723613}
       newState: 2
+    - callType: 3
+      nameKey: "Mosquet\xF3n"
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      waitTime: 0
+      PlayWithBefore: 0
+      obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 998058886}
+      newState: 1
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
   correctCode: 01000000090000000900000003000000

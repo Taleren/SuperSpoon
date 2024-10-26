@@ -10,13 +10,20 @@ public class CallminigameObject : basicObject
     public override void Interact()
     {
 
+        eventData curEvent = getStateEvents();
+        if (curEvent == null)
+        {
+            curEvent = new eventData();
+            curEvent.interactEvent = intEvent;
+        }
+
         if (currentState == targetState)
         {
-            eventManager.Instance.startEvent(intEvent, () => { miniGameManager.Instance.LoadMinigame(_Minigame); });
+            eventManager.Instance.startEvent(curEvent.interactEvent, () => { miniGameManager.Instance.LoadMinigame(_Minigame); });
         }
         else
         {
-            eventManager.Instance.startEvent(intEvent, () => { gameManager.Instance.setState(gameManager.GameState.FreePlay); });
+            eventManager.Instance.startEvent(curEvent.interactEvent, () => { gameManager.Instance.setState(gameManager.GameState.FreePlay); });
 
         }
         LeaveHover();
