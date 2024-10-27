@@ -135,6 +135,11 @@ public class gameManager : MonoBehaviour
 
                 break;
             case GameState.onInteract:
+                if (mainCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.m_MaxSpeed > 0)
+                {
+                        setCameraSpeed(true);
+
+                }
                 //if (mainCamera.GetCinemachineComponent<CinemachinePOV>() != null)
                 //{
                 //    setCameraSpeed(true);
