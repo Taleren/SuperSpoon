@@ -86,7 +86,7 @@ public class EeventCall : PropertyDrawer
                 DrawWaitTime(position);
                 break;
             case InteractEvent.eventCallTypes.changeOptionals:
-                DrawBoolean(position);
+                DrawNewState(position);
 
                 break;
                       default:
@@ -172,6 +172,7 @@ public class EeventCall : PropertyDrawer
 
         EditorGUI.PropertyField(drawArea, Boolean, new GUIContent("Active"));
     }
+   
     private void DrawGameObject(Rect position,string name)
     {
         EditorGUIUtility.labelWidth = 100;

@@ -8921,7 +8921,7 @@ MonoBehaviour:
         obj: {fileID: 1114746202}
         animator: {fileID: 501553548}
         interactObject: {fileID: 260366464}
-        newState: 0
+        newState: 2
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -10137,7 +10137,7 @@ MonoBehaviour:
         obj: {fileID: 501553545}
         animator: {fileID: 2132941807}
         interactObject: {fileID: 260366464}
-        newState: 2
+        newState: 0
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -47573,7 +47573,7 @@ MonoBehaviour:
         obj: {fileID: 0}
         animator: {fileID: 0}
         interactObject: {fileID: 1312140358}
-        newState: 2
+        newState: 0
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -60534,7 +60534,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -607, y: -128.9}
+  m_AnchoredPosition: {x: -607, y: -101}
   m_SizeDelta: {x: 394.5431, y: 835.9023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1324498364
@@ -68287,6 +68287,24 @@ MonoBehaviour:
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
+  - HoverText: DescLata
+    state: 1
+    interactEvent:
+      eventOrder:
+      - callType: 2
+        nameKey: SiToca
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 0}
+        animator: {fileID: 0}
+        interactObject: {fileID: 0}
+        newState: 0
+    minigameEvent:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!64 &1431274414
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -72333,6 +72351,17 @@ MonoBehaviour:
       animator: {fileID: 0}
       interactObject: {fileID: 741919393}
       newState: 2
+    - callType: 3
+      nameKey: 
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      waitTime: 0.1
+      PlayWithBefore: 0
+      obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 1048554932}
+      newState: 2
     - callType: 6
       nameKey: 
       timelineObj: {fileID: 0}
@@ -73038,7 +73067,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -980.7, y: 421.9}
+  m_AnchoredPosition: {x: -980.7, y: 432}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1642414807
@@ -87599,14 +87628,25 @@ MonoBehaviour:
     eventOrder: []
   outline: {fileID: 605456793}
   Hoverkey: DescCigarrillos
-  showName: 0
+  showName: 1
   startState: 2
   currentState: 0
   eventList:
   - HoverText: DescCigarrillos
     state: 1
     interactEvent:
-      eventOrder: []
+      eventOrder:
+      - callType: 2
+        nameKey: SiToca
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 0}
+        animator: {fileID: 0}
+        interactObject: {fileID: 0}
+        newState: 0
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -90719,18 +90759,7 @@ MonoBehaviour:
       obj: {fileID: 0}
       animator: {fileID: 0}
       interactObject: {fileID: 5334037118979984761}
-      newState: 0
-    - callType: 0
-      nameKey: 
-      timelineObj: {fileID: 0}
-      Transform: {fileID: 0}
-      Boolean: 0
-      waitTime: 0
-      PlayWithBefore: 0
-      obj: {fileID: 0}
-      animator: {fileID: 0}
-      interactObject: {fileID: 5334037118979984761}
-      newState: 0
+      newState: 1
   outline: {fileID: 298255413}
   Hoverkey: DescMosqueton
   showName: 1

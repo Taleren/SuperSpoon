@@ -169,24 +169,16 @@ public class gameManager : MonoBehaviour
     {
         startGame += action;
     }
-    public void lockOptionals()
+    public void lockOptionals(basicObject.ObjState state)
     {
         for (int i = 0; i < Optionals.Length; i++)
         {
             print(Optionals[i].name);
-            Optionals[i].setState(basicObject.ObjState.Off);
+            Optionals[i].setState(state);
 
         }
     }
-    public void unlockOptionals()
-    {
-        for (int i = 0; i < Optionals.Length; i++)
-        {
-            print(Optionals[i].name);
-
-            Optionals[i].setState(basicObject.ObjState.Active);
-        }
-    }
+ 
     public enum GameState
     {
         Paused,

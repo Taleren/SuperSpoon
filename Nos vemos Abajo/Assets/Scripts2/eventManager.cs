@@ -100,18 +100,10 @@ public class eventManager : MonoBehaviour
                     StartCoroutine(waitTime(Call.waitTime));
                     break;
                 case InteractEvent.eventCallTypes.changeOptionals:
-                    if(Call.Boolean == false)
-                    {
-                        print("lock");
-                        gameManager.Instance.lockOptionals();
-                    }
-                    else
-                    {
-                        print("unlock");
-
-                        gameManager.Instance.unlockOptionals();
-
-                    }
+                    
+                        gameManager.Instance.lockOptionals(Call.newState);
+                    
+                  
                     if (!Call.PlayWithBefore)
                     {
                         playCall();
