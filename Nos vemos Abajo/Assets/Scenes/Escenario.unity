@@ -10578,14 +10578,14 @@ MonoBehaviour:
   startState: 0
   currentState: 0
   eventList:
-  - HoverText: Farol
+  - HoverText: DescFarol
     state: 1
     interactEvent:
       eventOrder: []
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
-  - HoverText: Farol
+  - HoverText: DescFarol
     state: 2
     interactEvent:
       eventOrder: []
@@ -48713,14 +48713,14 @@ MonoBehaviour:
       animator: {fileID: 0}
       interactObject: {fileID: 1844133235}
       newState: 0
-    - callType: 3
+    - callType: 5
       nameKey: 
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
       Boolean: 0
       waitTime: 0
       PlayWithBefore: 0
-      obj: {fileID: 1827318341}
+      obj: {fileID: 1273616169}
       animator: {fileID: 0}
       interactObject: {fileID: 1783342270}
       newState: 0
@@ -54029,12 +54029,12 @@ MonoBehaviour:
   intEvent:
     eventOrder: []
   outline: {fileID: 1357309277}
-  Hoverkey: 
+  Hoverkey: DescCintaAdhesiva
   showName: 1
   startState: 0
   currentState: 0
   eventList:
-  - HoverText: 
+  - HoverText: DescCintaAdhesiva
     state: 2
     interactEvent:
       eventOrder: []
@@ -68013,12 +68013,12 @@ MonoBehaviour:
   intEvent:
     eventOrder: []
   outline: {fileID: 2091438906}
-  Hoverkey: 
+  Hoverkey: DescLata
   showName: 1
   startState: 2
   currentState: 0
   eventList:
-  - HoverText: 
+  - HoverText: DescLata
     state: 2
     interactEvent:
       eventOrder:
@@ -68424,7 +68424,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.47
+      value: -0.409
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
@@ -68434,7 +68434,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.928
+      value: 0.955
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
@@ -68486,6 +68486,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: 8865ff6b5c420a448ac290097f94e33a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: 8865ff6b5c420a448ac290097f94e33a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: 8865ff6b5c420a448ac290097f94e33a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.06
+      objectReference: {fileID: 0}
     - target: {fileID: -516098083770646512, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
       propertyPath: m_Name
@@ -68520,10 +68535,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 26216817}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8865ff6b5c420a448ac290097f94e33a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1450349391}
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 8865ff6b5c420a448ac290097f94e33a,
         type: 3}
       insertIndex: -1
@@ -68533,12 +68544,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1844133234}
   m_SourcePrefab: {fileID: 100100000, guid: 8865ff6b5c420a448ac290097f94e33a, type: 3}
---- !u!1 &1450349388 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8865ff6b5c420a448ac290097f94e33a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1450349387}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1450349389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4083501151425157549, guid: 8865ff6b5c420a448ac290097f94e33a,
@@ -68551,28 +68556,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1450349387}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1450349391
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450349388}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!4 &1450440395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4867907061975868457, guid: 10554dab2874de9409bd19f04932b0fc,
@@ -80792,17 +80775,6 @@ MonoBehaviour:
     state: 2
     interactEvent:
       eventOrder:
-      - callType: 6
-        nameKey: Furgoneta
-        timelineObj: {fileID: 0}
-        Transform: {fileID: 0}
-        Boolean: 0
-        waitTime: 0.5
-        PlayWithBefore: 0
-        obj: {fileID: 0}
-        animator: {fileID: 0}
-        interactObject: {fileID: 0}
-        newState: 0
       - callType: 4
         nameKey: vientoFuerte
         timelineObj: {fileID: 0}
@@ -80814,14 +80786,14 @@ MonoBehaviour:
         animator: {fileID: 0}
         interactObject: {fileID: 0}
         newState: 0
-      - callType: 3
+      - callType: 5
         nameKey: Furgoneta
         timelineObj: {fileID: 0}
         Transform: {fileID: 1291500781}
         Boolean: 0
         waitTime: 0
         PlayWithBefore: 0
-        obj: {fileID: 1291500779}
+        obj: {fileID: 1783342269}
         animator: {fileID: 0}
         interactObject: {fileID: 1783342270}
         newState: 0
@@ -80858,7 +80830,7 @@ Transform:
   m_GameObject: {fileID: 1783342269}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4681123, y: -0.4981163, z: 0.92650366}
+  m_LocalPosition: {x: 1.37, y: -1.12, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87363,19 +87335,19 @@ MonoBehaviour:
   intEvent:
     eventOrder: []
   outline: {fileID: 605456793}
-  Hoverkey: DescCuerda
+  Hoverkey: DescCigarrillos
   showName: 0
   startState: 2
   currentState: 0
   eventList:
-  - HoverText: DescCuerda
+  - HoverText: DescCigarrillos
     state: 1
     interactEvent:
       eventOrder: []
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
-  - HoverText: DescCuerda
+  - HoverText: DescCigarrillos
     state: 2
     interactEvent:
       eventOrder:
