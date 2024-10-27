@@ -17,7 +17,10 @@ public class gameManager : MonoBehaviour
     [SerializeField] GameObject  hands;
   [SerializeField]  Canvas gameCursorCanvas;
     [SerializeField] protected InteractEvent startGameEvent;
- public   Vector3 lastpressPos;
+
+    [SerializeField] protected basicObject[] Optionals;
+
+    public Vector3 lastpressPos;
     public GameState currentState { get; private set; }
     private void Awake()
     {
@@ -165,6 +168,24 @@ public class gameManager : MonoBehaviour
     public void subscribeGameStart(Action action)
     {
         startGame += action;
+    }
+    public void lockOptionals()
+    {
+        for (int i = 0; i < Optionals.Length; i++)
+        {
+            print(Optionals[i].name);
+            Optionals[i].setState(basicObject.ObjState.Off);
+
+        }
+    }
+    public void unlockOptionals()
+    {
+        for (int i = 0; i < Optionals.Length; i++)
+        {
+            print(Optionals[i].name);
+
+            Optionals[i].setState(basicObject.ObjState.Active);
+        }
     }
     public enum GameState
     {

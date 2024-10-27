@@ -85,6 +85,10 @@ public class EeventCall : PropertyDrawer
             case InteractEvent.eventCallTypes.waitState:
                 DrawWaitTime(position);
                 break;
+            case InteractEvent.eventCallTypes.changeOptionals:
+                DrawBoolean(position);
+
+                break;
                       default:
                 break;
         }

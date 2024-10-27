@@ -188,12 +188,10 @@ public class TextManager : MonoBehaviour
                 {
                     if (personaje != null)
                     {
-                        // SoundManager.instance.buscarSonido("hablar").pitch -= alternarPitch ? -0.1f : 0.1f;
-                        //SoundManager.instance.PlaySound("hablar", personaje.transform.position, personaje);
-                        // alternarPitch = !alternarPitch;
-                        savedTime = Time.time;
+                        SoundManager.instance.buscarSonido("hablar").pitch -= alternarPitch ? -0.1f : 0.1f;
+                        SoundManager.instance.PlaySound("hablar", personaje.transform.position, personaje);
+                        alternarPitch = !alternarPitch;
                         yield return new WaitForSeconds(1 / characterPerSecond);
-                        print("terminado. Tiepo usado = " + (Time.time - savedTime));
 
                     }
                 }

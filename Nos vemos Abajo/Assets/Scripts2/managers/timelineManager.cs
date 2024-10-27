@@ -41,6 +41,7 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
     }
     public void endTimeline()
     {
+        director.Stop();
         gameManager.Instance.setCameraSpeed(true);
 
         currentNextAction.Invoke();
@@ -79,9 +80,17 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
             listPropertyName.RemoveAt(index);
         }
     }
-    public void timelineDialogue(string dialog)
+    public void timelineDialogue(string dialog,int end)
     {
-        TextManager.Instance.playDialogue(dialog, ()=> { });
+        if (end == 1)
+        {
+            TextManager.Instance.playDialogue(dialog, () => { endTimeline(); });
+
+        }
+        else
+        {
+            TextManager.Instance.playDialogue(dialog, () => { });
+        }
     }
     //public void soundDialogue(string soundKey,int objectNum)
     //{
