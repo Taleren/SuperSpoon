@@ -247,8 +247,16 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: golpeLata
     clip: {fileID: 8300000, guid: 023cea9d57e608f4f94363227f858222, type: 3}
-    volume: 0.1
-    spatialBlend: 0
+    volume: 0.2
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
+    source: {fileID: 0}
+  - name: quitarHielo
+    clip: {fileID: 8300000, guid: fe4c88f7acbc8d349bf931edce19a8eb, type: 3}
+    volume: 0.2
+    spatialBlend: 1
     pitch: 1
     loop: 0
     audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
