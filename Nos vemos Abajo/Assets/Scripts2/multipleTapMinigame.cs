@@ -12,6 +12,7 @@ public class multipleTapMinigame : minigame
     [SerializeField] float startSnow;
     float currentSnow;
     [SerializeField] float endSnow;
+    [SerializeField] GameObject particles;
 
     public override void StartMinigame()
     {
@@ -50,7 +51,7 @@ public class multipleTapMinigame : minigame
     public void changeSnow()
     {
         MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
-
+        GameObject newpart = Instantiate(particles, gameManager.Instance.lastpressPos,Quaternion.identity);
         currentSnow = currentSnow + ((endSnow - startSnow) / numberTaps);
         print(currentSnow + ((endSnow - startSnow) / numberTaps));
         propertyBlock.SetFloat("_Snow_Quantity", currentSnow);

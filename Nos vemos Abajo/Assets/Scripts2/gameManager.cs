@@ -16,7 +16,7 @@ public class gameManager : MonoBehaviour
     [SerializeField] GameObject  hands;
   [SerializeField]  Canvas gameCursorCanvas;
     [SerializeField] protected InteractEvent startGameEvent;
-
+ public   Vector3 lastpressPos;
     public GameState currentState { get; private set; }
     private void Awake()
     {
@@ -35,6 +35,7 @@ public class gameManager : MonoBehaviour
         hands.SetActive(false);
         setCursor(true);
         setGameCursor(false);
+        setCameraSpeed(false);
         //mainCamera = (CinemachineVirtualCamera)Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera;
 
         // StartCoroutine(delayStart());

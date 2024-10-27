@@ -12,6 +12,9 @@ public class CursorCamara : MonoBehaviour
     public LayerMask clickableminigame;
     private LayerMask currentMask;
     public LayerMask none;
+    RaycastHit hitContinuo;
+
+    [SerializeField] Sprite[] cursorSprites;
 
     [SerializeField] private Image cursor;
     void Start()
@@ -35,8 +38,7 @@ public class CursorCamara : MonoBehaviour
     {
         if (gameManager.Instance.currentState != gameManager.GameState.Paused)
         {
-            RaycastHit hitContinuo;
-            Ray rayContinuo = cam.ScreenPointToRay(Input.mousePosition);
+           Ray rayContinuo = cam.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(rayContinuo, out hitContinuo, Mathf.Infinity, currentMask))
             {
@@ -51,7 +53,6 @@ public class CursorCamara : MonoBehaviour
                     currentObject = _obj;
                     currentObject.EnterHover();
                 }
-
                 //  Debug.Log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
             }
             else
@@ -62,9 +63,10 @@ public class CursorCamara : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0))
             {
-                print("up");
                 if (currentObject != null)
                 {
+                    gameManager.Instance.lastpressPos = hitContinuo.point;
+
                     currentObject.Interact();
                 }
                 //RaycastHit hit;
@@ -98,17 +100,19 @@ public class CursorCamara : MonoBehaviour
                 break;
             case gameManager.GameState.FreePlay:
                 cursor.enabled = true;
-
+                cursor.sprite = cursorSprites[0];
                 currentMask = clickable;
                 break;
             case gameManager.GameState.Minigame:
                 cursor.enabled = false;
-
+                cursor.sprite = cursorSprites[0];
                 currentMask = clickableminigame;
 
                 break;
             case gameManager.GameState.onInteract:
-                cursor.enabled = false;
+                cursor.enabled = true;
+                cursor.sprite = cursorSprites[1];
+
                 currentMask = none;
 
                 break;
