@@ -151,6 +151,16 @@ public class TextManager : MonoBehaviour
     {
         nextAction.Add(action);
         IndiceLineaActual = 0;
+        StartCoroutine(preType(linea));
+    }
+    private IEnumerator preType(string linea)
+    {
+        print("prep dialog" + linea);
+        if (_typewriterCoroutine != null)
+        {
+            yield return new WaitUntil(() => _typewriterCoroutine == null);
+        }
+        print("start dialog" + linea);
 
         _typewriterCoroutine = StartCoroutine(Typewriter(linea));
 
@@ -162,7 +172,7 @@ public class TextManager : MonoBehaviour
         //   print("ss");
         DialogoActual = linea;
         List<string> a = getLine(DialogoActual + "_" + IndiceLineaActual.ToString());
-        while (a/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null )
+        while (a/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null)
         {
 
             // Texto
@@ -176,7 +186,7 @@ public class TextManager : MonoBehaviour
             // Delay + typewriter
             while (IndiceCaracterVisibleActualmente < textInfo.characterCount)
             {
-                
+
                 char character = textInfo.characterInfo[IndiceCaracterVisibleActualmente].character;
 
                 _texBox.maxVisibleCharacters++;
@@ -197,7 +207,7 @@ public class TextManager : MonoBehaviour
 
                     }
                 }
-                yield return new WaitUntil(()=> pausado == false);
+                yield return new WaitUntil(() => pausado == false);
                 IndiceCaracterVisibleActualmente++;
 
             }
@@ -208,7 +218,7 @@ public class TextManager : MonoBehaviour
             a = getLine(DialogoActual + "_" + IndiceLineaActual.ToString());
 
             yield return new WaitForSeconds(finalDelay);
-            
+
 
         }
 
@@ -219,9 +229,10 @@ public class TextManager : MonoBehaviour
             nextAction[0]?.Invoke();
             nextAction.RemoveAt(0);
         }
+        _typewriterCoroutine = null;
     }
 
-    
+
 
     void Pause()
     {
