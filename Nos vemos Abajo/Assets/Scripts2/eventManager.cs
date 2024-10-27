@@ -102,13 +102,21 @@ public class eventManager : MonoBehaviour
                 case InteractEvent.eventCallTypes.changeOptionals:
                     if(Call.Boolean == false)
                     {
+                        print("lock");
                         gameManager.Instance.lockOptionals();
                     }
                     else
                     {
+                        print("unlock");
+
                         gameManager.Instance.unlockOptionals();
 
                     }
+                    if (!Call.PlayWithBefore)
+                    {
+                        playCall();
+                    }
+
                     break;
                 default:
                     break;

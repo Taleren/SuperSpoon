@@ -173,7 +173,8 @@ public class gameManager : MonoBehaviour
     {
         for (int i = 0; i < Optionals.Length; i++)
         {
-            Optionals[0].setState(basicObject.ObjState.Off);
+            print(Optionals[i].name);
+            Optionals[i].setState(basicObject.ObjState.Off);
 
         }
     }
@@ -181,7 +182,9 @@ public class gameManager : MonoBehaviour
     {
         for (int i = 0; i < Optionals.Length; i++)
         {
-            Optionals[0].setState(basicObject.ObjState.Active);
+            print(Optionals[i].name);
+
+            Optionals[i].setState(basicObject.ObjState.Active);
         }
     }
     public enum GameState
