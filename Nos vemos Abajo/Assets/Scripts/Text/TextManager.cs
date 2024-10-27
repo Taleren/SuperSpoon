@@ -168,7 +168,7 @@ public class TextManager : MonoBehaviour
             _texBox.ForceMeshUpdate();
             TMP_TextInfo textInfo = _texBox.textInfo;
 
-            yield return null;
+            yield return new WaitForFixedUpdate();
             savedTime = Time.time;
 
             // Delay + typewriter
@@ -188,11 +188,12 @@ public class TextManager : MonoBehaviour
                 {
                     if (personaje != null)
                     {
-                       // SoundManager.instance.buscarSonido("hablar").pitch -= alternarPitch ? -0.1f : 0.1f;
+                        // SoundManager.instance.buscarSonido("hablar").pitch -= alternarPitch ? -0.1f : 0.1f;
                         //SoundManager.instance.PlaySound("hablar", personaje.transform.position, personaje);
-                       // alternarPitch = !alternarPitch;
-
+                        // alternarPitch = !alternarPitch;
+                        savedTime = Time.time;
                         yield return new WaitForSeconds(1 / characterPerSecond);
+                        print("terminado. Tiepo usado = " + (Time.time - savedTime));
 
                     }
                 }
@@ -207,7 +208,7 @@ public class TextManager : MonoBehaviour
             a = getLine(DialogoActual + "_" + IndiceLineaActual.ToString());
 
             yield return new WaitForSeconds(finalDelay);
-            print("terminado. Tiepo usado = " + (Time.time - savedTime));
+            
 
         }
 
