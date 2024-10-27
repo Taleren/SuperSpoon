@@ -13,6 +13,7 @@ public class gameManager : MonoBehaviour
     public float savedCameraSpeedY;
     Action changeState;
     Action startGame;
+    [SerializeField] int framerate;
     [SerializeField] GameObject  hands;
   [SerializeField]  Canvas gameCursorCanvas;
     [SerializeField] protected InteractEvent startGameEvent;
@@ -20,7 +21,7 @@ public class gameManager : MonoBehaviour
     public GameState currentState { get; private set; }
     private void Awake()
     {
-        Application.targetFrameRate = 30;
+        Application.targetFrameRate = framerate;
 
         if (Instance == null)
         {
@@ -59,8 +60,11 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.L))
-        //{
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Application.targetFrameRate = framerate;
+
+        }
         //  if  (Application.targetFrameRate == 60)
         //    {
         //        Application.targetFrameRate =30;

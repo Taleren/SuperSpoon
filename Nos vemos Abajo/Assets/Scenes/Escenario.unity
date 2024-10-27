@@ -12314,6 +12314,11 @@ PrefabInstance:
       objectReference: {fileID: 501553545}
     - target: {fileID: 1496849953838099355, guid: e2ef83d051b9ce14f950b72ef0025746,
         type: 3}
+      propertyPath: framerate
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496849953838099355, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 2053765830}
