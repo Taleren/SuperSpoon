@@ -285,3 +285,11 @@ MonoBehaviour:
     loop: 0
     audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
+  - name: abrirCaja
+    clip: {fileID: 8300000, guid: 8b2030bde4e2a42449668ad01cb9d5ae, type: 3}
+    volume: 0.2
+    spatialBlend: 0.565
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
+    source: {fileID: 0}
