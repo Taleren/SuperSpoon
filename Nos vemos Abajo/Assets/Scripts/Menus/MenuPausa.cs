@@ -15,6 +15,8 @@ public class MenuPausa : MonoBehaviour
 
     private gameManager.GameState gameStateAnterior;
 
+    public GameObject transicionPanel;
+
     private void Start()
     {
         menuPausa.SetActive(false);
@@ -23,7 +25,7 @@ public class MenuPausa : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) 
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (gameManager.Instance.currentState != gameManager.GameState.Paused)
             {
@@ -40,8 +42,10 @@ public class MenuPausa : MonoBehaviour
         menuPausa.SetActive(false);
         Time.timeScale = 1f;
         gameManager.Instance.setState(gameStateAnterior);
-        Cursor.visible = false;
-        
+        if (gameStateAnterior == gameManager.GameState.FreePlay) 
+        {
+            Cursor.visible = false;
+        }
     }
     public void OptionsPausa()
     {
@@ -57,7 +61,15 @@ public class MenuPausa : MonoBehaviour
 
     public void SalirJuegoPausa()
     {
-        //string escenaActual = SceneManager.GetActiveScene().name;
-        //SceneManager.LoadScene(escenaActual);
+        StartCoroutine("volverMenuCR");
+    }
+
+    IEnumerator volverMenuCR()
+    {
+        menuPausa.SetActive(false);
+        Time.timeScale = 1f;
+        transicionPanel.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("escenaTransicion");
     }
 }

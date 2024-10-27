@@ -4070,6 +4070,7 @@ MonoBehaviour:
   optionsPausa: {fileID: 144732730743518184}
   menuPausa: {fileID: 6157409549404445400}
   botonesPausa: {fileID: 821022486579122111}
+  transicionPanel: {fileID: 3994406326144046342}
 --- !u!1 &7457714475816033083
 GameObject:
   m_ObjectHideFlags: 0
