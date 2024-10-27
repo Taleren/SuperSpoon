@@ -8918,6 +8918,8 @@ PlayableDirector:
     value: {fileID: 806651914}
   - key: {fileID: -4446805937659104591, guid: efe4dab2ca527394aa4ecd86fd3f7f53, type: 2}
     value: {fileID: 1897081829}
+  - key: {fileID: 5375316793363461894, guid: efe4dab2ca527394aa4ecd86fd3f7f53, type: 2}
+    value: {fileID: 996753060}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &316879794
@@ -29591,11 +29593,11 @@ MonoBehaviour:
       - callType: 4
         nameKey: cortarCuerda
         timelineObj: {fileID: 0}
-        Transform: {fileID: 1087153629}
+        Transform: {fileID: 1837694985}
         Boolean: 0
         waitTime: 0
         PlayWithBefore: 0
-        obj: {fileID: 1087153628}
+        obj: {fileID: 1837694981}
         animator: {fileID: 0}
         interactObject: {fileID: 0}
         newState: 2
@@ -51441,6 +51443,28 @@ MonoBehaviour:
         animator: {fileID: 623947677}
         interactObject: {fileID: 0}
         newState: 0
+      - callType: 4
+        nameKey: mosqueton
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 1461909398}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 1461909393}
+        animator: {fileID: 623947677}
+        interactObject: {fileID: 0}
+        newState: 0
+      - callType: 4
+        nameKey: paso
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 1461909398}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 1461909393}
+        animator: {fileID: 623947677}
+        interactObject: {fileID: 0}
+        newState: 0
     minigameEvent:
       m_PersistentCalls:
         m_Calls:
@@ -58221,6 +58245,17 @@ MonoBehaviour:
         waitTime: 0
         PlayWithBefore: 0
         obj: {fileID: 0}
+        animator: {fileID: 290925626}
+        interactObject: {fileID: 0}
+        newState: 0
+      - callType: 4
+        nameKey: quitarHielo
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 5240018118008350423}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 3398861849545891483}
         animator: {fileID: 290925626}
         interactObject: {fileID: 0}
         newState: 0
