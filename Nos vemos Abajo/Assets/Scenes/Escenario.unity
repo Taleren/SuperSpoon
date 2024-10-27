@@ -10189,7 +10189,7 @@ PlayableDirector:
   m_GameObject: {fileID: 316879792}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: efe4dab2ca527394aa4ecd86fd3f7f53, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: ce5abc75f4e55d046998a8c7e7af78f1, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -19839,12 +19839,12 @@ PrefabInstance:
     - target: {fileID: 789043545454809456, guid: e2ef83d051b9ce14f950b72ef0025746,
         type: 3}
       propertyPath: m_Events.m_Events.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 789043545454809456, guid: e2ef83d051b9ce14f950b72ef0025746,
         type: 3}
       propertyPath: m_Events.m_Signals.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 789043545454809456, guid: e2ef83d051b9ce14f950b72ef0025746,
         type: 3}
