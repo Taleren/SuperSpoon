@@ -60188,7 +60188,7 @@ PrefabInstance:
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
