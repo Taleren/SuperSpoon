@@ -47781,13 +47781,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
-      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].obj
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[0].obj
       value: 
       objectReference: {fileID: 1375798639}
     - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
-      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].nameKey
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].obj
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[0].nameKey
       value: botonFarol
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].nameKey
+      value: BotonFarol_Pulsar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[0].callType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[0].newState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[1].callType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[1].newState
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -47797,7 +47827,7 @@ PrefabInstance:
     - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].callType
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -47806,9 +47836,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
-      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].Transform
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[0].Transform
       value: 
       objectReference: {fileID: 1375798640}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].Transform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[0].interactObject
+      value: 
+      objectReference: {fileID: 1391417183}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[1].interactObject
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].interactObject

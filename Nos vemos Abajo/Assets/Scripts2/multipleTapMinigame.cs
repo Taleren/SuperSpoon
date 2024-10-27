@@ -55,7 +55,7 @@ public class multipleTapMinigame : minigame
         currentSnow = currentSnow + ((endSnow - startSnow) / numberTaps);
         print(currentSnow + ((endSnow - startSnow) / numberTaps));
         propertyBlock.SetFloat("_Snow_Quantity", currentSnow);
-
+        Destroy(newpart, 3);
         foreach (MeshRenderer item in meshr)
         {
             print(item.name);

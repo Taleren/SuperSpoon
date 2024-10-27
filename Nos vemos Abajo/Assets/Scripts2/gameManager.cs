@@ -20,6 +20,8 @@ public class gameManager : MonoBehaviour
     public GameState currentState { get; private set; }
     private void Awake()
     {
+        Application.targetFrameRate = 60;
+
         if (Instance == null)
         {
             Instance = this;
