@@ -116,11 +116,13 @@ public class TextManagerParrafo : MonoBehaviour
 
     private void Update()
     {
+        /*
         if(Input.GetKeyDown("space")) 
         {
             if (_texBox.maxVisibleCharacters != _texBox.textInfo.characterCount - 1)
                 Skip();
         }
+        */
     }
 
  

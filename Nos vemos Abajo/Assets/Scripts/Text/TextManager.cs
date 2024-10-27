@@ -131,6 +131,7 @@ public class TextManager : MonoBehaviour
 
     private void Update()
     {
+        /*
         if (Input.GetKeyDown("z"))
         {
             SkipAll();
@@ -143,6 +144,7 @@ public class TextManager : MonoBehaviour
         {
             Continue();
         }
+        */
     }
 
     public void playDialogue(string linea, Action action)
