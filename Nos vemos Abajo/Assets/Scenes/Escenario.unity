@@ -7855,6 +7855,17 @@ MonoBehaviour:
         animator: {fileID: 501553548}
         interactObject: {fileID: 260366464}
         newState: 0
+      - callType: 7
+        nameKey: New State
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 1
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 1114746202}
+        animator: {fileID: 501553548}
+        interactObject: {fileID: 260366464}
+        newState: 0
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -8876,6 +8887,17 @@ MonoBehaviour:
         timelineObj: {fileID: 0}
         Transform: {fileID: 0}
         Boolean: 1
+        waitTime: 0
+        PlayWithBefore: 1
+        obj: {fileID: 501553545}
+        animator: {fileID: 2132941807}
+        interactObject: {fileID: 260366464}
+        newState: 2
+      - callType: 7
+        nameKey: Monitor_idle
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
         waitTime: 0
         PlayWithBefore: 1
         obj: {fileID: 501553545}
@@ -12448,6 +12470,21 @@ PrefabInstance:
       propertyPath: gameCursorCanvas
       value: 
       objectReference: {fileID: 1056819672}
+    - target: {fileID: 1496849953838099355, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: Optionals.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496849953838099355, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: Optionals.Array.data[0]
+      value: 
+      objectReference: {fileID: 1431274411}
+    - target: {fileID: 1496849953838099355, guid: e2ef83d051b9ce14f950b72ef0025746,
+        type: 3}
+      propertyPath: Optionals.Array.data[1]
+      value: 
+      objectReference: {fileID: 2090977409}
     - target: {fileID: 1496849953838099355, guid: e2ef83d051b9ce14f950b72ef0025746,
         type: 3}
       propertyPath: startGameEvent.eventOrder.Array.size
@@ -36273,6 +36310,17 @@ MonoBehaviour:
         animator: {fileID: 0}
         interactObject: {fileID: 1312140358}
         newState: 2
+      - callType: 7
+        nameKey: 
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 0}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 0}
+        animator: {fileID: 0}
+        interactObject: {fileID: 1312140358}
+        newState: 2
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -51286,6 +51334,17 @@ MonoBehaviour:
       animator: {fileID: 0}
       interactObject: {fileID: 292711177}
       newState: 2
+    - callType: 7
+      nameKey: firmar
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 1433324488}
+      Boolean: 1
+      waitTime: 0
+      PlayWithBefore: 0
+      obj: {fileID: 1433324492}
+      animator: {fileID: 0}
+      interactObject: {fileID: 292711177}
+      newState: 2
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
 --- !u!114 &1433324495
@@ -65047,6 +65106,17 @@ MonoBehaviour:
       interactObject: {fileID: 1925567931}
       newState: 2
     - callType: 3
+      nameKey: 
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      waitTime: 0
+      PlayWithBefore: 0
+      obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 5334037118979984761}
+      newState: 0
+    - callType: 7
       nameKey: 
       timelineObj: {fileID: 0}
       Transform: {fileID: 0}
