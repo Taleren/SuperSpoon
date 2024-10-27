@@ -20,9 +20,18 @@ public   override void Start()
     public override void Interact()
     {
         eventData curEvent = getStateEvents();
-        print (curEvent.minigameEvent.ToString()) ;
-        eventManager.Instance.startEvent(curEvent.interactEvent, () => { curEvent.minigameEvent?.Invoke(); gameManager.Instance.setState(gameManager.GameState.Minigame); });
-        LeaveHover();
+        if (curEvent.minigameEvent.GetPersistentEventCount() > 0 && curEvent.minigameEvent.GetPersistentMethodName(0) == "endMinigame")
+        {
+
+            eventManager.Instance.startEvent(curEvent.interactEvent, () => { curEvent.minigameEvent?.Invoke(); });
+
+
+        }
+        else
+        {
+            eventManager.Instance.startEvent(curEvent.interactEvent, () => { curEvent.minigameEvent?.Invoke(); gameManager.Instance.setState(gameManager.GameState.Minigame); });
+        }
+            LeaveHover();
     }
   
     public override void EnterHover()
@@ -41,9 +50,10 @@ public   override void Start()
     }
   
   
-    public void nextCall()
-    {
-        eventManager.Instance.playCall();
-    }
+    //public void nextCall()
+    //{
+    //    print(gameObject.name);
+    //    eventManager.Instance.playCall();
+    //}
 }
 

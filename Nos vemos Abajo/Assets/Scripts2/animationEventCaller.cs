@@ -9,6 +9,7 @@ public class animationEventCaller : MonoBehaviour
 
     public void nextCall()
     {
+        print(gameObject.name);
         eventManager.Instance.playCall();
     }
     

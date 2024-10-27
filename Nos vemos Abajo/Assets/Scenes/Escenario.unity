@@ -20052,7 +20052,7 @@ MonoBehaviour:
       obj: {fileID: 0}
       animator: {fileID: 0}
       interactObject: {fileID: 1881487853}
-      newState: 2
+      newState: 0
   endOnTap: 0
   meshr:
   - {fileID: 7202271454783502976}
@@ -48162,6 +48162,10 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 223318595}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7738345878910061327, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1375798648}
     - targetCorrespondingSourceObject: {fileID: 2640062204363259450, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       insertIndex: -1
@@ -49210,6 +49214,20 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1316571706}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1375798648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375798639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6213d10bdeb63dd4b846bacbd899045b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  farolHijo: []
+  meshr: []
 --- !u!1 &1376611138
 GameObject:
   m_ObjectHideFlags: 0
