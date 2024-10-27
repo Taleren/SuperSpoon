@@ -277,3 +277,11 @@ MonoBehaviour:
     loop: 0
     audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
+  - name: quitarBrida
+    clip: {fileID: 8300000, guid: 11d05f7b1a36c5145b78369c074017d6, type: 3}
+    volume: 0.2
+    spatialBlend: 0
+    pitch: 0.9
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
+    source: {fileID: 0}
