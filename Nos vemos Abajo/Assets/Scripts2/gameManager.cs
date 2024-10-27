@@ -21,7 +21,7 @@ public class gameManager : MonoBehaviour
     public GameState currentState { get; private set; }
     private void Awake()
     {
-        Application.targetFrameRate = framerate;
+       // Application.targetFrameRate;
 
         if (Instance == null)
         {
