@@ -20,7 +20,7 @@ public class gameManager : MonoBehaviour
     public GameState currentState { get; private set; }
     private void Awake()
     {
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 30;
 
         if (Instance == null)
         {
@@ -59,7 +59,18 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{
+        //  if  (Application.targetFrameRate == 60)
+        //    {
+        //        Application.targetFrameRate =30;
+        //    }
+        //    else
+        //    {
+        //        Application.targetFrameRate = 60;
+
+        //    }
+        //} 
     }
     public void callPingPong(string callText,Action nextAction)
     {
