@@ -9,10 +9,10 @@ public class PRUEBASSONIDO : MonoBehaviour
 
     }
     void Update()
-    {
-        /*if (Input.GetKeyDown(KeyCode.Q))    
+    {/*
+        if (Input.GetKeyDown(KeyCode.Q))    
         {
-            SoundManager.instance.PlaySound("pasoChirrido1", new Vector3(1, 1, 1));
+            SoundManager.instance.PlaySound("quitarBrida", new Vector3(1, 1, 1));
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -33,6 +33,6 @@ public class PRUEBASSONIDO : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Y))
         {
             SoundManager.instance.PlaySound("golpeLata", new Vector3(1, 1, 1));
-        }*/
+        }//*/
     }
 }
