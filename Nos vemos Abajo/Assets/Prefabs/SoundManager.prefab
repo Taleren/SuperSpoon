@@ -126,16 +126,16 @@ MonoBehaviour:
     audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: botonFarol
-    clip: {fileID: 8300000, guid: 7b294f3ac35d83b4e955918f9959dfe0, type: 3}
-    volume: 0.1
+    clip: {fileID: 8300000, guid: a1203987475c8cc49a0d18b5a30c8f53, type: 3}
+    volume: 0.2
     spatialBlend: 1
     pitch: 0.9
     loop: 0
     audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: valvulaFarol
-    clip: {fileID: 8300000, guid: 08d150d2b0155da45a9d7881655d74b2, type: 3}
-    volume: 0.05
+    clip: {fileID: 8300000, guid: 5a199f74a9423be448b73c46dca16520, type: 3}
+    volume: 0.15
     spatialBlend: 1
     pitch: 0.9
     loop: 0
