@@ -81117,7 +81117,7 @@ Transform:
   m_GameObject: {fileID: 1783342269}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.37, y: -1.12, z: -1}
+  m_LocalPosition: {x: 1.62, y: -1.12, z: -1.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -90727,6 +90727,17 @@ MonoBehaviour:
       animator: {fileID: 0}
       interactObject: {fileID: 1925567931}
       newState: 2
+    - callType: 2
+      nameKey: Final2
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 0}
+      Boolean: 0
+      waitTime: 0
+      PlayWithBefore: 0
+      obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 5334037118979984761}
+      newState: 1
     - callType: 3
       nameKey: 
       timelineObj: {fileID: 0}
