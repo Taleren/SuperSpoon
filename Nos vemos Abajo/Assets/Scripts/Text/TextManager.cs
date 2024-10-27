@@ -23,10 +23,10 @@ public class TextManager : MonoBehaviour
     private Coroutine _typewriterCoroutine;
 
     // Delay
-    private WaitForSeconds _simpleDelay;
-    private WaitForSeconds _interpunctuationDelay;
-    private WaitForSeconds _finalDelay;
-    private WaitForSeconds _tSalto;
+    private WaitForSecondsRealtime _simpleDelay;
+    private WaitForSecondsRealtime _interpunctuationDelay;
+    private WaitForSecondsRealtime _finalDelay;
+    private WaitForSecondsRealtime _tSalto;
 
     // Tiempo espera
     [Header("Typewriter Settings")]
@@ -60,10 +60,10 @@ public class TextManager : MonoBehaviour
         }
         _texBox = GetComponent<TMP_Text>();
 
-        _simpleDelay = new WaitForSeconds(1 / characterPerSecond);
-        _interpunctuationDelay = new WaitForSeconds(interpunctuationDelay);
-        _finalDelay = new WaitForSeconds(finalDelay);
-        _tSalto = new WaitForSeconds(0);
+        _simpleDelay = new WaitForSecondsRealtime(1 / characterPerSecond);
+        _interpunctuationDelay = new WaitForSecondsRealtime(interpunctuationDelay);
+        _finalDelay = new WaitForSecondsRealtime(finalDelay);
+        _tSalto = new WaitForSecondsRealtime(0);
 
         //Dialogo
         DialogueHash = new Dictionary<string, List<string>>();
@@ -156,7 +156,7 @@ public class TextManager : MonoBehaviour
 
     private IEnumerator Typewriter(string linea)
     {
-        savedTime = Time.time;
+
      //   print("ss");
         DialogoActual = linea;
 
@@ -181,7 +181,9 @@ public class TextManager : MonoBehaviour
                 if (character == '?' || character == '.' || character == ',' || character == ':' ||
                     character == ';' || character == '!' || character == '-' || character == '\n')
                 {
-                    yield return _interpunctuationDelay;
+                    //yield return _interpunctuationDelay;
+                    yield return new WaitForFixedUpdate();
+
                 }
                 else
                 {
@@ -190,7 +192,10 @@ public class TextManager : MonoBehaviour
                         SoundManager.instance.buscarSonido("hablar").pitch -= alternarPitch ? -0.1f : 0.1f;
                         SoundManager.instance.PlaySound("hablar", GameObject.Find("PERSONAJE").transform.position, GameObject.Find("PERSONAJE"));
                         alternarPitch = !alternarPitch;
-                        yield return _simpleDelay;
+
+                        // yield return _simpleDelay;
+                        yield return new WaitForFixedUpdate();
+
                     }
                 }
                 yield return new WaitUntil(()=> pausado == false);
@@ -198,9 +203,14 @@ public class TextManager : MonoBehaviour
             }
             IndiceLineaActual++;
             // Parada final
-          //  print("parada final");
+            //  print("parada final");
+            savedTime = Time.time;
+
             yield return _finalDelay;
+            print("terminado. Tiepo usado = " + (Time.time - savedTime));
+
         }
+
         _texBox.text = string.Empty;
         if (nextAction.Count > 0)
         {
@@ -208,7 +218,6 @@ public class TextManager : MonoBehaviour
             nextAction[0]?.Invoke();
             nextAction.RemoveAt(0);
         }
-        print("terminado. Tiepo usado = " +(Time.time-savedTime));
     }
 
     
@@ -319,7 +328,7 @@ public class TextManager : MonoBehaviour
     {
         yield return new WaitForFixedUpdate();
         Pause();
-        yield return new WaitForSeconds(tiempoEspera);
+        yield return new WaitForSecondsRealtime(tiempoEspera);
         Continue();
 
     }
