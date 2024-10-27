@@ -280,13 +280,21 @@ MonoBehaviour:
   - name: quitarBrida
     clip: {fileID: 8300000, guid: 11d05f7b1a36c5145b78369c074017d6, type: 3}
     volume: 0.2
-    spatialBlend: 0
+    spatialBlend: 1
     pitch: 0.9
     loop: 0
     audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
     source: {fileID: 0}
   - name: abrirCaja
     clip: {fileID: 8300000, guid: 8b2030bde4e2a42449668ad01cb9d5ae, type: 3}
+    volume: 0.2
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: 3ed80bed704874b43a9a0a20728ae69b, type: 2}
+    source: {fileID: 0}
+  - name: moverValvula
+    clip: {fileID: 8300000, guid: 0ce4ae76c05cf17499ca184aad2cca88, type: 3}
     volume: 0.2
     spatialBlend: 0.565
     pitch: 1
