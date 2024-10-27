@@ -40033,7 +40033,7 @@ MonoBehaviour:
         interactObject: {fileID: 0}
         newState: 2
       - callType: 4
-        nameKey: cortarCuerda
+        nameKey: quitarBrida
         timelineObj: {fileID: 0}
         Transform: {fileID: 1837694985}
         Boolean: 0
@@ -60183,12 +60183,12 @@ PrefabInstance:
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -60207,6 +60207,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[2].obj
+      value: 
+      objectReference: {fileID: 1391417175}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
       propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[0].nameKey
       value: ValvulaFarol_Giro
       objectReference: {fileID: 0}
@@ -60218,7 +60223,7 @@ PrefabInstance:
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].nameKey
-      value: valvulaFarol
+      value: moverValvula
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -60229,6 +60234,11 @@ PrefabInstance:
         type: 3}
       propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].nameKey
       value: ValvulaFarol_GiroGas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[2].nameKey
+      value: moverValvula
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -60272,6 +60282,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[2].animator
+      value: 
+      objectReference: {fileID: 478505001}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[2].callType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
       propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].Transform
       value: 
       objectReference: {fileID: 1391417186}
@@ -60285,6 +60305,11 @@ PrefabInstance:
       propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].Transform
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[2].Transform
+      value: 
+      objectReference: {fileID: 1391417186}
     - target: {fileID: 9129068006694395107, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: m_RenderingLayerMask
