@@ -8839,7 +8839,7 @@ PlayableDirector:
   m_GameObject: {fileID: 316879792}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: afb0ea2d832b7b64a8adc5c10e3858a5, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: efe4dab2ca527394aa4ecd86fd3f7f53, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -8915,6 +8915,8 @@ PlayableDirector:
     value: {fileID: 1754260481}
   - key: {fileID: -7509265112733355716, guid: afb0ea2d832b7b64a8adc5c10e3858a5, type: 2}
     value: {fileID: 806651914}
+  - key: {fileID: -4446805937659104591, guid: efe4dab2ca527394aa4ecd86fd3f7f53, type: 2}
+    value: {fileID: 1897081829}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &316879794
@@ -11699,7 +11701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &489896495
 Transform:
   m_ObjectHideFlags: 0
@@ -12859,6 +12861,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &543910282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 12fcb9af9ad6d834ab73d9580d92b5c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1421582025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &554575757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1cef05fedd63ad646861b913b70281ee,
@@ -29446,7 +29454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intEvent:
     eventOrder: []
-  outline: {fileID: 0}
+  outline: {fileID: 219373137}
   Hoverkey: 
   showName: 1
   startState: 2
@@ -30079,7 +30087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intEvent:
     eventOrder: []
-  outline: {fileID: 0}
+  outline: {fileID: 3082319698675748979}
   Hoverkey: DescCandado
   showName: 1
   startState: 2
@@ -47691,6 +47699,46 @@ PrefabInstance:
       propertyPath: eventList.Array.data[0].HoverText
       value: DescBoton
       objectReference: {fileID: 0}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].obj
+      value: 
+      objectReference: {fileID: 1375798639}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].nameKey
+      value: botonFarol
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].animator
+      value: 
+      objectReference: {fileID: 1375798643}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].callType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].newState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].Transform
+      value: 
+      objectReference: {fileID: 1375798640}
+    - target: {fileID: 2166562049939276120, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].interactObject
+      value: 
+      objectReference: {fileID: 1391417183}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: startRot.x
@@ -47779,7 +47827,7 @@ PrefabInstance:
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: onEndEvent.eventOrder.Array.data[0].newState
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3336078302037397397, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -47928,6 +47976,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].obj
+      value: 
+      objectReference: {fileID: 1391417175}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].obj
+      value: 
+      objectReference: {fileID: 1391417175}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
       propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[0].nameKey
       value: ValvulaFarol_Giro
       objectReference: {fileID: 0}
@@ -47939,12 +48002,17 @@ PrefabInstance:
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].nameKey
-      value: ValvulaFarol_Giro
+      value: valvulaFarol
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[0].nameKey
       value: ValvulaFarol_GiroGas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].nameKey
+      value: valvulaFarol
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -47966,6 +48034,31 @@ PrefabInstance:
       propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].animator
       value: 
       objectReference: {fileID: 478505001}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].callType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].animator
+      value: 
+      objectReference: {fileID: 478505001}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].callType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[2].Transform
+      value: 
+      objectReference: {fileID: 1391417186}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].Transform
+      value: 
+      objectReference: {fileID: 1391417186}
     - target: {fileID: 9129068006694395107, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: m_RenderingLayerMask
@@ -49024,6 +49117,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &1375798639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7738345878910061327, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1316571706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1375798640 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4665909762664888557, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1316571706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1375798643 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7414445114331687125, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1316571706}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1376611138
 GameObject:
   m_ObjectHideFlags: 0
@@ -49338,6 +49449,24 @@ MonoBehaviour:
   meshr:
   - {fileID: 973327441}
   - {fileID: 1498969089}
+--- !u!114 &1391417183 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1316571706}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391417175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6a67ab26d3b234daafdc005ce23735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1391417186 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6840782968070451206, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+    type: 3}
+  m_PrefabInstance: {fileID: 1316571706}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1393772710
 GameObject:
   m_ObjectHideFlags: 0
@@ -50630,7 +50759,18 @@ MonoBehaviour:
   - HoverText: DescFirma
     state: 2
     interactEvent:
-      eventOrder: []
+      eventOrder:
+      - callType: 4
+        nameKey: firmar
+        timelineObj: {fileID: 0}
+        Transform: {fileID: 1433324489}
+        Boolean: 0
+        waitTime: 0
+        PlayWithBefore: 0
+        obj: {fileID: 1433324490}
+        animator: {fileID: 0}
+        interactObject: {fileID: 0}
+        newState: 0
     minigameEvent:
       m_PersistentCalls:
         m_Calls:
@@ -50693,6 +50833,17 @@ MonoBehaviour:
       waitTime: 0
       PlayWithBefore: 0
       obj: {fileID: 0}
+      animator: {fileID: 0}
+      interactObject: {fileID: 292711177}
+      newState: 2
+    - callType: 4
+      nameKey: firmar
+      timelineObj: {fileID: 0}
+      Transform: {fileID: 1433324488}
+      Boolean: 0
+      waitTime: 0
+      PlayWithBefore: 0
+      obj: {fileID: 1433324492}
       animator: {fileID: 0}
       interactObject: {fileID: 292711177}
       newState: 2
@@ -61735,7 +61886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2112555411
 Transform:
   m_ObjectHideFlags: 0
@@ -64567,7 +64718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intEvent:
     eventOrder: []
-  outline: {fileID: 0}
+  outline: {fileID: 543910282}
   Hoverkey: DescCaja
   showName: 1
   startState: 0
