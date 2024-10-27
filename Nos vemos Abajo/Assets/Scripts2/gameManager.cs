@@ -62,19 +62,19 @@ public class gameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            Application.targetFrameRate = framerate;
+            //    Application.targetFrameRate = framerate;
 
+            //}
+            if (Application.targetFrameRate == 60)
+            {
+                Application.targetFrameRate = 30;
+            }
+            else
+            {
+                Application.targetFrameRate = 60;
+
+            }
         }
-        //  if  (Application.targetFrameRate == 60)
-        //    {
-        //        Application.targetFrameRate =30;
-        //    }
-        //    else
-        //    {
-        //        Application.targetFrameRate = 60;
-
-        //    }
-        //} 
     }
     public void callPingPong(string callText,Action nextAction)
     {

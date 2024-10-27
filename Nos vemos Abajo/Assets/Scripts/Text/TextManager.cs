@@ -38,7 +38,7 @@ public class TextManager : MonoBehaviour
     // Parar saltar
     public bool pausado { get; private set; } = false;
 
-
+    float savedTime;
     // Excel
     [Header("Documento de texto en .csv ")]
     [SerializeField] TextAsset[] textDialogues;
@@ -156,6 +156,7 @@ public class TextManager : MonoBehaviour
 
     private IEnumerator Typewriter(string linea)
     {
+        savedTime = Time.time;
      //   print("ss");
         DialogoActual = linea;
 
@@ -207,7 +208,7 @@ public class TextManager : MonoBehaviour
             nextAction[0]?.Invoke();
             nextAction.RemoveAt(0);
         }
-        print("terminado");
+        print("terminado. Tiepo usado = " +(Time.time-savedTime));
     }
 
     
