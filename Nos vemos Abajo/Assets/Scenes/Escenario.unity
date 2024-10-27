@@ -18075,6 +18075,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464697630}
   m_Mesh: {fileID: 2534964839176971238, guid: 2051259d1f3e9534aaaa73ab313608db, type: 3}
+--- !u!1 &465062171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 465062172}
+  - component: {fileID: 465062173}
+  m_Layer: 0
+  m_Name: Bloqueador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &465062172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465062171}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08, y: -0.5, z: -0.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1630333416}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &465062173
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465062171}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4, y: 1, z: 4.27}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &465540781
 GameObject:
   m_ObjectHideFlags: 0
@@ -28737,7 +28790,7 @@ MonoBehaviour:
       newState: 2
   startPos: {x: 0, y: 0, z: 0}
   startRot: {x: 0, y: 0, z: 0}
-  numberTaps: 5
+  numberTaps: 3
   onFinishTap:
     eventOrder:
     - callType: 3
@@ -28767,7 +28820,7 @@ MonoBehaviour:
   - {fileID: 7202271454783502976}
   - {fileID: 8521902485948310855}
   startSnow: 0
-  endSnow: 20
+  endSnow: 16
   particles: {fileID: 7208203020083626228, guid: 519adfa2eb022c04d870574b84703b1b,
     type: 3}
 --- !u!1 &750717037
@@ -72374,6 +72427,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 725321466}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4ac88c5fd02422b45a806c009ab939f4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 465062172}
     - targetCorrespondingSourceObject: {fileID: -3274006528333456403, guid: 4ac88c5fd02422b45a806c009ab939f4,
         type: 3}
       insertIndex: -1
@@ -72519,7 +72576,7 @@ MonoBehaviour:
       interactObject: {fileID: 484872028}
       newState: 2
     - callType: 4
-      nameKey: salchipapa
+      nameKey: abrirCaja
       timelineObj: {fileID: 0}
       Transform: {fileID: 1630333416}
       Boolean: 0
