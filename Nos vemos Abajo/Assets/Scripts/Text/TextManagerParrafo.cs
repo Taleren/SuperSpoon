@@ -127,7 +127,7 @@ public class TextManagerParrafo : MonoBehaviour
     public void SetParrafo()
     {
         if (_typewriterCoroutine != null)
-            StopCoroutine(_typewriterCoroutine);
+           // StopCoroutine(_typewriterCoroutine);
 
         _texBox.maxVisibleCharacters = 0;
         IndiceCaracterVisibleActualmente = 0;
@@ -177,7 +177,6 @@ public class TextManagerParrafo : MonoBehaviour
             { 
                 yield return _simpleDelay; 
             }
-            
             IndiceCaracterVisibleActualmente++;
             
         }
@@ -188,7 +187,7 @@ public class TextManagerParrafo : MonoBehaviour
 
     void Skip() 
     {
-        StopCoroutine(_typewriterCoroutine);
+        //StopCoroutine(_typewriterCoroutine);
         TMP_TextInfo textInfo = _texBox.textInfo;
         _texBox.maxVisibleCharacters = textInfo.characterCount;
         return;

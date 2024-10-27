@@ -63,21 +63,21 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            //    Application.targetFrameRate = framerate;
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{
+        //    //    Application.targetFrameRate = framerate;
 
-            //}
-            if (Application.targetFrameRate == 60)
-            {
-                Application.targetFrameRate = 30;
-            }
-            else
-            {
-                Application.targetFrameRate = 60;
+        //    //}
+        //    if (Application.targetFrameRate == 60)
+        //    {
+        //        Application.targetFrameRate = 30;
+        //    }
+        //    else
+        //    {
+        //        Application.targetFrameRate = 60;
 
-            }
-        }
+        //    }
+        //}
     }
     public void callPingPong(string callText,Action nextAction)
     {

@@ -84,15 +84,8 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
     }
     public void timelineDialogue(string dialog,int end)
     {
-        if (end == 1)
-        {
-            TextManager.Instance.playDialogue(dialog, () => { endTimeline(); eventManager.Instance.playCall(); });
+        TextManager.Instance.playDialogue(dialog, () => { });
 
-        }
-        else
-        {
-            TextManager.Instance.playDialogue(dialog, () => { });
-        }
     }
     //public void soundDialogue(string soundKey,int objectNum)
     //{
