@@ -18,6 +18,8 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
 
  [SerializeField]   Transform fatherSoundPointers;
 
+    
+
     private void Awake()
     {
         if (Instance == null)
@@ -44,7 +46,7 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
         director.Stop();
         gameManager.Instance.setCameraSpeed(true);
 
-        currentNextAction.Invoke();
+        currentNextAction?.Invoke();
     }
     // Start is called before the first frame update
     void Start()
@@ -84,7 +86,7 @@ public class timelineManager : MonoBehaviour, IExposedPropertyTable
     {
         if (end == 1)
         {
-            TextManager.Instance.playDialogue(dialog, () => { endTimeline(); });
+            TextManager.Instance.playDialogue(dialog, () => { endTimeline(); eventManager.Instance.playCall(); });
 
         }
         else
