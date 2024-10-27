@@ -12,7 +12,7 @@ public class PRUEBASSONIDO : MonoBehaviour
     {
         /*if (Input.GetKeyDown(KeyCode.Q))    
         {
-            SoundManager.instance.PlaySound("abrirMechero", new Vector3(1, 1, 1));
+            SoundManager.instance.PlaySound("quitarHielo", new Vector3(1, 1, 1));
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
