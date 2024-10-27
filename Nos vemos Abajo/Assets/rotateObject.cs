@@ -55,7 +55,6 @@ public class Rotate3DObject : MonoBehaviour
         }
 
         mouseLookInputAction = actions.FindAction("MouseLook");
-
         actions.Enable();
     }
 

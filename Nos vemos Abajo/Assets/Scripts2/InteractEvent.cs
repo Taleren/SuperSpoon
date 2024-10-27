@@ -18,6 +18,7 @@ public class InteractEvent
         changeObjectState,
         soundState,
         activateObject,
-        waitState
+        waitState,
+        changeOptionals
     }
 }

@@ -99,6 +99,17 @@ public class eventManager : MonoBehaviour
                 case InteractEvent.eventCallTypes.waitState:
                     StartCoroutine(waitTime(Call.waitTime));
                     break;
+                case InteractEvent.eventCallTypes.changeOptionals:
+                    if(Call.Boolean == false)
+                    {
+                        gameManager.Instance.lockOptionals();
+                    }
+                    else
+                    {
+                        gameManager.Instance.unlockOptionals();
+
+                    }
+                    break;
                 default:
                     break;
             }
