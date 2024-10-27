@@ -8830,7 +8830,7 @@ MonoBehaviour:
     eventOrder: []
   outline: {fileID: 969978216}
   Hoverkey: DescCuerdaSonya
-  showName: 0
+  showName: 1
   startState: 0
   currentState: 0
   eventList:
@@ -8841,7 +8841,7 @@ MonoBehaviour:
     minigameEvent:
       m_PersistentCalls:
         m_Calls: []
-  - HoverText: DescCuerda
+  - HoverText: DescCuerdaSonya
     state: 2
     interactEvent:
       eventOrder:
@@ -81036,11 +81036,11 @@ MonoBehaviour:
       - callType: 4
         nameKey: vientoFuerte
         timelineObj: {fileID: 0}
-        Transform: {fileID: 1291500781}
+        Transform: {fileID: 1783342272}
         Boolean: 0
         waitTime: 0
         PlayWithBefore: 0
-        obj: {fileID: 1291500779}
+        obj: {fileID: 1783342269}
         animator: {fileID: 0}
         interactObject: {fileID: 0}
         newState: 0
