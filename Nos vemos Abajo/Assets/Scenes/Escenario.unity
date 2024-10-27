@@ -48061,9 +48061,14 @@ PrefabInstance:
       objectReference: {fileID: 1391417175}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
-      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].obj
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[0].obj
       value: 
       objectReference: {fileID: 1391417175}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].obj
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[0].interactEvent.eventOrder.Array.data[0].nameKey
@@ -48082,12 +48087,12 @@ PrefabInstance:
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[0].nameKey
-      value: ValvulaFarol_GiroGas
+      value: valvulaFarol
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].nameKey
-      value: valvulaFarol
+      value: ValvulaFarol_GiroGas
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -48116,13 +48121,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[0].callType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
       propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].animator
       value: 
       objectReference: {fileID: 478505001}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].callType
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
@@ -48131,9 +48141,14 @@ PrefabInstance:
       objectReference: {fileID: 1391417186}
     - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
-      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].Transform
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[0].Transform
       value: 
       objectReference: {fileID: 1391417186}
+    - target: {fileID: 8246893647645337283, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
+        type: 3}
+      propertyPath: eventList.Array.data[1].interactEvent.eventOrder.Array.data[1].Transform
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9129068006694395107, guid: 06c5d0d97ff9cd74b87a687e9a6f9b55,
         type: 3}
       propertyPath: m_RenderingLayerMask
@@ -64749,12 +64764,13 @@ PrefabInstance:
         type: 3}
       propertyPath: cursorSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 21300000, guid: 5f2b726dd8df2034fa477750c4a38f78,
+        type: 3}
     - target: {fileID: 5626181267524981230, guid: 4dffac926b7c9c2408766c5a9fcf0d75,
         type: 3}
       propertyPath: cursorSprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 0e17602a03ec0fe4f8dd48876066aa4a,
+      objectReference: {fileID: 21300000, guid: 4d88282aa3620b545a95a0c5b0486de8,
         type: 3}
     - target: {fileID: 6773911395155465481, guid: 4dffac926b7c9c2408766c5a9fcf0d75,
         type: 3}
