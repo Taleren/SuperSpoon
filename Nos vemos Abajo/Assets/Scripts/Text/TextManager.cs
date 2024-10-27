@@ -23,10 +23,10 @@ public class TextManager : MonoBehaviour
     private Coroutine _typewriterCoroutine;
 
     // Delay
-    private WaitForSecondsRealtime _simpleDelay;
-    private WaitForSecondsRealtime _interpunctuationDelay;
-    private WaitForSecondsRealtime _finalDelay;
-    private WaitForSecondsRealtime _tSalto;
+    private WaitForSeconds _simpleDelay;
+    private WaitForSeconds _interpunctuationDelay;
+    private WaitForSeconds _finalDelay;
+    private WaitForSeconds _tSalto;
 
     // Tiempo espera
     [Header("Typewriter Settings")]
@@ -34,7 +34,7 @@ public class TextManager : MonoBehaviour
     [SerializeField] private float interpunctuationDelay = 0.5f;
     [SerializeField] private float finalDelay = 1.0f;
 
-
+[SerializeField]    GameObject personaje;
     // Parar saltar
     public bool pausado { get; private set; } = false;
 
@@ -60,10 +60,10 @@ public class TextManager : MonoBehaviour
         }
         _texBox = GetComponent<TMP_Text>();
 
-        _simpleDelay = new WaitForSecondsRealtime(1 / characterPerSecond);
-        _interpunctuationDelay = new WaitForSecondsRealtime(interpunctuationDelay);
-        _finalDelay = new WaitForSecondsRealtime(finalDelay);
-        _tSalto = new WaitForSecondsRealtime(0);
+        _simpleDelay = new WaitForSeconds(1 / characterPerSecond);
+        _interpunctuationDelay = new WaitForSeconds(interpunctuationDelay);
+        _finalDelay = new WaitForSeconds(finalDelay);
+        _tSalto = new WaitForSeconds(0);
 
         //Dialogo
         DialogueHash = new Dictionary<string, List<string>>();
@@ -117,7 +117,7 @@ public class TextManager : MonoBehaviour
         _texBox.maxVisibleCharacters = 0;
         IndiceCaracterVisibleActualmente = 0;
 
-        _texBox.text = getLine(basekey)[0] + "\n";
+        _texBox.text =basekey;
 
     }
 
@@ -157,18 +157,19 @@ public class TextManager : MonoBehaviour
     private IEnumerator Typewriter(string linea)
     {
 
-     //   print("ss");
+        //   print("ss");
         DialogoActual = linea;
-
-        while (getLine(DialogoActual + "_" + IndiceLineaActual.ToString())/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null )
+        List<string> a = getLine(DialogoActual + "_" + IndiceLineaActual.ToString());
+        while (a/*DialogueHash[DialogoActual + IndiceLineaActual.ToString()]*/ != null )
         {
+
             // Texto
-            getSubs(DialogoActual + "_" + IndiceLineaActual.ToString());
-          //  print(DialogoActual + "_" + IndiceLineaActual.ToString());
+            getSubs(a[0]);
             _texBox.ForceMeshUpdate();
             TMP_TextInfo textInfo = _texBox.textInfo;
 
             yield return new WaitForFixedUpdate();
+            savedTime = Time.time;
 
             // Delay + typewriter
             while (IndiceCaracterVisibleActualmente < textInfo.characterCount)
@@ -181,33 +182,33 @@ public class TextManager : MonoBehaviour
                 if (character == '?' || character == '.' || character == ',' || character == ':' ||
                     character == ';' || character == '!' || character == '-' || character == '\n')
                 {
-                    //yield return _interpunctuationDelay;
-                    yield return new WaitForFixedUpdate();
-
+                    yield return new WaitForSeconds(interpunctuationDelay);
                 }
                 else
                 {
-                    if (GameObject.Find("PERSONAJE") != null)
+                    if (personaje != null)
                     {
-                        SoundManager.instance.buscarSonido("hablar").pitch -= alternarPitch ? -0.1f : 0.1f;
-                        SoundManager.instance.PlaySound("hablar", GameObject.Find("PERSONAJE").transform.position, GameObject.Find("PERSONAJE"));
-                        alternarPitch = !alternarPitch;
-
-                        // yield return _simpleDelay;
-                        yield return new WaitForFixedUpdate();
+                        // SoundManager.instance.buscarSonido("hablar").pitch -= alternarPitch ? -0.1f : 0.1f;
+                        //SoundManager.instance.PlaySound("hablar", personaje.transform.position, personaje);
+                        // alternarPitch = !alternarPitch;
+                        savedTime = Time.time;
+                        yield return new WaitForSeconds(1 / characterPerSecond);
+                        print("terminado. Tiepo usado = " + (Time.time - savedTime));
 
                     }
                 }
                 yield return new WaitUntil(()=> pausado == false);
                 IndiceCaracterVisibleActualmente++;
+
             }
+
             IndiceLineaActual++;
             // Parada final
             //  print("parada final");
-            savedTime = Time.time;
+            a = getLine(DialogoActual + "_" + IndiceLineaActual.ToString());
 
-            yield return _finalDelay;
-            print("terminado. Tiepo usado = " + (Time.time - savedTime));
+            yield return new WaitForSeconds(finalDelay);
+            
 
         }
 
@@ -239,6 +240,7 @@ public class TextManager : MonoBehaviour
     }
     public void StartGame()
     {
+        
         // print("hello intro");
         // _typewriterCoroutine = StartCoroutine(Typewriter("Introtutorial"));
 
@@ -302,33 +304,33 @@ public class TextManager : MonoBehaviour
 
     private IEnumerator reproducirSonidoCR(string _soundName)
     {
-        yield return new WaitForFixedUpdate();
+        yield return null;
         SoundManager.instance.PlaySound(_soundName, new Vector3(0,0,0));
         Pause();
         yield return new WaitForSeconds(SoundManager.instance.duracionSonido(_soundName));
-        yield return new WaitForFixedUpdate();
+        yield return null;
         Continue();
     }
 
     private IEnumerator cambiarPitchCR(string _soundName, float nuevoPitch)
     {
-        yield return new WaitForFixedUpdate();
+        yield return null;
         SoundManager.instance.buscarSonido(_soundName).pitch = nuevoPitch;
-        yield return new WaitForFixedUpdate();
+        yield return null;
     }
 
     private IEnumerator cambiarVolumenCR(string _soundName, float nuevovolumen)
     {
-        yield return new WaitForFixedUpdate();
+        yield return null;
         SoundManager.instance.buscarSonido(_soundName).volume = nuevovolumen;
-        yield return new WaitForFixedUpdate();
+        yield return null;
     }
 
     private IEnumerator esperarTiempoCR(float tiempoEspera)
     {
-        yield return new WaitForFixedUpdate();
+        yield return null;
         Pause();
-        yield return new WaitForSecondsRealtime(tiempoEspera);
+        yield return new WaitForSeconds(tiempoEspera);
         Continue();
 
     }
